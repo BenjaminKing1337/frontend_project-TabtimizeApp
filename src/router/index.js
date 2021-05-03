@@ -10,7 +10,6 @@ const routes = [
     name: 'Frontpage',
     component: Frontpage
   }
- 
 ]
 
 const router = new VueRouter({
