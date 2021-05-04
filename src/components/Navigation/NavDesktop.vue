@@ -123,6 +123,7 @@
         ul li {
             list-style-type: none;
             margin-top: 1em;
+            line-height: 100%;
 
             a {
                 margin-left: 2.5em;
@@ -146,11 +147,13 @@
     }
 }
 
-    .switch {
+.switch {
   position: relative;
   display: inline-block;
-  width: 52px;
+  width: 54px;
   height: 28px;
+  margin-left: 1em;
+  bottom: 5px;
 }
 
 .switch input { 
@@ -184,11 +187,11 @@
 }
 
 input:checked + .slider {
-  background-color: #2196F3;
+  background-color: #00ff90;
 }
 
 input:focus + .slider {
-  box-shadow: 0 0 1px #2196F3;
+  box-shadow: 0 0 1px #00ff90;
 }
 
 input:checked + .slider:before {
@@ -199,7 +202,7 @@ input:checked + .slider:before {
 
 /* Rounded sliders */
 .slider.round {
-  border-radius: 34px;
+  border-radius: 30px;
 }
 
 .slider.round:before {
