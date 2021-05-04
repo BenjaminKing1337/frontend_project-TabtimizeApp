@@ -32,5 +32,4 @@ export default {
     margin-left: 350px !important;
   }
 
-
 </style>
