@@ -25,3 +25,9 @@ export default {
 };
 </script>
 
+<style lang="scss">
+@import "./src/styles/styles.scss";
+  .body{
+    background: map-get($ColorScheme, bg);
+  }
+</style>
