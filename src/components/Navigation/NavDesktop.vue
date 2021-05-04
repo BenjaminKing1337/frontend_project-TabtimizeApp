@@ -86,6 +86,7 @@
 @import "./src/styles/styles.scss";
 /*NAVIGATION*/
 .sideBar {
+    z-index: 1;
     width: 350px;
     height: 100vh;
     background-color: map-get($ColorScheme, white);

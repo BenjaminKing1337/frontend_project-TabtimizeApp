@@ -12,8 +12,7 @@
 
 <style lang="scss" scoped>
 #MyProfile {
-    margin-left:350px;
+    border-radius: 100% 100% / 100% 100%;
     width: 800px;
-    background-color: yellow;
 }
 </style>
