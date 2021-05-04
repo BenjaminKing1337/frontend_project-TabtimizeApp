@@ -1,7 +1,7 @@
 <template>
   <v-app>
+    <NavDesktop/>
     <v-main class="body">
-      <NavDesktop/>
       <router-view/>
     </v-main>
   </v-app>
@@ -29,5 +29,8 @@ export default {
 @import "./src/styles/styles.scss";
   .body{
     background: map-get($ColorScheme, bg);
+    margin-left: 350px !important;
   }
+
+
 </style>

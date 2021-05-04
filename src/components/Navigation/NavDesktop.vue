@@ -65,7 +65,7 @@
           <li>
             <a href="#">
               <v-icon>mdi-help-circle</v-icon>
-              Help Tips
+              <router-link to="">Help Tips</router-link> 
             </a>
             <label class="switch">
               <input type="checkbox" />
@@ -90,6 +90,7 @@
     height: 100vh;
     background-color: map-get($ColorScheme, white);
     box-shadow: 6px 0 30px 10px rgba($color: #000000, $alpha: .1);
+    position: fixed;
 
     .top {
         display: flex;
@@ -125,9 +126,10 @@
             list-style-type: none;
             margin-top: 1em;
             line-height: 100%;
+            margin-left: 2em;
 
             a {
-                margin-left: 2.5em;
+                margin-left: .5em;
                 text-decoration: none;
                 color: map-get($ColorScheme, text);
 
