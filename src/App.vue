@@ -30,7 +30,7 @@ export default {
 <style lang="scss">
 @import "./src/styles/styles.scss";
   
-  .body{
+  .body {
     background: map-get($ColorScheme, bg);
     margin-left: 350px !important;
     #gradientHeader {
