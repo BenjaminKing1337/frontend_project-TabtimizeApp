@@ -20,19 +20,19 @@
           <li>
             <a href="#">
               <v-icon>mdi-link-variant</v-icon>
-              Link Opportunities
+              <router-link to="/Main Features/LinkOpportunities">Link Opportunities</router-link> 
             </a>
           </li>
           <li>
             <a href="#">
               <v-icon>mdi-view-list</v-icon>
-              Lists
+              <router-link to="/Main Features/Lists">Lists</router-link> 
             </a>
           </li>
           <li>
             <a href="#">
               <v-icon>mdi-dice-3</v-icon>
-              Relevance Comparison
+              <router-link to="/Main Features/RelevanceComparison">Relevance Comparison</router-link> 
             </a>
           </li>
         </ul>
@@ -42,13 +42,14 @@
           <li>
             <a href="#">
               <v-icon>mdi-cog</v-icon>
-              Domains and Pages
+              <router-link to="/Setup/DomainsAndPages">Domains and Pages</router-link> 
+
             </a>
           </li>
           <li>
             <a href="#">
               <v-icon>mdi-file-document-multiple</v-icon>
-              Billing and Usage
+              <router-link to="/Setup/BillingAndUsage">Billing and Usage</router-link>
             </a>
           </li>
         </ul>
@@ -58,7 +59,7 @@
           <li>
             <a href="#">
               <v-icon>mdi-face-profile</v-icon>
-              My Profile
+             <router-link to="/Extras/MyProfile">My Profile</router-link> 
             </a>
           </li>
           <li>

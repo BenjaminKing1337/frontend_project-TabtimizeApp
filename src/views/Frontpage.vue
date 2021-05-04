@@ -1,5 +1,7 @@
 <template>
-  <div></div>
+  <div>
+    Frontpage
+  </div>
 </template>
 
 <script>
