@@ -1,66 +1,38 @@
 <template>
+<div>
   <div id="menubar">
     <v-card class="menubtn" id="helpbtn">
       <v-icon x-large>mdi-help-circle</v-icon>
     </v-card>
     <v-card class="menubtn menubtncenter" id="tablogo">
       <router-link to="/"
-        ><img src="../../assets/logoT.svg" alt="logo" height="80px" />
+        ><img src="../../assets/logoT.svg" alt="logo" height="65px" />
       </router-link>
     </v-card>
     <v-card class="menubtn" id="burgermenu">
-      <v-app-bar-nav-icon @click.stop="drawer = !drawer"></v-app-bar-nav-icon>
-
-      <v-navigation-drawer v-model="drawer" absolute top temporary>
-        <v-list nav dense>
-          <v-list-item-group v-model="group">
-            <v-list-item>
-              <v-list-item-title>
-                <router-link to="/Main Features/LinkOpportunities"
-                  >Link Opportunities</router-link
-                >
-              </v-list-item-title>
-            </v-list-item>
-            <v-list-item>
-              <v-list-item-title>
-                <router-link to="/Main Features/Lists"
-                  >Link Opportunities</router-link
-                >
-              </v-list-item-title>
-            </v-list-item>
-            <v-list-item>
-              <v-list-item-title>
-                <router-link to="/Main Features/RelevanceComparison"
-                  >Link Opportunities</router-link
-                >
-              </v-list-item-title>
-            </v-list-item>
-            <v-list-item>
-              <v-list-item-title>
-                <router-link to="/Main Features/LinkOpportunities"
-                  >Link Opportunities</router-link
-                >
-              </v-list-item-title>
-            </v-list-item>
-            <v-list-item>
-              <v-list-item-title>
-                <router-link to="/Main Features/LinkOpportunities"
-                  >Link Opportunities</router-link
-                >
-              </v-list-item-title>
-            </v-list-item>
-            <v-list-item>
-              <v-list-item-title>
-                <router-link to="/Main Features/LinkOpportunities"
-                  >Link Opportunities</router-link
-                >
-              </v-list-item-title>
-            </v-list-item>
-          </v-list-item-group>
-        </v-list>
-      </v-navigation-drawer>
+      <v-icon x-large @click.stop="drawer = !drawer">mdi-menu</v-icon>
     </v-card>
   </div>
+  <v-navigation-drawer
+            v-model="drawer"
+            fixed
+            temporary
+            bottom
+            height="400"
+        >
+            <v-list-item-group
+                v-model="group"
+                align="center"
+            >
+                <v-list-item><a href="#"><v-icon>mdi-link-variant</v-icon><router-link to="/Main Features/LinkOpportunities">Link Opportunities</router-link> </a></v-list-item>
+                <v-list-item><a href="#"><v-icon>mdi-view-list</v-icon><router-link to="/Main Features/Lists">Lists</router-link> </a></v-list-item>
+                <v-list-item><a href="#" ><v-icon>mdi-dice-3</v-icon><router-link to="/Main Features/RelevanceComparison">Relevance Comparison</router-link> </a></v-list-item>
+                <v-list-item><a href="#"><v-icon>mdi-cog</v-icon><router-link to="/Setup/DomainsAndPages">Domains and Pages</router-link> </a></v-list-item>
+                <v-list-item><a href="#"><v-icon>mdi-file-document-multiple</v-icon><router-link to="/Setup/BillingAndUsage">Billing and Usage</router-link></a></v-list-item>
+                <v-list-item><a href="#"><v-icon>mdi-face-profile</v-icon><router-link to="/Extras/MyProfile">My Profile</router-link> </a></v-list-item>
+            </v-list-item-group>
+      </v-navigation-drawer>
+</div>
 </template>
 
 <script>
@@ -90,7 +62,7 @@ export default {
 
 #menubar {
   display: flex;
-  position: absolute;
+  position: fixed;
   align-items: flex-end;
   bottom: 0;
   z-index: 10;
@@ -101,7 +73,7 @@ export default {
   }
   #tablogo {
     border-radius: 5px 5px 0px 0px;
-    box-shadow: inset 0px 0px 1px 1px rgba(134, 134, 134, 0.233);
+    box-shadow: 2px 2px 26px rgba(134, 134, 134, 0.16);
     border-bottom: none;
     z-index: 2;
   }
@@ -114,11 +86,25 @@ export default {
     justify-content: center;
     align-items: center;
     width: 33.333%;
-    height: 80px;
-    background-color: whitesmoke;
+    height: 70px;
+    background-color: white;
+    .v-icon{
+      font-size: 3.5em !important;
+    }
   }
   .menubtncenter {
-    height: 100px;
+    height: 90px;
   }
 }
+.v-list-item{
+  justify-content: center;
+  a{
+    text-decoration: none;
+    color: map-get($ColorScheme , text );
+  }
+}
+.v-icon{
+  color: map-get($ColorScheme , primary );
+}
+
 </style>
