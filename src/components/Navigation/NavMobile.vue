@@ -1,22 +1,81 @@
 <template>
   <div id="menubar">
-    <div class="menubtn" id="helpbtn">
+    <v-card class="menubtn" id="helpbtn">
       <v-icon x-large>mdi-help-circle</v-icon>
-    </div>
-    <div class="menubtn menubtncenter" id="tablogo">
+    </v-card>
+    <v-card class="menubtn menubtncenter" id="tablogo">
       <router-link to="/"
         ><img src="../../assets/logoT.svg" alt="logo" height="80px" />
       </router-link>
-    </div>
-    <div class="menubtn" id="burgermenu">
-            <v-icon x-large>mdi-menu</v-icon>
+    </v-card>
+    <v-card class="menubtn" id="burgermenu">
+      <v-app-bar-nav-icon @click.stop="drawer = !drawer"></v-app-bar-nav-icon>
 
-    </div>
+      <v-navigation-drawer v-model="drawer" absolute top temporary>
+        <v-list nav dense>
+          <v-list-item-group v-model="group">
+            <v-list-item>
+              <v-list-item-title>
+                <router-link to="/Main Features/LinkOpportunities"
+                  >Link Opportunities</router-link
+                >
+              </v-list-item-title>
+            </v-list-item>
+            <v-list-item>
+              <v-list-item-title>
+                <router-link to="/Main Features/Lists"
+                  >Link Opportunities</router-link
+                >
+              </v-list-item-title>
+            </v-list-item>
+            <v-list-item>
+              <v-list-item-title>
+                <router-link to="/Main Features/RelevanceComparison"
+                  >Link Opportunities</router-link
+                >
+              </v-list-item-title>
+            </v-list-item>
+            <v-list-item>
+              <v-list-item-title>
+                <router-link to="/Main Features/LinkOpportunities"
+                  >Link Opportunities</router-link
+                >
+              </v-list-item-title>
+            </v-list-item>
+            <v-list-item>
+              <v-list-item-title>
+                <router-link to="/Main Features/LinkOpportunities"
+                  >Link Opportunities</router-link
+                >
+              </v-list-item-title>
+            </v-list-item>
+            <v-list-item>
+              <v-list-item-title>
+                <router-link to="/Main Features/LinkOpportunities"
+                  >Link Opportunities</router-link
+                >
+              </v-list-item-title>
+            </v-list-item>
+          </v-list-item-group>
+        </v-list>
+      </v-navigation-drawer>
+    </v-card>
   </div>
 </template>
 
 <script>
-export default {};
+export default {
+  data: () => ({
+    drawer: false,
+    group: null,
+  }),
+
+  watch: {
+    group() {
+      this.drawer = false;
+    },
+  },
+};
 </script>
 
 <style lang="scss" scoped>
@@ -34,7 +93,7 @@ export default {};
   position: absolute;
   align-items: flex-end;
   bottom: 0;
-  z-index: 1;
+  z-index: 10;
   width: 100%;
   #helpbtn {
     border-radius: 5px 0px 0px 0px;
@@ -62,6 +121,4 @@ export default {};
     height: 100px;
   }
 }
-
-
 </style>
