@@ -84,6 +84,13 @@
 
 <style lang="scss">
 @import "./src/styles/styles.scss";
+
+/*RESPONSIVENESS*/
+@media only screen and (max-width: 600px) {
+  .sideBar {
+    display:none;
+  }
+}
 /*NAVIGATION*/
 .sideBar {
     z-index: 1;
