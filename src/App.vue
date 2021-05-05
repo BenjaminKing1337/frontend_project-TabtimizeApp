@@ -48,7 +48,7 @@ export default {
     width: 120%;
     left: -10%;
     z-index: 0;
-    height: 300px;
+    height: 500px;
     background-image: linear-gradient(
       map-get($ColorScheme, purple),
       map-get($ColorScheme, button)
