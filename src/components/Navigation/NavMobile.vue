@@ -3,14 +3,15 @@
     <div class="menubtn" id="helpbtn">
       <v-icon x-large>mdi-help-circle</v-icon>
     </div>
+
     <div class="menubtn menubtncenter" id="tablogo">
       <router-link to="/"
         ><img src="../../assets/logoT.svg" alt="logo" height="80px" />
       </router-link>
     </div>
-    <div class="menubtn" id="burgermenu">
-            <v-icon x-large>mdi-menu</v-icon>
 
+    <div class="menubtn" id="burgermenu">
+        <v-icon x-large>mdi-menu</v-icon>
     </div>
   </div>
 </template>

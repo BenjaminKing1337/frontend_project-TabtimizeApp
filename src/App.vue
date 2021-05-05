@@ -32,27 +32,6 @@ export default {
 
 <style lang="scss">
 @import "./src/styles/styles.scss";
-<<<<<<< Updated upstream
-  
-  .body {
-    background: map-get($ColorScheme, bg);
-    margin-left: 350px !important;
-    #gradientHeader {
-      position: absolute;
-      width: 110%;
-      left: -5%;
-      z-index: 0;
-      height: 300px;
-      background-image: linear-gradient(map-get($ColorScheme, purple), map-get($ColorScheme, button));
-      border-radius: 0% 0% 100% 100% / 0% 0% 100% 100%
-    }
-    .router {
-      position: relative;
-      z-index: 2;
-    }
-  }
-
-=======
 
 /*RESPONSIVENESS*/
 @media only screen and (max-width: 600px) {
@@ -63,7 +42,6 @@ export default {
 .body {
   background: map-get($ColorScheme, bg);
   margin-left: 350px;
-  width: 100%;
   overflow: hidden;
   #gradientHeader {
     position: absolute;
@@ -83,5 +61,4 @@ export default {
     z-index: 2;
   }
 }
->>>>>>> Stashed changes
 </style>
