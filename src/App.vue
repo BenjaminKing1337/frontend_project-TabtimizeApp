@@ -42,7 +42,6 @@ export default {
 .body {
   background: map-get($ColorScheme, bg);
   margin-left: 350px;
-  width: 100%;
   overflow: hidden;
   #gradientHeader {
     position: absolute;
