@@ -1,7 +1,6 @@
 <template>
   <v-app>
     <NavDesktop />
-
     <v-main class="body">
       <div id="gradientHeader"></div>
 
