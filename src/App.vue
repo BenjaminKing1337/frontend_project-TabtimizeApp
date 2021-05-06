@@ -50,7 +50,7 @@ export default {
     z-index: 0;
     height: 500px;
     background-image: linear-gradient(
-      map-get($ColorScheme, purple),
+      map-get($ColorScheme, purple1),
       map-get($ColorScheme, button)
     );
     border-radius: 0% 0% 100% 100% / 0% 0% 100% 100%;

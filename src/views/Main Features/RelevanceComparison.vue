@@ -23,6 +23,18 @@
           <input type="text" id="linktwo" name="linktwo" />
         </div>
       </div>
+      <div class="bot">
+        <h3>Comparison History</h3>
+        <hr>
+        <div class="lin">
+          <div class="my">
+          <span>MY LINK</span>
+        </div>
+        <div class="comp">
+          <span>COMPARED LINK</span>
+        </div>
+        </div>
+      </div>
     </div>
   </div>
 </template>
@@ -43,16 +55,39 @@ export default {};
   margin-top: 4em;
   justify-content: center;
 
+  .bot {
+    width: 1200px;
+    height: 400px;
+    background-color: white;
+    position: fixed;
+    margin-top: 22em;
+    box-shadow: 0 0 10px rgba($color: #000000, $alpha: .2);
+    border-radius: 10px;
+
+    .lin {
+      display: flex;
+      justify-content: center;
+      
+      .my, .comp {
+        margin: 2em 14em;
+      }
+    }
+
+    h3 {
+      padding: 2em;
+    }
+  }
+
   .top {
     text-align: center;
 
     h2 {
-      color: map-get($ColorScheme, white);
+      color: map-get($ColorScheme, white1);
       font-size: 32px;
     }
 
     span {
-      color: map-get($ColorScheme, white);
+      color: map-get($ColorScheme, white1);
       font-size: 16px;
     }
   }
