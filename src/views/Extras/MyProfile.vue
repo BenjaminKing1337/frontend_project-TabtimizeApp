@@ -11,8 +11,5 @@
 </script>
 
 <style lang="scss" scoped>
-#MyProfile {
-    border-radius: 100% 100% / 100% 100%;
-    width: 800px;
-}
+
 </style>

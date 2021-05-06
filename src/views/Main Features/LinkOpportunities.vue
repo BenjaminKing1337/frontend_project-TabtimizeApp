@@ -1,29 +1,202 @@
 <template>
   <div id="backlinkEngine">
-    <div class="flex" id="balance">
-      <div class="balancedivs">Registered Pages</div>
-      <div class="balancedivs">Analysis Balance</div>
+    <div id="title"><h1>Backlink Engine</h1></div>
+
+    <div class="flex spaceAround" id="balance">
+      <div class="balancedivs" id="box1">
+        <div id="icon" class="circle regpageColor">
+          <v-icon class="icon">mdi-text-box-multiple</v-icon>
+        </div>
+        <h3 class="flex center">Registered Pages</h3>
+        <div class="flex center">
+          <p id="p1">0</p>
+          <p class="dispflexcenter" id="p2">Registered</p>
+        </div>
+      </div>
+      <div class="balancedivs" id="box2">
+        <div id="icon" class="circle anabalaColor">
+          <v-icon class="icon">mdi-cursor-pointer</v-icon>
+        </div>
+        <h3 class="flex center">Analysis Balance</h3>
+        <div class="flex center">
+          <p id="p1">0 / 0</p>
+          <p class="dispflexcenter" id="p2">Used</p>
+        </div>
+      </div>
     </div>
-    <div id="pagelist">List area</div>
+    <div id="pagelist">
+      <div class="page">
+        <div id="navigation">
+          <div class="dispflexcenter circle shadow bgcolor">
+            <v-icon>mdi-arrow-right</v-icon>
+          </div>
+        </div>
+        <div id="pageNo">
+          <h2 class="flex center">PAGE 0 / 0</h2>
+        </div>
+        <div id="pageInfo">
+          <div id="pageName" class="flex spaceBetween">
+            <h3>PAGE NAME</h3>
+            <h3 class="thin">/</h3>
+          </div>
+          <hr class="line" />
+          <div id="number" class="flex spaceBetween">
+            <h3>LINK OPPORTUNITIES</h3>
+            <h3 class="thin">130</h3>
+          </div>
+          <hr class="line" />
+          <div id="topic" class="flex spaceBetween">
+            <h3>URL TOPIC</h3>
+            <h3 class="thin">Business & Industrial</h3>
+          </div>
+          <hr class="line" />
+          <div id="analyzed" class="flex spaceBetween">
+            <h3>LAST ANALYZED</h3>
+            <div class="flex">
+              <h3 class="thin">25/01/2021</h3>
+              <button id="refresh" class="button">
+                <v-icon>mdi-refresh</v-icon>
+              </button>
+            </div>
+          </div>
+          <hr class="line" />
+        </div>
+        <div id="viewPage">
+          <button id="view" class="button">
+            <h3>VIEW</h3>
+          </button>
+        </div>
+      </div>
+    </div>
   </div>
 </template>
 
 <script>
-export default {
-    
- };
+export default {};
 </script>
 
 <style lang="scss" scoped>
-.balancedivs {
-  max-width: 500px;
-  height: 200px;
-  background-color: white;
-}
+@import "./src/styles/styles.scss";
 
-.flex {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
+/* PAGE */
+#backlinkEngine {
+  #title {
+    display: flex;
+    justify-content: center;
+    color: map-get($ColorScheme, white1);
+    margin-top: 50px;
+    margin-bottom: 40px;
+  }
+  #balance {
+    #box1 {
+      border-bottom: 2px solid map-get($ColorScheme, button);
+    }
+    #box2 {
+      border-bottom: 2px solid map-get($ColorScheme, accept);
+    }
+    .balancedivs {
+      box-shadow: 2px 2px 26px rgba(134, 134, 134, 0.16);
+      width: 300px;
+      min-height: 140px;
+      background-color: map-get($ColorScheme, white1);
+      border-radius: 5px;
+      margin: 0 20px;
+
+      padding: 10px;
+      .regpageColor {
+        background: linear-gradient(
+          map-get($ColorScheme, button),
+          map-get($ColorScheme, white1) 99%
+        );
+      }
+      .anabalaColor {
+        background: linear-gradient(
+          map-get($ColorScheme, accept),
+          map-get($ColorScheme, white1) 99%
+        );
+      }
+      h3 {
+        font-size: 16px;
+        @media (min-width: $md) {
+          padding: 20px !important;
+        }
+      }
+      #icon {
+        display: flex;
+        justify-content: center;
+        margin-top: -20px;
+        margin-left: -20px;
+      }
+      #p1 {
+        font-weight: bold;
+      }
+      #p2 {
+        margin-left: 3px;
+        font-size: 12.8px;
+      }
+    }
+  }
+
+  #pagelist {
+    justify-self: center;
+    margin: 20px 20px;
+    padding: 30px;
+    border-radius: 5px;
+    background-color: map-get($ColorScheme, white1);
+    @media (min-width: $md) {
+      margin: 20px 200px !important;
+      max-width: 1200px !important;
+    }
+    #navigation {
+      display: flex;
+      float: right;
+      margin-top: -40px;
+      margin-right: -40px;
+
+      .v-icon {
+        color: map-get($ColorScheme, purple1);
+        font-size: 3rem;
+      }
+    }
+    #pageNo {
+    }
+    #pageInfo {
+      #refresh {
+      }
+    }
+    #viewPage {
+      #view {
+      }
+    }
+  }
+
+  /*Multiple use classes*/
+
+  .circle {
+    height: 50px;
+    width: 50px;
+    border-radius: 100%;
+    @media (min-width: $lg) {
+      position: absolute;
+      height: 80px !important;
+      width: 80px !important;
+      margin-left: -40px !important;
+      .icon {
+        font-size: 2rem;
+      }
+    }
+  }
+
+  .line {
+    margin: 5px 0;
+    height: 1px;
+    border-width: 0;
+    background-color: map-get($ColorScheme, hLink);
+    color: map-get($ColorScheme, hLink);
+  }
+  .thin {
+    font-weight: 300;
+    text-align: left;
+  }
 }
 </style>

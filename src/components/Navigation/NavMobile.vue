@@ -25,8 +25,8 @@
                 align="center"
             >
                 <v-list-item><a href="#"><v-icon>mdi-link-variant</v-icon><router-link to="/Main Features/LinkOpportunities">Link Opportunities</router-link> </a></v-list-item>
-                <v-list-item><a href="#"><v-icon>mdi-view-list</v-icon><router-link to="/Main Features/Lists">Lists</router-link> </a></v-list-item>
-                <v-list-item><a href="#" ><v-icon>mdi-dice-3</v-icon><router-link to="/Main Features/RelevanceComparison">Relevance Comparison</router-link> </a></v-list-item>
+                <v-list-item><a href="#"><v-icon>mdi-view-list</v-icon><router-link to="/Main Features/Lists">Compiled Lists</router-link> </a></v-list-item>
+                <v-list-item><a href="#"><v-icon>mdi-dice-3</v-icon><router-link to="/Main Features/RelevanceComparison">Relevance Comparison</router-link> </a></v-list-item>
                 <v-list-item><a href="#"><v-icon>mdi-cog</v-icon><router-link to="/Setup/DomainsAndPages">Domains and Pages</router-link> </a></v-list-item>
                 <v-list-item><a href="#"><v-icon>mdi-file-document-multiple</v-icon><router-link to="/Setup/BillingAndUsage">Billing and Usage</router-link></a></v-list-item>
                 <v-list-item><a href="#"><v-icon>mdi-face-profile</v-icon><router-link to="/Extras/MyProfile">My Profile</router-link> </a></v-list-item>
@@ -53,13 +53,7 @@ export default {
 <style lang="scss" scoped>
 @import "./src/styles/styles.scss";
 
-/*RESPONSIVENESS*/
-@media only screen and (min-width: 600px) {
-  #menubar {
-    display: none !important;
-  }
-}
-
+/*MENUBAR*/
 #menubar {
   display: flex;
   position: fixed;
@@ -67,6 +61,9 @@ export default {
   bottom: 0;
   z-index: 10;
   width: 100%;
+  @media (min-width: $md) {
+            display: none !important;
+        }
   #helpbtn {
     border-radius: 5px 0px 0px 0px;
     z-index: 1;
@@ -96,11 +93,15 @@ export default {
     height: 90px;
   }
 }
+
+
+
+/* DRAWER*/
 .v-list-item{
   justify-content: center;
   a{
     text-decoration: none;
-    color: map-get($ColorScheme , text );
+    color: map-get($ColorScheme, primary);
   }
 }
 .v-icon{

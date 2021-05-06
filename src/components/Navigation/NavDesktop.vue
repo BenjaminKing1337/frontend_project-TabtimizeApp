@@ -3,11 +3,9 @@
     <div class="sideBar">
       <div class="top">
         <div class="logo">
-          <img src="@/assets/logo.png" alt="logo" />
+          <img src="@/assets/logo+text.svg" height="250px" alt="logo" />
         </div>
-        <div class="tabtimize">
-          <span>Tabtimize</span>
-        </div>
+        
       </div>
 
       <div class="mail">
@@ -20,19 +18,23 @@
           <li>
             <a href="#">
               <v-icon>mdi-link-variant</v-icon>
-              <router-link to="/Main Features/LinkOpportunities">Link Opportunities</router-link> 
+              <router-link to="/Main Features/LinkOpportunities"
+                >Link Opportunities</router-link
+              >
             </a>
           </li>
           <li>
             <a href="#">
               <v-icon>mdi-view-list</v-icon>
-              <router-link to="/Main Features/Lists">Lists</router-link> 
+              <router-link to="/Main Features/Lists">Compiled Lists</router-link>
             </a>
           </li>
           <li>
             <a href="#">
               <v-icon>mdi-dice-3</v-icon>
-              <router-link to="/Main Features/RelevanceComparison">Relevance Comparison</router-link> 
+              <router-link to="/Main Features/RelevanceComparison"
+                >Relevance Comparison</router-link
+              >
             </a>
           </li>
         </ul>
@@ -42,14 +44,17 @@
           <li>
             <a href="#">
               <v-icon>mdi-cog</v-icon>
-              <router-link to="/Setup/DomainsAndPages">Domains and Pages</router-link> 
-
+              <router-link to="/Setup/DomainsAndPages"
+                >Domains and Pages</router-link
+              >
             </a>
           </li>
           <li>
             <a href="#">
               <v-icon>mdi-file-document-multiple</v-icon>
-              <router-link to="/Setup/BillingAndUsage">Billing and Usage</router-link>
+              <router-link to="/Setup/BillingAndUsage"
+                >Billing and Usage</router-link
+              >
             </a>
           </li>
         </ul>
@@ -59,13 +64,13 @@
           <li>
             <a href="#">
               <v-icon>mdi-face-profile</v-icon>
-             <router-link to="/Extras/MyProfile">My Profile</router-link> 
+              <router-link to="/Extras/MyProfile">My Profile</router-link>
             </a>
           </li>
           <li>
             <a href="#">
               <v-icon>mdi-help-circle</v-icon>
-              <router-link to="">Help Tips</router-link> 
+              <router-link to="">Help Tips</router-link>
             </a>
             <label class="switch">
               <input type="checkbox" />
@@ -79,83 +84,78 @@
 </template>
 
 <script>
-
 </script>
 
 <style lang="scss">
 @import "./src/styles/styles.scss";
 
-/*RESPONSIVENESS*/
-@media only screen and (max-width: 600px) {
-  .sideBar {
-    display:none;
-  }
-}
 /*NAVIGATION*/
 .sideBar {
-    z-index: 1;
-    width: 350px;
-    height: 100vh;
-    background-color: map-get($ColorScheme, white);
-    box-shadow: 6px 0 30px 10px rgba($color: #000000, $alpha: .1);
-    position: fixed;
+  z-index: 1;
+  width: 350px;
+  height: 100vh;
+  background-color: map-get($ColorScheme, white);
+  box-shadow: 6px 0 30px 10px rgba($color: #000000, $alpha: 0.1);
+  position: fixed;
+  @media (max-width: $md) {
+    display: none !important;
+  }
+  .top {
+    display: flex;
+    justify-content: center;
+    padding-top: 4em;
 
-    .top {
-        display: flex;
-        justify-content: center;
-        padding-top: 4em;
-
-        .logo img {
-            width: 60%;
-        }
-
-        .tabtimize span {
-            font-size: 42px;
-            color: map-get($ColorScheme, headline);
-        }
+    .logo img {
+      width: 90%;
+      margin: -60px 0;
     }
 
-    .mail {
-        display: flex;
-        justify-content: center;
-        margin-top: 1.5em;
+    .tabtimize span {
+      font-size: 42px;
+      color: map-get($ColorScheme, headline);
+    }
+  }
 
-        span.email {
-            color:map-get($ColorScheme, text);
-            font-size: 16px;
-            font-weight: bold;
-            text-transform: uppercase;
+  .mail {
+    display: flex;
+    justify-content: center;
+    margin-top: 1.5em;
+
+    span.email {
+      color: map-get($ColorScheme, text);
+      font-size: 16px;
+      font-weight: bold;
+      text-transform: uppercase;
+    }
+  }
+
+  .list {
+    ul li {
+      list-style-type: none;
+      margin-top: 1em;
+      line-height: 100%;
+      margin-left: 2em;
+
+      a {
+        margin-left: 0.5em;
+        text-decoration: none;
+        color: map-get($ColorScheme, text);
+
+        .v-icon {
+          color: map-get($ColorScheme, text);
         }
+      }
     }
 
-    .list {
-
-        ul li {
-            list-style-type: none;
-            margin-top: 1em;
-            line-height: 100%;
-            margin-left: 2em;
-
-            a {
-                margin-left: .5em;
-                text-decoration: none;
-                color: map-get($ColorScheme, text);
-
-                .v-icon {
-                    color: map-get($ColorScheme, text);
-                }
-            }
-        }
-
-        h3 {
-            margin-left: 3.5em;
-            margin-top: 2em;
-        }
-
-        hr {
-            margin-top: 2em;
-        }
+    h3 {
+      margin-left: 3.5em;
+      margin-top: 2em;
     }
+
+    hr {
+      margin-top: 2em;
+    }
+  }
 }
 
 .switch {
@@ -167,7 +167,7 @@
   bottom: 5px;
 }
 
-.switch input { 
+.switch input {
   opacity: 0;
   width: 0;
   height: 0;
@@ -181,8 +181,8 @@
   right: 0;
   bottom: 0;
   background-color: #ccc;
-  -webkit-transition: .4s;
-  transition: .4s;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
 }
 
 .slider:before {
@@ -193,8 +193,8 @@
   left: 4px;
   bottom: 4px;
   background-color: white;
-  -webkit-transition: .4s;
-  transition: .4s;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
 }
 
 input:checked + .slider {

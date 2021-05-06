@@ -1,12 +1,79 @@
+// Breakpoints
+$xl: 1440px;
+$lg: 1200px;
+$md: 900px;
+$sm: 600px;
+
+// Color Scheme
 $ColorScheme: (
     primary: #112243,
-    white1: #FFFFFD,
-    bg: #F7F9FD,
-    hLink: #686ACD,
+    white1: #fffffd,
+    bg: #f7f9fd,
+    hLink: #686acd,
     button: #fe3652,
-    link: #7776B1,
+    link: #7776b1,
     purple1: #762d78,
     paragraph: #959794,
     headline: #001140,
     text: #000000,
-)
+    accept: #03a65a,
+);
+
+// Global classes
+
+.button {
+    padding: 5px 10px;
+    height: 30px;
+    min-width: 30px;
+    border-radius: 15px;
+    background-color: map-get($ColorScheme, button);
+    color: map-get($ColorScheme, white1) !important;
+
+}
+.shadow {
+    box-shadow: 2px 2px 26px rgba(134, 134, 134, 0.16);
+}
+.bgcolor {
+    background-color: map-get($ColorScheme, white1);
+    color: map-get($ColorScheme, white1);
+}
+.dark {
+    color: map-get($ColorScheme, primary) !important;
+  }
+.fRight {
+    float: right;
+}
+.circle {
+    border-radius: 100% !important;
+    height: 40px;
+    width: 40px;
+    background-color: map-get($ColorScheme, white1);
+}
+.dispflexcenter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.flex {
+    display: flex;
+    flex-direction: row;
+}
+.flexcol {
+    display: flex;
+    flex-direction: column;
+}
+.spaceAround {
+    justify-content: space-around;
+}
+.spaceBetween {
+    justify-content: space-between;
+}
+.center {
+    justify-content: center;
+}
+.vcenter {
+    align-items: center;
+}
+.tcenter {
+    text-align: center;
+}
