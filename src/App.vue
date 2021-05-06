@@ -36,7 +36,7 @@
           <h3 class="tcenter">...</h3>
           <hr class="line" />
           <v-list-item align="bottom">
-            <router-link id="view" class="button" to="/Extras/MyProfile">
+            <router-link id="view" class="RedBtn" to="/Extras/MyProfile">
               View All
             </router-link>
           </v-list-item>

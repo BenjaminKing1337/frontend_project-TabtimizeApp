@@ -54,7 +54,7 @@
             <h3>LAST ANALYZED</h3>
             <div class="flex">
               <h3 class="thin">25/01/2021</h3>
-              <button id="refresh" class="button">
+              <button id="refresh" class="RedBtn">
                 <v-icon>mdi-refresh</v-icon>
               </button>
             </div>
@@ -62,7 +62,7 @@
           <hr class="line" />
         </div>
         <div id="viewPage">
-          <button id="view" class="button">
+          <button id="view" class="RedBtn">
             <h3>VIEW</h3>
           </button>
         </div>
