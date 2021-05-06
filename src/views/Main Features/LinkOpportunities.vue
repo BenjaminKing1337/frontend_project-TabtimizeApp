@@ -13,6 +13,7 @@
           <p class="dispflexcenter" id="p2">Registered</p>
         </div>
       </div>
+
       <div class="balancedivs" id="box2">
         <div id="icon" class="circle anabalaColor">
           <v-icon class="icon">mdi-cursor-pointer</v-icon>
@@ -31,9 +32,11 @@
             <v-icon>mdi-arrow-right</v-icon>
           </div>
         </div>
+
         <div id="pageNo">
           <h2 class="flex center">PAGE 0 / 0</h2>
         </div>
+
         <div id="pageInfo">
           <div id="pageName" class="flex spaceBetween">
             <h3>PAGE NAME</h3>
@@ -53,19 +56,22 @@
           <div id="analyzed" class="flex spaceBetween">
             <h3>LAST ANALYZED</h3>
             <div class="flex">
-              <h3 class="thin">25/01/2021</h3>
-              <button id="refresh" class="RedBtn">
+              <button id="refresh" class="RedBtn dispflexcenter">
                 <v-icon>mdi-refresh</v-icon>
               </button>
+              <h3 class="thin">25/01/2021</h3>
+              
             </div>
           </div>
           <hr class="line" />
         </div>
-        <div id="viewPage">
-          <button id="view" class="RedBtn">
-            <h3>VIEW</h3>
+
+        <div id="viewPage" class="dispflexcenter">
+          <button id="view" class="RedBtn dispflexcenter">
+            <router-link class="nodecor" to="/Main Features/LinkOpCardview"><h3 class="nodecor light">VIEW</h3></router-link>
           </button>
         </div>
+
       </div>
     </div>
   </div>
@@ -136,7 +142,6 @@ export default {};
       }
     }
   }
-
   #pagelist {
     justify-self: center;
     margin: 20px 20px;
@@ -148,7 +153,7 @@ export default {};
       margin: 20px 200px !important;
       max-width: 1200px !important;
     }
-    
+
     #navigation {
       display: flex;
       float: right;
@@ -163,42 +168,59 @@ export default {};
     #pageNo {
     }
     #pageInfo {
+      hr.line {
+        margin-bottom: 30px;
+      }
+      #pageName,
+      #number,
+      #topic,
+      #analyzed {
+        margin: 5px auto;
+      }
       #refresh {
+        margin: 0 5px;
+        width: 100%;
+        .v-icon {
+          color: map-get($ColorScheme, white1);
+        }
       }
     }
     #viewPage {
       #view {
+        width: 100%;
+       
       }
     }
   }
 
   /*Multiple use classes*/
-
-  .circle {
-    height: 50px;
-    width: 50px;
-    border-radius: 100%;
-    @media (min-width: $lg) {
-      position: absolute;
-      height: 80px !important;
-      width: 80px !important;
-      margin-left: -40px !important;
-      .icon {
-        font-size: 2rem;
+  #backlinkEngine {
+    .circle {
+      height: 50px;
+      width: 50px;
+      border-radius: 100%;
+      @media (min-width: $lg) {
+        position: absolute;
+        height: 80px !important;
+        width: 80px !important;
+        margin-left: -40px !important;
+        .icon {
+          font-size: 2rem;
+        }
       }
     }
-  }
 
-  .line {
-    margin: 5px 0;
-    height: 1px;
-    border-width: 0;
-    background-color: map-get($ColorScheme, primary);
-    color: map-get($ColorScheme, primary);
-  }
-  .thin {
-    font-weight: 300;
-    text-align: left;
+    .line {
+      margin: 5px 0;
+      height: 1px;
+      border-width: 0;
+      background-color: map-get($ColorScheme, primary);
+      color: map-get($ColorScheme, primary);
+    }
+    .thin {
+      font-weight: 300;
+      text-align: left;
+    }
   }
 }
 </style>

@@ -42,6 +42,7 @@
           </v-list-item>
         </v-list-item-group>
       </v-navigation-drawer>
+      
       <v-navigation-drawer
         id="profileDrawer"
         v-model="drawer1"
@@ -86,6 +87,7 @@
           </v-list-item>
         </v-list-item-group>
       </v-navigation-drawer>
+      
       <router-view class="router" />
     </v-main>
     <NavMobile />
@@ -167,13 +169,15 @@ export default {
     position: absolute;
     z-index: 3;
     right: 3%;
-    width: 110px;
+    width: 80px;
     display: flex;
     justify-content: space-between;
-
+    @media (min-width: $md) {
+      width: 100px !important;
+    }
     .cornerIcon {
       margin-top: 20px;
-      @media (max-width: $sm) {
+      @media (max-width: $md) {
         font-size: 1rem;
         width: 35px;
         height: 35px;

@@ -40,6 +40,12 @@ $ColorScheme: (
 .dark {
     color: map-get($ColorScheme, primary) !important;
   }
+.light {
+    color: map-get($ColorScheme, white1) !important;
+}
+.nodecor {
+    text-decoration: none !important;
+}
 .fRight {
     float: right;
 }
