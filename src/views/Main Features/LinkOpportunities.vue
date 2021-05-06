@@ -143,10 +143,12 @@ export default {};
     padding: 30px;
     border-radius: 5px;
     background-color: map-get($ColorScheme, white1);
+    border-bottom: 2px solid map-get($ColorScheme, purple1);
     @media (min-width: $md) {
       margin: 20px 200px !important;
       max-width: 1200px !important;
     }
+    
     #navigation {
       display: flex;
       float: right;
@@ -191,8 +193,8 @@ export default {};
     margin: 5px 0;
     height: 1px;
     border-width: 0;
-    background-color: map-get($ColorScheme, hLink);
-    color: map-get($ColorScheme, hLink);
+    background-color: map-get($ColorScheme, primary);
+    color: map-get($ColorScheme, primary);
   }
   .thin {
     font-weight: 300;
