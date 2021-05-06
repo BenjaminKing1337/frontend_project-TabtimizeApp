@@ -1,7 +1,7 @@
 <template>
   <v-app>
     <NavDesktop />
-    
+     <button @click="darkThemeSwitch">Switch Theme</button>
     <v-main class="body">
       <div id="gradientHeader"></div>
       <router-view class="router" />
@@ -25,8 +25,9 @@ export default {
   },
 
   data: () => ({
-    //
+    
   }),
+  
 };
 </script>
 

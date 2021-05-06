@@ -57,7 +57,7 @@ export default {};
 
   .bot {
     width: 1200px;
-    height: 400px;
+    height: auto;
     background-color: white;
     position: fixed;
     margin-top: 22em;
@@ -70,6 +70,8 @@ export default {};
       
       .my, .comp {
         margin: 2em 14em;
+        color: map-get($ColorScheme, paragraph);
+        font-size: 14px;
       }
     }
 
