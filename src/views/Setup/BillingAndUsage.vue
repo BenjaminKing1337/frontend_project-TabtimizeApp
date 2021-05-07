@@ -126,7 +126,7 @@ export default {};
 @import "./src/styles/styles.scss";
 
 .main {
-  width: 1400px;
+  width: 80%;
   height: 100vh;
   display: flex;
   flex-wrap: wrap;
