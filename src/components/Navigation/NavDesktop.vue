@@ -3,7 +3,9 @@
     <div class="sideBar">
       <div class="top">
         <div class="logo">
-          <img src="@/assets/logo+text.svg" height="240px" alt="logo" />
+          <router-link to="/">
+            <img src="@/assets/logo+text.svg" height="240px" alt="logo" />
+          </router-link>
         </div>
         
       </div>
@@ -18,7 +20,7 @@
           <li>
             <a href="#">
               <v-icon>mdi-link-variant</v-icon>
-              <router-link to="/Main Features/LinkOpportunities"
+              <router-link to="/MainFeatures/LinkOpportunities"
                 >Link Opportunities</router-link
               >
             </a>
@@ -26,13 +28,13 @@
           <li>
             <a href="#">
               <v-icon>mdi-view-list</v-icon>
-              <router-link to="/Main Features/Lists">Compiled Lists</router-link>
+              <router-link to="/MainFeatures/Lists">Compiled Lists</router-link>
             </a>
           </li>
           <li>
             <a href="#">
               <v-icon>mdi-dice-3</v-icon>
-              <router-link to="/Main Features/RelevanceComparison"
+              <router-link to="/MainFeatures/RelevanceComparison"
                 >Relevance Comparison</router-link
               >
             </a>

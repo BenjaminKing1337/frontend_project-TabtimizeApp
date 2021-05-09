@@ -1,9 +1,9 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 import Frontpage from '../views/Frontpage.vue'
-import LinkOpportunities from '../views/Main Features/LinkOpportunities.vue'
-import Lists from '../views/Main Features/Lists.vue'
-import RelevanceComparison from '../views/Main Features/RelevanceComparison.vue'
+import LinkOpportunities from '../views/MainFeatures/LinkOpportunities.vue'
+import Lists from '../views/MainFeatures/Lists.vue'
+import RelevanceComparison from '../views/MainFeatures/RelevanceComparison.vue'
 import DomainsAndPages from '../views/Setup/DomainsAndPages.vue'
 import BillingAndUsage from '../views/Setup/BillingAndUsage.vue'
 import MyProfile from '../views/Extras/MyProfile.vue'
@@ -18,17 +18,17 @@ const routes = [
     component: Frontpage
   },
   {
-    path: '/Main Features/LinkOpportunities',
+    path: '/MainFeatures/LinkOpportunities',
     name: 'LinkOpportunities',
     component: LinkOpportunities
   },
   {
-    path: '/Main Features/Lists',
+    path: '/MainFeatures/Lists',
     name: 'Lists',
     component: Lists
   },
   {
-    path: '/Main Features/RelevanceComparison',
+    path: '/MainFeatures/RelevanceComparison',
     name: 'RelevanceComparison',
     component: RelevanceComparison
   },

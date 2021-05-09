@@ -52,12 +52,9 @@ import Roadmap from '../components/Containers/Roadmap'
     justify-content: center;
     padding-top: 80px;
     h1{
-      font-size: 86px;
+      font-size: 62px;
       @media (max-width: $md){
         font-size: 38px;
-      }
-      @media (min-width: $md) and (max-width: $lg){
-        font-size: 62px;
       }
     }
   }
