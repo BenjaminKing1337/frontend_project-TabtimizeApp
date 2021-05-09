@@ -7,9 +7,9 @@
 
     <div class="manual">
       <img src="@/assets/manual_left.png" alt="manual_left" />
-      <img src="@/assets/arrow.png" alt="arrow" />
+      <img class="arrow" src="@/assets/arrow.png" alt="arrow" />
       <img src="@/assets/manual_center.png" alt="manual_center" />
-      <img src="@/assets/arrow.png" alt="arrow" />
+      <img class="arrow" src="@/assets/arrow.png" alt="arrow" />
       <img src="@/assets/manual_right.png" alt="manual_right" />
     </div>
 
@@ -47,22 +47,62 @@ import Roadmap from '../components/Containers/Roadmap'
 <style lang="scss">
   @import "./src/styles/styles.scss";
   .welcome{
-    color: map-get($ColorScheme , white );
+    color: map-get($ColorScheme , white1 );
     display: flex;
     justify-content: center;
     padding-top: 80px;
     h1{
-      font-size: 92px;
+      font-size: 86px;
+      @media (max-width: $md){
+        font-size: 38px;
+      }
+      @media (min-width: $md) and (max-width: $lg){
+        font-size: 62px;
+      }
     }
   }
 
   .manual{
     height: 250px;
-    width: 900px;
+    width: auto;
+    max-width: 1000px;
     margin: 160px auto 76px auto;
     display: flex;
     align-items: center;
     justify-content: space-evenly;
+
+    @media (max-width: $sm){
+      flex-direction: column;
+      height: auto;
+      margin: 100px auto 38px auto;
+      img{
+        margin-bottom: 3em;
+      }
+
+      .arrow{
+        display: none;
+      } 
+    }
+    @media (min-width: $sm) and (max-width: $md){
+      margin: 100px auto 38px auto;
+      img{
+        height: 180px;
+      }
+
+      .arrow{
+        height: 8px;
+      }
+    }
+
+    @media (min-width: $md) and (max-width: $lg){
+      img{
+        height: 200px;
+      }
+
+      .arrow{
+        height: 12px;
+      }
+    }
   }
 
   .helpGuides{
@@ -77,24 +117,47 @@ import Roadmap from '../components/Containers/Roadmap'
       padding: 14px 0;
     }
     .buttons{
+      width: 390px;
+      margin-bottom: 34px;
+      display: flex;
+      justify-content: space-between;
       .help_button, .learn_button{
         font-size: 18px;
         color: map-get($ColorScheme , hLink );
         font-weight: 500;
-        background-color: map-get($ColorScheme , white );
+        background-color: map-get($ColorScheme , white1 );
         padding: 14px 20px;
         border-radius: 27px;
         box-shadow: 2px 5px 14px hsla(0, 0%, 0%, 0.16);
       }
-      .learn_button{
-        margin: 0 0 34px 18px;
+    }
+
+    @media (max-width: $md){
+      padding: 0 25px;
+
+      .buttons{
+        flex-wrap: wrap;
+        width: auto;
+        max-width: 390px;
+        .help_button, .learn_button{
+          margin-bottom: 10px;
+          margin-right: 10px;
+        }
       }
+    }
+    @media (min-width: $md) and (max-width: $lg){
+      padding: 0 40px;
     }
   }
 
   .news{
     display: flex;
     margin-bottom: 100px;
+    justify-content: center;
+
+    @media (max-width: $md){
+      flex-wrap: wrap;
+    }
   }
 
 </style>

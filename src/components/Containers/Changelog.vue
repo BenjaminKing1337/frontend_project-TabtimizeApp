@@ -33,10 +33,11 @@
 .changelog{
     height: auto;
     width: 634px;
-    background-color: map-get($ColorScheme , white );
+    background-color: map-get($ColorScheme , white1 );
     margin-left: 90px;
     border-radius: 9px;
     box-shadow: 2px 2px 26px hsla(0, 0%, 0%, 0.16);
+    position: relative;
 
     h1{
         font-size: 26px;
@@ -88,13 +89,16 @@
             height: 28px;
             width: 50px;
             border-radius: 14px;
-            margin: 0 30px;
+            margin: 0 30px 44px 30px;
             background-color: #C3F2FB;
             color: #03ACCA;
         }
     }
 
     .button{
+        position: absolute;
+        bottom: 0;
+        right: 0;
         display: flex;
         justify-content: flex-end;
         .viewOlder{
@@ -102,10 +106,41 @@
             height: 34px;
             width: 104px;
             font-size: 18px;
-            color: map-get($ColorScheme , white );
+            color: map-get($ColorScheme , white1 );
             background-color: map-get($ColorScheme , button );
             border-radius: 25px;
         }
+    }
+
+    @media (max-width: $md){
+        margin: 0 14px 1em 14px;
+        width: 310px;
+
+        h1{
+            padding: 26px 24px 8px 24px;
+        }
+
+        .log{
+            .iconDate{
+                margin-top: 29px;
+            }
+
+            .category{
+                margin: 0 30px 60px 30px;
+            }
+        }
+
+        .button{
+            width: 100%;
+            .viewOlder{
+                width: 100%;
+                margin: 10px 28px;
+            }
+        }
+    }
+    
+    @media (min-width: $md) and (max-width: $lg){
+        margin: 0 10px 0 25px;
     }
 }
 </style>

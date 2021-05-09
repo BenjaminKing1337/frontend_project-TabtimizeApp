@@ -3,7 +3,7 @@
     <div class="sideBar">
       <div class="top">
         <div class="logo">
-          <img src="@/assets/logo+text.svg" height="250px" alt="logo" />
+          <img src="@/assets/logo+text.svg" height="240px" alt="logo" />
         </div>
         
       </div>
@@ -105,14 +105,15 @@ export default {
   @media (max-width: $md) {
     display: none !important;
   }
+  
   .top {
     display: flex;
     justify-content: center;
     padding-top: 4em;
 
     .logo img {
-      width: 90%;
-      margin: -60px 0;
+      width: 80%;
+      margin: -60px 0 -60px 25px;
     }
 
     .tabtimize span {
@@ -125,6 +126,7 @@ export default {
     display: flex;
     justify-content: center;
     margin-top: 1.5em;
+    word-break: break-all;
 
     span.email {
       color: map-get($ColorScheme, text);
@@ -159,6 +161,39 @@ export default {
 
     hr {
       margin-top: 2em;
+    }
+  }
+
+  @media (max-width: $lg) {
+    width: 200px;
+
+    .top{
+      padding-top: 2em;
+
+      .logo img {
+        margin: -60px 0 -60px 15px;
+      }
+    }
+    
+
+    .mail{
+      span.email{
+        font-size: 12px;
+      }
+    }
+    .list{
+      ul li{
+        margin-left: 0;
+      }
+
+      a{
+        font-size: 12px;
+      }
+
+      h3{
+        margin-left: 1em;
+        font-size: 14px;
+      }
     }
   }
 }

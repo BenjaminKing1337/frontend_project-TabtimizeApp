@@ -134,6 +134,9 @@ export default {
   @media (max-width: $md) {
     margin-left: 0px !important;
   }
+  @media (max-width: $lg) {
+    margin-left: 200px;
+  }
   #gradientHeader {
     position: absolute;
     width: 120%;
