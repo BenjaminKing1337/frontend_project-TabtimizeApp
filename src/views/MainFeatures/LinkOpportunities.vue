@@ -121,7 +121,7 @@ export default {};
         );
       }
       h3 {
-        font-size: 16px;
+        font-size: $medium;
         @media (min-width: $md) {
           padding: 20px;
         }
@@ -137,7 +137,7 @@ export default {};
       }
       #p2 {
         margin-left: 3px;
-        font-size: 12.8px;
+        font-size: $small;
       }
     }
   }
@@ -161,7 +161,7 @@ export default {};
 
       .v-icon {
         color: map-get($cs, purple1);
-        font-size: 3rem;
+        font-size: $biggest;
       }
     }
     #pageNo {
@@ -203,9 +203,7 @@ export default {};
         height: 80px !important;
         width: 80px !important;
         margin-left: -40px !important;
-        .icon {
-          font-size: 2rem;
-        }
+        
       }
     }
 

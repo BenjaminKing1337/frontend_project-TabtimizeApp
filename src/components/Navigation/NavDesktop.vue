@@ -119,7 +119,7 @@ export default {
     }
 
     .tabtimize span {
-      font-size: 42px;
+      font-size: $bigger;
       color: map-get($cs, headline);
     }
   }
@@ -132,7 +132,7 @@ export default {
 
     span.email {
       color: map-get($cs, text);
-      font-size: 16px;
+      font-size: $medium;
       font-weight: bold;
       text-transform: uppercase;
     }
@@ -180,7 +180,7 @@ export default {
 
     .mail{
       span.email{
-        font-size: 12px;
+        font-size: $small;
       }
     }
     .list{
@@ -189,12 +189,12 @@ export default {
       }
 
       a{
-        font-size: 12px;
+        font-size: $small;
       }
 
       h3{
         margin-left: 1em;
-        font-size: 14px;
+        font-size: $small;
       }
     }
   }

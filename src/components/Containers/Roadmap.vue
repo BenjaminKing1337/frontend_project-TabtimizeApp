@@ -40,7 +40,7 @@
     position: relative;
 
     h1{
-        font-size: 26px;
+        font-size: $big;
         font-weight: 300;
         padding: 30px 48px 8px 48px;
     }
@@ -65,13 +65,13 @@
             h2{
                 font-weight: 300;
                 padding: 0 15px;
-                font-size: 18px;
+                font-size: $medium2;
             }
         }
 
         h1{
             padding: 0 30px;
-            font-size: 22px;
+            font-size: $medium2;
             font-weight: 700;
             margin-top: -10px;
         }
@@ -105,7 +105,7 @@
             margin: 0 28px 10px 0;
             height: 34px;
             width: 104px;
-            font-size: 18px;
+            font-size: $medium2;
             color: map-get($cs , white1 );
             background-color: map-get($cs , button );
             border-radius: 25px;

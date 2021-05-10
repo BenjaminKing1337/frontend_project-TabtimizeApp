@@ -52,9 +52,9 @@ import Roadmap from '../components/Containers/Roadmap'
     justify-content: center;
     padding-top: 80px;
     h1{
-      font-size: 62px;
+      font-size: $biggest;
       @media (max-width: $md){
-        font-size: 38px;
+        font-size: $bigger;
       }
     }
   }
@@ -106,11 +106,11 @@ import Roadmap from '../components/Containers/Roadmap'
     padding: 0 110px;
 
     h1{
-      font-size: 36px;
+      font-size: $big2;
     }
 
     p{
-      font-size: 16px;
+      font-size: $medium;
       padding: 14px 0;
     }
     .buttons{
@@ -119,7 +119,7 @@ import Roadmap from '../components/Containers/Roadmap'
       display: flex;
       justify-content: space-between;
       .help_button, .learn_button{
-        font-size: 18px;
+        font-size: $medium;
         color: map-get($cs , hLink );
         font-weight: 500;
         background-color: map-get($cs , white1 );

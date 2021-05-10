@@ -74,7 +74,7 @@ export default {
       
       .my, .comp {
         color: map-get($cs, paragraph);
-        font-size: 14px;
+        font-size: $medium;
         padding: 30px 0;
         display: flex;
         flex-direction: column;
@@ -108,12 +108,12 @@ export default {
 
     h2 {
       color: map-get($cs, white1);
-      font-size: 32px;
+      font-size: $big2;
     }
 
     span {
       color: map-get($cs, white1);
-      font-size: 16px;
+      font-size: $medium;
     }
   }
 
@@ -135,7 +135,7 @@ export default {
           
           .rc {
               color: map-get($cs, primary);
-              font-size: 24px;
+              font-size: $big;
               text-align: center;
           }
 
@@ -165,7 +165,7 @@ export default {
 
             input[type=text]:focus {
                 outline: none;
-                font-size: 16px;
+                font-size: $medium;
                 color: map-get($cs, primary);
             }
         }
