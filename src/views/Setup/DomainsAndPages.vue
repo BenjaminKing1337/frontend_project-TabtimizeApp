@@ -170,7 +170,7 @@ export default {};
       }
 
       td {
-        border: 1px solid #dddddd;
+        border-bottom: 1px solid lightgray;
         padding: 8px;
       }
 
@@ -204,6 +204,7 @@ export default {};
         border: 1px solid black;
         padding: 0.5em;
         appearance: menulist;
+        border-radius: 5px;
       }
     }
 
@@ -213,6 +214,7 @@ export default {};
       input[type="search"] {
         border: 1px solid black;
         padding: 0.5em;
+        border-radius: 10px;
       }
     }
   }
