@@ -144,7 +144,7 @@ export default {};
   .bot {
       .invoices {
           min-width: 300px;
-          max-width: 1200px;
+          max-width: 1150px;
           margin: 2em auto 2em auto;
           height: auto;
           background-color: white;
@@ -266,7 +266,7 @@ export default {};
         flex-wrap: wrap;
       
         .info-box {
-            min-width: 320px;
+            min-width: 360px;
             max-width: 380px;
             height: 140px;
             margin: 2em 1% 0 1% ;
