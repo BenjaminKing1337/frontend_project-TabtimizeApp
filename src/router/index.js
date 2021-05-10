@@ -2,6 +2,7 @@ import Vue from 'vue'
 import VueRouter from 'vue-router'
 import Frontpage from '../views/Frontpage.vue'
 import LinkOpportunities from '../views/MainFeatures/LinkOpportunities.vue'
+import Cardview from '../views/MainFeatures/Cardview.vue'
 import Lists from '../views/MainFeatures/Lists.vue'
 import RelevanceComparison from '../views/MainFeatures/RelevanceComparison.vue'
 import DomainsAndPages from '../views/Setup/DomainsAndPages.vue'
@@ -21,6 +22,11 @@ const routes = [
     path: '/MainFeatures/LinkOpportunities',
     name: 'LinkOpportunities',
     component: LinkOpportunities
+  },
+  {
+    path: '/MainFeatures/Cardview',
+    name: 'Cardview',
+    component: Cardview
   },
   {
     path: '/MainFeatures/Lists',

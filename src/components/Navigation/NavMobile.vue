@@ -101,11 +101,11 @@ export default {
   justify-content: center;
   a{
     text-decoration: none;
-    color: map-get($ColorScheme, primary);
+    color: map-get($cs, primary);
   }
 }
 .v-icon{
-  color: map-get($ColorScheme , primary );
+  color: map-get($cs , primary );
 }
 
 </style>

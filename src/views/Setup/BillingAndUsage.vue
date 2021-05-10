@@ -213,7 +213,7 @@ export default {};
               margin-top: 2em;
 
               span {
-                  color: map-get($ColorScheme, paragraph);
+                  color: map-get($cs, paragraph);
                   font-size: 14px;
               }
           }
@@ -228,7 +228,7 @@ export default {};
               justify-content: flex-end;
 
               .payment-button {
-                  background-color: map-get($ColorScheme, button);
+                  background-color: map-get($cs, button);
                   color: white;
                   height: 38px;
                   width: 160px;
@@ -241,7 +241,7 @@ export default {};
               display: flex;
               justify-content: flex-end;
               .plan-button {
-                  background-color: map-get($ColorScheme, button);
+                  background-color: map-get($cs, button);
                   color: white;
                   height: 38px;
                   width: 106px;
@@ -282,7 +282,7 @@ export default {};
                 margin-bottom: 1em;
             }
             button.get-more {
-                background-color: map-get($ColorScheme, button);
+                background-color: map-get($cs, button);
                 color: white;
                 height: 38px;
                 width: 98px;
@@ -317,7 +317,7 @@ export default {};
                 }
 
                 .icon .balance {
-                    background-color: map-get($ColorScheme, button);
+                    background-color: map-get($cs, button);
                     color: white;
                     padding: .5em;
                     border-radius: 100%;

@@ -128,7 +128,7 @@ export default {
 @import "./src/styles/styles.scss";
 
 .body {
-  background: map-get($ColorScheme, bg);
+  background: map-get($cs, bg);
   margin-left: 350px;
   overflow: hidden;
   @media (max-width: $md) {
@@ -144,8 +144,8 @@ export default {
     z-index: 0;
     height: 250px;
     background-image: linear-gradient(
-      map-get($ColorScheme, purple1),
-      map-get($ColorScheme, button)
+      map-get($cs, purple1),
+      map-get($cs, button)
     );
     border-radius: 0% 0% 100% 100% / 0% 0% 100% 100%;
 
@@ -187,10 +187,10 @@ export default {
       }
 
       #notifications {
-        color: map-get($ColorScheme, button);
+        color: map-get($cs, button);
       }
       #profile {
-        color: map-get($ColorScheme, accept);
+        color: map-get($cs, accept);
       }
     }
   }
@@ -210,7 +210,7 @@ export default {
   justify-content: center;
   a {
     text-decoration: none;
-    color: map-get($ColorScheme, primary);
+    color: map-get($cs, primary);
   }
 }
 .v-application p {

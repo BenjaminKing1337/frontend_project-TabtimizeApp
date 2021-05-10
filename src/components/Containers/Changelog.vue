@@ -33,7 +33,7 @@
 .changelog{
     height: auto;
     width: 634px;
-    background-color: map-get($ColorScheme , white1 );
+    background-color: map-get($cs , white1 );
     margin-left: 90px;
     border-radius: 9px;
     box-shadow: 2px 2px 26px hsla(0, 0%, 0%, 0.16);
@@ -79,7 +79,7 @@
         p{
             padding: 8px 30px 0 30px;
             margin-bottom: 10px;
-            color: map-get($ColorScheme , paragraph );
+            color: map-get($cs , paragraph );
         }
 
         .category{
@@ -106,8 +106,8 @@
             height: 34px;
             width: 104px;
             font-size: 18px;
-            color: map-get($ColorScheme , white1 );
-            background-color: map-get($ColorScheme , button );
+            color: map-get($cs , white1 );
+            background-color: map-get($cs , button );
             border-radius: 25px;
         }
     }

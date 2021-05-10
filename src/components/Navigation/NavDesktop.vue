@@ -101,7 +101,7 @@ export default {
   z-index: 1;
   width: 350px;
   height: 100vh;
-  background-color: map-get($ColorScheme, white);
+  background-color: map-get($cs, white);
   box-shadow: 6px 0 30px 10px rgba($color: #000000, $alpha: 0.1);
   position: fixed;
   @media (max-width: $md) {
@@ -120,7 +120,7 @@ export default {
 
     .tabtimize span {
       font-size: 42px;
-      color: map-get($ColorScheme, headline);
+      color: map-get($cs, headline);
     }
   }
 
@@ -131,7 +131,7 @@ export default {
     word-break: break-all;
 
     span.email {
-      color: map-get($ColorScheme, text);
+      color: map-get($cs, text);
       font-size: 16px;
       font-weight: bold;
       text-transform: uppercase;
@@ -148,10 +148,10 @@ export default {
       a {
         margin-left: 0.5em;
         text-decoration: none;
-        color: map-get($ColorScheme, text);
+        color: map-get($cs, text);
 
         .v-icon {
-          color: map-get($ColorScheme, text);
+          color: map-get($cs, text);
         }
       }
     }

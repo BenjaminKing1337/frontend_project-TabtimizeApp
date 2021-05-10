@@ -73,7 +73,7 @@ export default {
       justify-content: space-evenly;
       
       .my, .comp {
-        color: map-get($ColorScheme, paragraph);
+        color: map-get($cs, paragraph);
         font-size: 14px;
         padding: 30px 0;
         display: flex;
@@ -107,12 +107,12 @@ export default {
     text-align: center;
 
     h2 {
-      color: map-get($ColorScheme, white1);
+      color: map-get($cs, white1);
       font-size: 32px;
     }
 
     span {
-      color: map-get($ColorScheme, white1);
+      color: map-get($cs, white1);
       font-size: 16px;
     }
   }
@@ -134,7 +134,7 @@ export default {
           width: 30%;
           
           .rc {
-              color: map-get($ColorScheme, primary);
+              color: map-get($cs, primary);
               font-size: 24px;
               text-align: center;
           }
@@ -147,7 +147,7 @@ export default {
            position: relative;
             label {
                 .ico {
-                    color: map-get($ColorScheme, primary);
+                    color: map-get($cs, primary);
                     position: absolute;
                     left: 8px;
                     top: 50%;
@@ -156,7 +156,7 @@ export default {
             }
 
             input[type=text] {
-                border: 2px solid map-get($ColorScheme, primary);
+                border: 2px solid map-get($cs, primary);
                 border-radius: 30px;
                 padding: .5em 2em;
                 color: white;
@@ -166,13 +166,13 @@ export default {
             input[type=text]:focus {
                 outline: none;
                 font-size: 16px;
-                color: map-get($ColorScheme, primary);
+                color: map-get($cs, primary);
             }
         }
     }
     button.compare {
       color: white;
-      background-color: map-get($ColorScheme, button);
+      background-color: map-get($cs, button);
       height: 35px;
       width: 100px;
       border-radius: 20px;

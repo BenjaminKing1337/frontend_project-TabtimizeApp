@@ -67,9 +67,8 @@
         </div>
 
         <div id="viewPage" class="dispflexcenter">
-          <button id="view" class="RedBtn dispflexcenter">
-            <router-link class="nodecor" to="/Main Features/LinkOpCardview"><h3 class="nodecor light">VIEW</h3></router-link>
-          </button>
+          <router-link class="nodecor" to="/MainFeatures/Cardview"><button id="view" class="RedBtn dispflexcenter"><h3 class="nodecor light">VIEW</h3></button></router-link>
+          
         </div>
 
       </div>
@@ -89,36 +88,36 @@ export default {};
   #title {
     display: flex;
     justify-content: center;
-    color: map-get($ColorScheme, white1);
+    color: map-get($cs, white1);
     margin-top: 50px;
     margin-bottom: 40px;
   }
   #balance {
     #box1 {
-      border-bottom: 2px solid map-get($ColorScheme, button);
+      border-bottom: 2px solid map-get($cs, button);
     }
     #box2 {
-      border-bottom: 2px solid map-get($ColorScheme, accept);
+      border-bottom: 2px solid map-get($cs, accept);
     }
     .balancedivs {
       box-shadow: 2px 2px 26px rgba(134, 134, 134, 0.16);
       width: 300px;
       min-height: 140px;
-      background-color: map-get($ColorScheme, white1);
+      background-color: map-get($cs, white1);
       border-radius: 5px;
       margin: 0 20px;
 
       padding: 10px;
       .regpageColor {
         background: linear-gradient(
-          map-get($ColorScheme, button),
-          map-get($ColorScheme, white1) 99%
+          map-get($cs, button),
+          map-get($cs, white1) 99%
         );
       }
       .anabalaColor {
         background: linear-gradient(
-          map-get($ColorScheme, accept),
-          map-get($ColorScheme, white1) 99%
+          map-get($cs, accept),
+          map-get($cs, white1) 99%
         );
       }
       h3 {
@@ -147,8 +146,8 @@ export default {};
     margin: 20px 20px;
     padding: 30px;
     border-radius: 5px;
-    background-color: map-get($ColorScheme, white1);
-    border-bottom: 2px solid map-get($ColorScheme, purple1);
+    background-color: map-get($cs, white1);
+    border-bottom: 2px solid map-get($cs, purple1);
     @media (min-width: $md) {
       margin: 20px 200px !important;
       max-width: 1200px !important;
@@ -161,7 +160,7 @@ export default {};
       margin-right: -40px;
 
       .v-icon {
-        color: map-get($ColorScheme, purple1);
+        color: map-get($cs, purple1);
         font-size: 3rem;
       }
     }
@@ -181,7 +180,7 @@ export default {};
         margin: 0 5px;
         width: 100%;
         .v-icon {
-          color: map-get($ColorScheme, white1);
+          color: map-get($cs, white1);
         }
       }
     }
@@ -214,8 +213,8 @@ export default {};
       margin: 5px 0;
       height: 1px;
       border-width: 0;
-      background-color: map-get($ColorScheme, primary);
-      color: map-get($ColorScheme, primary);
+      background-color: map-get($cs, primary);
+      color: map-get($cs, primary);
     }
     .thin {
       font-weight: 300;

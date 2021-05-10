@@ -5,7 +5,7 @@ $md: 900px;
 $sm: 600px;
 
 // Color Scheme
-$ColorScheme: (
+$cs: (
     primary: #112243,
     white1: #fffffd,
     bg: #f7f9fd,
@@ -26,22 +26,22 @@ $ColorScheme: (
     height: 30px;
     min-width: 30px;
     border-radius: 15px;
-    background-color: map-get($ColorScheme, button);
-    color: map-get($ColorScheme, white1) !important;
+    background-color: map-get($cs, button);
+    color: map-get($cs, white1) !important;
 
 }
 .shadow {
     box-shadow: 2px 2px 26px rgba(134, 134, 134, 0.16);
 }
 .bgcolor {
-    background-color: map-get($ColorScheme, white1);
-    color: map-get($ColorScheme, white1);
+    background-color: map-get($cs, white1);
+    color: map-get($cs, white1);
 }
 .dark {
-    color: map-get($ColorScheme, primary) !important;
+    color: map-get($cs, primary) !important;
   }
 .light {
-    color: map-get($ColorScheme, white1) !important;
+    color: map-get($cs, white1) !important;
 }
 .nodecor {
     text-decoration: none !important;
@@ -53,7 +53,7 @@ $ColorScheme: (
     border-radius: 100% !important;
     height: 40px;
     width: 40px;
-    background-color: map-get($ColorScheme, white1);
+    background-color: map-get($cs, white1);
 }
 .dispflexcenter {
     display: flex;

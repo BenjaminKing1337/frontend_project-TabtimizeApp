@@ -47,7 +47,7 @@ import Roadmap from '../components/Containers/Roadmap'
 <style lang="scss">
   @import "./src/styles/styles.scss";
   .welcome{
-    color: map-get($ColorScheme , white1 );
+    color: map-get($cs , white1 );
     display: flex;
     justify-content: center;
     padding-top: 80px;
@@ -120,9 +120,9 @@ import Roadmap from '../components/Containers/Roadmap'
       justify-content: space-between;
       .help_button, .learn_button{
         font-size: 18px;
-        color: map-get($ColorScheme , hLink );
+        color: map-get($cs , hLink );
         font-weight: 500;
-        background-color: map-get($ColorScheme , white1 );
+        background-color: map-get($cs , white1 );
         padding: 14px 20px;
         border-radius: 27px;
         box-shadow: 2px 5px 14px hsla(0, 0%, 0%, 0.16);

@@ -71,7 +71,7 @@ export default {};
       margin: 0em 6em;
 
       span {
-        color: map-get($ColorScheme, paragraph);
+        color: map-get($cs, paragraph);
         font-size: 14px;
       }
     }
