@@ -161,8 +161,17 @@ export default {};
   .table {
       margin-top: 3em;
 
-      th {
+      table {
+        border-collapse: collapse;
+      }
+
+      th, td {
           text-align:left;
+      }
+
+      td {
+        border: 1px solid #dddddd;
+        padding: 8px;
       }
 
       .delete {
