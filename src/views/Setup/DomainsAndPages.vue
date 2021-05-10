@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="wrap">
     <div class="smallbox">
       <h3>Google Accounts</h3>
       <hr />
@@ -47,6 +47,60 @@
           <input type="search" name="search" id="src" />
         </div>
       </div>
+      <div class="table">
+        <div class="panel-body">
+          <table
+            id="data-table"
+            width="100%"
+          >
+            <thead>
+              <tr>
+                <th>CHOOSE</th>
+                <th>PAGES</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>
+                    <input type="checkbox" name="" id="">
+                </td>
+                <td>/</td>
+                <td>
+                    <v-icon class="delete">mdi-delete</v-icon>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                     <input type="checkbox" name="" id="">
+                </td>
+                <td>/sitemap.html</td>
+                <td>
+                    <v-icon class="delete">mdi-delete</v-icon>
+                </td>
+              </tr>
+              <tr>
+                 <td>
+                     <input type="checkbox" name="" id="">
+                </td>
+                <td>/about-us</td>
+                <td>
+                    <v-icon class="delete">mdi-delete</v-icon>
+                </td>
+              </tr>
+              <tr>
+                 <td>
+                     <input type="checkbox" name="" id="">
+                </td>
+                <td>/contact</td>
+                <td>
+                    <v-icon class="delete">mdi-delete</v-icon>
+                </td>
+              </tr>
+
+            </tbody>
+          </table>
+        </div>
+      </div>
     </div>
   </div>
 </template>
@@ -57,6 +111,10 @@ export default {};
 
 <style lang="scss" scoped>
 @import "./src/styles/styles.scss";
+
+.wrap {
+    height: 100vh;
+}
 
 .smallbox {
   margin-top: 4em !important;
@@ -100,6 +158,18 @@ export default {};
   margin: 0 auto;
   box-shadow: 0 0 10px rgba($color: #000000, $alpha: 0.2);
 
+  .table {
+      margin-top: 3em;
+
+      th {
+          text-align:left;
+      }
+
+      .delete {
+          color: map-get($cs, button);
+      }
+  }
+
   .top {
     display: flex;
 
@@ -114,26 +184,26 @@ export default {};
   }
 
   .search {
-      display: flex;
-      margin-top: 2em;
+    display: flex;
+    margin-top: 2em;
 
     .left {
       flex-grow: 1;
       justify-content: flex-start;
 
       select {
-          border: 1px solid black;
-          padding: .5em;
-          appearance: menulist;
+        border: 1px solid black;
+        padding: 0.5em;
+        appearance: menulist;
       }
     }
 
     .right {
       justify-content: flex-end;
 
-      input[type=search] {
-          border: 1px solid black;
-          padding: .5em;
+      input[type="search"] {
+        border: 1px solid black;
+        padding: 0.5em;
       }
     }
   }
