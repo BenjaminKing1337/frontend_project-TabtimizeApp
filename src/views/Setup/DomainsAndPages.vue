@@ -1,6 +1,6 @@
 <template>
     <div>
-        Domains and Pages
+        
     </div>
 </template>
 
