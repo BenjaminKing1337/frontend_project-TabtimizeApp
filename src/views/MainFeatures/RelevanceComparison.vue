@@ -33,7 +33,7 @@
         <div class="lin">
           <div class="my">
             <span class="font-weight-medium">MY LINK</span>
-            <span>www.pornhub.com</span>
+            <span>www.guthib.com</span>
           </div>
           <div class="comp">
             <span class="font-weight-medium">COMPARED LINK</span>
