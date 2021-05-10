@@ -181,7 +181,7 @@ export default {
     .cornerIcon {
       margin-top: 20px;
       @media (max-width: $md) {
-        font-size: 1rem;
+        font-size: $medium;
         width: 35px;
         height: 35px;
       }

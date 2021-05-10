@@ -86,7 +86,7 @@ export default {
     height: 70px;
     background-color: white;
     .v-icon{
-      font-size: 3.5em !important;
+      font-size: $biggest !important;
     }
   }
   .menubtncenter {

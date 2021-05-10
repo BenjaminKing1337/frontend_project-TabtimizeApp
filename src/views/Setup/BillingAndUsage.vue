@@ -214,7 +214,7 @@ export default {};
 
               span {
                   color: map-get($cs, paragraph);
-                  font-size: 14px;
+                  font-size: $medium;
               }
           }
 
@@ -233,7 +233,7 @@ export default {};
                   height: 38px;
                   width: 160px;
                   border-radius: 30px;
-                  font-size: 14px;
+                  font-size: $small;
               }
           }
 
@@ -246,7 +246,7 @@ export default {};
                   height: 38px;
                   width: 106px;
                   border-radius: 30px;
-                  font-size: 14px;
+                  font-size: $small;
               }
           }
       }
@@ -287,7 +287,7 @@ export default {};
                 height: 38px;
                 width: 98px;
                 border-radius: 30px;
-                font-size: 14px;
+                font-size: $small;
                 display: flex;
                 justify-content: center;
                 align-items: center;
@@ -298,7 +298,7 @@ export default {};
             }
 
             .amount {
-                font-size: 12px;
+                font-size: $medium;
                 text-align: center;
                 padding: 0 .3em;
                 font-weight: bold;

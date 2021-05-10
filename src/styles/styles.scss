@@ -4,6 +4,17 @@ $lg: 1200px;
 $md: 900px;
 $sm: 600px;
 
+// Typescale
+$smallest: 0.512rem; // 8.19px
+$smaller: 0.64rem; // 10.24px
+$small: 0.8rem; // 12.80px
+$medium: 1rem;  // 16px
+$medium2: 1.25rem; // 20px
+$big: 1.563rem; // 25px
+$big2: 1.953rem; //31.25px
+$bigger: 2.441rem; // 39.06px
+$biggest: 3.052rem; //48.83px
+
 // Color Scheme
 $cs: (
     primary: #112243,
@@ -28,7 +39,6 @@ $cs: (
     border-radius: 15px;
     background-color: map-get($cs, button);
     color: map-get($cs, white1) !important;
-
 }
 .shadow {
     box-shadow: 2px 2px 26px rgba(134, 134, 134, 0.16);
@@ -39,7 +49,7 @@ $cs: (
 }
 .dark {
     color: map-get($cs, primary) !important;
-  }
+}
 .light {
     color: map-get($cs, white1) !important;
 }
