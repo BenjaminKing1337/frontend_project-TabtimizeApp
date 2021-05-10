@@ -123,7 +123,7 @@ export default {};
       h3 {
         font-size: 16px;
         @media (min-width: $md) {
-          padding: 20px !important;
+          padding: 20px;
         }
       }
       #icon {
@@ -222,4 +222,13 @@ export default {};
     }
   }
 }
+
+
+// @media only screen and (min-width: 910px) {
+//   .balancedivs{
+//     h3{
+//       padding: 0 !important;
+//     }
+//   }
+// }
 </style>
