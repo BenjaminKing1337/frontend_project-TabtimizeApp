@@ -13,18 +13,39 @@
         </h4>
       </div>
       <hr />
-      <div class="list-info">
-        <div class="name">
-          <span>NAME</span>
+      <div class="lists">
+        <div class="list_info">
+          <div class="name">
+            <span class="font-weight-medium">NAME</span>
+          </div>
+          <div class="created">
+            <span class="font-weight-medium">DAY CREATED</span>
+          </div>
+          <div class="links">
+            <span class="font-weight-medium">LINK OPPORTUNITIES</span>
+          </div>
+          <div class="options">
+            <span class="font-weight-medium">OPTIONS</span>
+          </div>
         </div>
-        <div class="created">
-          <span>DAY CREATED</span>
-        </div>
-        <div class="links">
-          <span>LINK OPPORTUNITIES</span>
-        </div>
-        <div class="options">
-          <span>OPTIONS</span>
+
+        <div class="created_lists">
+          <div class="list">
+            <div class="name">
+              <span>My list</span>
+            </div>
+            <div class="created">
+              <span>10.5.2021</span>
+            </div>
+            <div class="links">
+              <span>2485</span>
+            </div>
+            <div class="options">
+              <span>Need to make options</span>
+            </div>
+          </div>
+          
+          
         </div>
       </div>
     </div>
@@ -39,7 +60,7 @@ export default {};
 @import "./src/styles/styles.scss";
 
 .list-box {
-  width: 80%;
+  width: 90%;
   margin: 0 auto;
   height: auto;
   background-color: white;
@@ -60,20 +81,54 @@ export default {};
     margin: 2em 0em 2em;
   }
 
-  .list-info {
+  .lists {
     display: flex;
-    justify-content: center;
-
-    .name,
-    .created,
-    .links,
-    .options {
-      margin: 0em 6em;
+    flex-direction: column;
+    .list_info{
+      display: flex;
+      .name, .created, .links, .options{
+        width: 25%;
+      }
+    }
+    .created_lists{
+      background-color: rgb(214, 209, 209);
+      .list{
+        display: flex;
+        .name, .created, .links, .options{
+          width: 25%;
+        }
+      }
+      
+    }
 
       span {
         color: map-get($cs, paragraph);
         font-size: 14px;
       }
+    @media (max-width: $md){
+      flex-direction: row;
+      justify-content: space-between;
+      .list_info{
+        flex-direction: column;
+        .name, .created, .links, .options{
+          width: 100%;
+        }
+      }
+      .created_lists{
+        background-color: transparent;
+        .list{
+          flex-direction: column;
+          .name, .created, .links, .options{
+            width: 100%;
+            text-align: end;
+          }
+        }
+        
+      }
+      span {
+        font-size: 12px;
+      }
+
     }
   }
 }
