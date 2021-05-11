@@ -88,7 +88,7 @@ export default {};
 #cardview {
   display: flex;
   flex-direction: column;
-  margin-top: 100px;
+  margin-top: 100px !important;
   width: 90%;
   background-color: map-get($cs, white1);
   border-radius: 5px;

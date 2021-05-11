@@ -1,13 +1,13 @@
 <template>
   <div>
-    <div class="sideBar box" >
+    <div class="sideBar box">
       <div class="top">
         <div class="logo">
-          <router-link to="/">
-            <img src="@/assets/logo+text.svg" height="240px" alt="logo" />
+          <router-link class="flex center vbaseline" to="/">
+            <img src="@/assets/Tablogo.svg" height="80px" alt="logo" />
+            <img src="@/assets/Tabtext.svg" height="60px" alt="logo" />
           </router-link>
         </div>
-        
       </div>
 
       <div class="mail">
@@ -76,21 +76,17 @@
             </a>
             <label class="switch">
               <input type="checkbox" />
-              <span class="slider round" ></span>
+              <span class="slider round"></span>
             </label>
-             
           </li>
         </ul>
-         
       </div>
     </div>
   </div>
 </template>
 
 <script>
-export default {
-    
-}
+export default {};
 </script>
 
 
@@ -106,19 +102,21 @@ export default {
   box-shadow: 6px 0 30px 10px rgba($color: #000000, $alpha: 0.1);
   position: fixed;
   top: 0;
-  
+
   @media (max-width: $md) {
     display: none !important;
   }
-  
+
   .top {
-    display: flex;
-    justify-content: center;
-    padding-top: 4em;
+    width: 100%;
+    margin: 60px 0;
 
     .logo img {
-      width: 80%;
-      margin: -60px 0 -60px 25px;
+      width: 50%;
+    }
+    div > a > img:nth-child(2) {
+      margin-left: -15%;
+      margin-right: 5%;
     }
 
     .tabtimize span {
@@ -172,30 +170,29 @@ export default {
   @media (max-width: $lg) {
     width: 200px;
 
-    .top{
+    .top {
       padding-top: 2em;
 
       .logo img {
         margin: -60px 0 -60px 15px;
       }
     }
-    
 
-    .mail{
-      span.email{
+    .mail {
+      span.email {
         font-size: $small;
       }
     }
-    .list{
-      ul li{
+    .list {
+      ul li {
         margin-left: 0;
       }
 
-      a{
+      a {
         font-size: $small;
       }
 
-      h3{
+      h3 {
         margin-left: 1em;
         font-size: $small;
       }
