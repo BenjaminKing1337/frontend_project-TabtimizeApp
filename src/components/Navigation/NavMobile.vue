@@ -1,15 +1,15 @@
 <template>
 <div>
   <div id="menubar">
-    <v-card class="menubtn" id="helpbtn">
+    <v-card class="menubtn box" id="helpbtn">
       <v-icon x-large>mdi-help-circle</v-icon>
     </v-card>
-    <v-card class="menubtn menubtncenter" id="tablogo">
+    <v-card class="menubtn menubtncenter box" id="tablogo">
       <router-link to="/"
-        ><img src="../../assets/logoT.svg" alt="logo" height="65px" />
+        ><img class="noDark" src="../../assets/logoT.svg" alt="logo" height="65px" />
       </router-link>
     </v-card>
-    <v-card class="menubtn" id="burgermenu">
+    <v-card class="menubtn box" id="burgermenu">
       <v-icon x-large @click.stop="drawer = !drawer">mdi-menu</v-icon>
     </v-card>
   </div>
