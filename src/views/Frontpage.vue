@@ -117,7 +117,7 @@ import Roadmap from '../components/Containers/Roadmap'
       width: 390px;
       margin-bottom: 34px;
       display: flex;
-      justify-content: space-between;
+      justify-content: flex-start;
       .help_button, .learn_button{
         font-size: $medium;
         color: map-get($cs , hLink );
@@ -126,6 +126,9 @@ import Roadmap from '../components/Containers/Roadmap'
         padding: 14px 20px;
         border-radius: 27px;
         box-shadow: 2px 5px 14px hsla(0, 0%, 0%, 0.16);
+      }
+      .learn_button{
+        margin-left: 10px;
       }
     }
 
@@ -139,6 +142,7 @@ import Roadmap from '../components/Containers/Roadmap'
         .help_button, .learn_button{
           margin-bottom: 10px;
           margin-right: 10px;
+          margin-left: 0;
         }
       }
     }

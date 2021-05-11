@@ -3,8 +3,8 @@
     <div class="sideBar box">
       <div class="top">
         <div class="logo">
-          <router-link class="flex center vbaseline" to="/">
-            <img src="@/assets/Tablogo.svg" height="80px" alt="logo" />
+          <router-link class="flex vbaseline" to="/">
+            <img class="noDark" src="@/assets/Tablogo.svg" height="80px" alt="logo" />
             <img src="@/assets/Tabtext.svg" height="60px" alt="logo" />
           </router-link>
         </div>
