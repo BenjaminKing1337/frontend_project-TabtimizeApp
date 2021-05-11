@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div class="sideBar">
+    <div class="sideBar" :class="{'theme-dark': nightMode}">
       <div class="top">
         <div class="logo">
           <router-link to="/">
@@ -78,6 +78,7 @@
               <input type="checkbox" />
               <span class="slider round"></span>
             </label>
+             
           </li>
         </ul>
          
@@ -88,7 +89,7 @@
 
 <script>
 export default {
-  
+    
 }
 </script>
 

@@ -157,6 +157,7 @@ export default {};
   border-radius: 10px;
   margin: 0 auto;
   box-shadow: 0 0 10px rgba($color: #000000, $alpha: 0.2);
+  margin-bottom: 6em;
 
   .table {
       margin-top: 3em;

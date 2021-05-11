@@ -64,7 +64,7 @@ export default {};
   margin: 0 auto;
   height: auto;
   background-color: white;
-  margin-top: 4em;
+  margin-top: 6em;
   box-shadow: 0 0 20px rgba($color: #000000, $alpha: 0.2);
   padding: 2em;
   border-radius: 10px;
@@ -86,14 +86,17 @@ export default {};
     flex-direction: column;
     .list_info{
       display: flex;
+      margin: 1em;
       .name, .created, .links, .options{
         width: 25%;
       }
     }
     .created_lists{
-      background-color: rgb(214, 209, 209);
+      background-color: rgb(219, 219, 219);
+      border-radius: 10px;
       .list{
         display: flex;
+        margin: 1em;
         .name, .created, .links, .options{
           width: 25%;
         }

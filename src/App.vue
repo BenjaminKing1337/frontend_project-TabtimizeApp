@@ -1,7 +1,9 @@
 <template>
   <v-app>
     <NavDesktop />
-    <v-main class="body">
+    <v-main class="body" :class="{'theme-dark': nightMode}">
+      <button @click="nightMode = !nightMode">DARKMODE</button>
+
       <div id="gradientHeader"></div>
 
       <div class="cornerIcons fRight">
@@ -108,11 +110,13 @@ export default {
     //NavMobile
   },
 
-  data: () => ({
+  data: () => (
+    {
     drawer: false,
     group: null,
     drawer1: false,
     group1: null,
+    nightMode: false
   }),
 
   watch: {
@@ -127,10 +131,15 @@ export default {
 <style lang="scss">
 @import "./src/styles/styles.scss";
 
+ .theme-dark {
+    background-color: rgb(80, 80, 80) !important;
+}
+
 .body {
   background: map-get($cs, bg);
   margin-left: 350px;
   overflow: hidden;
+
   @media (max-width: $md) {
     margin-left: 0px !important;
   }
