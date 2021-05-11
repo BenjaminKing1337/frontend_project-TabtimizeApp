@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div class="sideBar" :class="{'theme-dark': nightMode}">
+    <div class="sideBar box" >
       <div class="top">
         <div class="logo">
           <router-link to="/">
@@ -76,7 +76,7 @@
             </a>
             <label class="switch">
               <input type="checkbox" />
-              <span class="slider round"></span>
+              <span class="slider round" ></span>
             </label>
              
           </li>
@@ -102,9 +102,11 @@ export default {
   z-index: 1;
   width: 350px;
   height: 100vh;
-  background-color: map-get($cs, white);
+  background-color: map-get($cs, white1);
   box-shadow: 6px 0 30px 10px rgba($color: #000000, $alpha: 0.1);
   position: fixed;
+  top: 0;
+  
   @media (max-width: $md) {
     display: none !important;
   }

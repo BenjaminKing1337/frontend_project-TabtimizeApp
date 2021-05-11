@@ -2,9 +2,9 @@
   <div>
     <div class="main">
       <div class="top">
-        <h2>Relevance Comparison</h2>
+        <h2 class="text">Relevance Comparison</h2>
         <br />
-        <span
+        <span class="text"
           >Insert two URLs and see how relevant the two pages are to each
           other.</span
         >
@@ -23,10 +23,10 @@
             <input type="text" id="linktwo" name="linktwo" />
           </div>
         </div>
-        <button class="compare">Compare</button>
+        <button class="compare noDark">Compare</button>
       </div>
       
-      <div class="bot">
+      <div class="bot box">
         <h3>Comparison History</h3>
         <hr>
         

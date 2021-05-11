@@ -2,7 +2,7 @@
   <div>
 
     <div class="welcome">
-      <h1>Welcome, User!</h1>
+      <h1 class="text">Welcome, User!</h1>
     </div>
 
     <div class="manual">
@@ -18,8 +18,8 @@
       <p>You can find help guides or learn more about our metrices by clicking the buttons below.</p>
 
       <div class="buttons">
-        <button class="help_button">Help guides</button>
-        <button class="learn_button"> Learn about our metrics</button>
+        <button class="help_button box" >Help guides</button>
+        <button class="learn_button box"> Learn about our metrics</button>
       </div>
     </div>
 

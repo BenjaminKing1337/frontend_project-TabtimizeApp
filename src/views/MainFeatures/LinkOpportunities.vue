@@ -1,9 +1,9 @@
 <template>
   <div id="backlinkEngine">
-    <div id="title"><h1>Backlink Engine</h1></div>
+    <div id="title"><h1 class="text">Backlink Engine</h1></div>
 
     <div class="flex spaceAround" id="balance">
-      <div class="balancedivs" id="box1">
+      <div class="balancedivs box" id="box1">
         <div id="icon" class="circle regpageColor">
           <v-icon class="icon">mdi-text-box-multiple</v-icon>
         </div>
@@ -14,7 +14,7 @@
         </div>
       </div>
 
-      <div class="balancedivs" id="box2">
+      <div class="balancedivs box" id="box2">
         <div id="icon" class="circle anabalaColor">
           <v-icon class="icon">mdi-cursor-pointer</v-icon>
         </div>
@@ -25,7 +25,7 @@
         </div>
       </div>
     </div>
-    <div id="pagelist">
+    <div id="pagelist" class="box">
       <div class="page">
         <div id="navigation">
           <div class="dispflexcenter circle shadow bgcolor">
@@ -57,7 +57,7 @@
             <h3>LAST ANALYZED</h3>
             <div class="flex">
               <button id="refresh" class="RedBtn dispflexcenter">
-                <v-icon>mdi-refresh</v-icon>
+                <v-icon class="noDark">mdi-refresh</v-icon>
               </button>
               <h3 class="thin">25/01/2021</h3>
               
@@ -67,7 +67,7 @@
         </div>
 
         <div id="viewPage" class="dispflexcenter">
-          <router-link class="nodecor" to="/MainFeatures/Cardview"><button id="view" class="RedBtn dispflexcenter"><h3 class="nodecor light">VIEW</h3></button></router-link>
+          <router-link class="nodecor" to="/MainFeatures/Cardview"><button id="view" class="RedBtn dispflexcenter"><h3 class="nodecor light noDark">VIEW</h3></button></router-link>
           
         </div>
 
