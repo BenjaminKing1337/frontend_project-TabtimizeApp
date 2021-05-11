@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div class="list-box">
+    <div class="list-box box">
       <div class="top">
         <h3>Your Lists:</h3>
       </div>
@@ -29,7 +29,7 @@
           </div>
         </div>
 
-        <div class="created_lists">
+        <div class="created_lists box_small">
           <div class="list">
             <div class="name">
               <span>My list</span>

@@ -5,6 +5,23 @@ $md: 900px;
 $sm: 600px;
 
 // Darkmode
+.darkMode{
+    filter: invert(1) hue-rotate(180deg);
+    .box_small{
+        filter: invert(0.1) hue-rotate(180deg);
+        box-shadow: none !important;
+    }
+    .text{
+        color: #000000 !important;
+    }
+    .box{
+        background: linear-gradient(rgb(224, 224, 224),rgb(212, 212, 212));
+        box-shadow: none !important;
+    }
+    .noDark{
+        filter: invert(1) hue-rotate(180deg);
+    }
+}
 
 
 // Typescale

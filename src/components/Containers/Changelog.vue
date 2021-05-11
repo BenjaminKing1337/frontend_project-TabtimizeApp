@@ -1,5 +1,5 @@
 <template>
-    <div class="changelog">
+    <div class="changelog box">
         <h1>Changelog</h1>
 
         <hr>
@@ -15,7 +15,7 @@
         </div>
 
         <div class="button">
-            <button class="viewOlder">View Older</button>
+            <button class="viewOlder noDark">View Older</button>
         </div>
         
 

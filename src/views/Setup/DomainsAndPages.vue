@@ -1,6 +1,6 @@
 <template>
   <div class="wrap">
-    <div class="smallbox">
+    <div class="smallbox box">
       <h3>Google Accounts</h3>
       <hr />
       <div class="mail">
@@ -8,7 +8,7 @@
         <span>someone@gmail.com</span>
       </div>
     </div>
-    <div class="smallbox">
+    <div class="smallbox box">
       <h3>Domains</h3>
       <hr />
       <div class="mail">
@@ -18,17 +18,17 @@
     </div>
 
     <div class="buttons">
-      <button class="RedBtn">Fetch Sitemap</button>
-      <button class="RedBtn">Add Page</button>
+      <button class="RedBtn noDark">Fetch Sitemap</button>
+      <button class="RedBtn noDark">Add Page</button>
     </div>
 
-    <div class="pages">
+    <div class="pages box">
       <div class="top">
         <div class="left">
           <h3>Registered Pages</h3>
         </div>
         <div class="right">
-          <button class="RedBtn">Verify</button>
+          <button class="RedBtn noDark">Verify</button>
         </div>
       </div>
       <div class="search">

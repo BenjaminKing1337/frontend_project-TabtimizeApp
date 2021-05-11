@@ -3,32 +3,32 @@
     <div class="main">
         <div class="top">
 
-            <div class="info-box">
+            <div class="info-box box">
                 <div class="info-top">
                     <h4 class="info-title">ANALYSIS BALANCE</h4>
                 </div>
                 <div class="info-bot">
                     <div class="icon">
-                        <v-icon class="balance">mdi-scale-balance</v-icon>
+                        <v-icon class="balance text">mdi-scale-balance</v-icon>
                     </div>
                     <div class="amount">
                         <span>0 / 5 used</span>
                     </div>
                     <div class="more-button">
-                        <button class="get-more">Get more
-                            <v-icon class="moar">mdi-menu-down</v-icon>
+                        <button class="get-more textBox"><p class="text">Get more</p>
+                            <v-icon class="moar text">mdi-menu-down</v-icon>
                         </button>
                     </div>
                 </div>
             </div>
 
-            <div class="info-box">
+            <div class="info-box box">
                 <div class="info-top">
                     <h4 class="info-title">REGISTERED PAGES</h4>
                 </div>
                 <div class="info-bot">
                     <div class="icon">
-                        <v-icon class="clip">mdi-clipboard-text</v-icon>
+                        <v-icon class="clip text">mdi-clipboard-text</v-icon>
                     </div>
                     <div class="amount">
                         <span>0 / 8 registered</span>
@@ -37,20 +37,20 @@
                 </div>
             </div>
 
-            <div class="info-box">
+            <div class="info-box box">
                 <div class="info-top">
                     <h4 class="info-title">LINK REQUESTS</h4>
                 </div>
                 <div class="info-bot">
-                    <div class="icon">
+                    <div class="icon noDark">
                         <v-icon class="external">mdi-open-in-new</v-icon>
                     </div>
                     <div class="amount">
                         <span>0 / 8 reg.</span>
                     </div>
                     <div class="more-button">
-                        <button class="get-more">Get more
-                            <v-icon class="moar">mdi-menu-down</v-icon>
+                        <button class="get-more text">Get more
+                            <v-icon class="moar text">mdi-menu-down</v-icon>
                         </button>
                     </div>
                 </div>
@@ -58,7 +58,7 @@
         </div>
 
       <div class="mid">
-         <div class="big-box">
+         <div class="big-box box">
              <div class="big-title">
                  <h3>SUBSCRIPTION PLAN</h3>
              </div>
@@ -76,29 +76,29 @@
                  <h5>2021 / 03 / 03</h5>
              </div>
              <div class="change-plan">
-                <button class="plan-button">Change Plan</button>
+                <button class="plan-button text">Change Plan</button>
             </div>
          </div>
 
-          <div class="big-box">
+          <div class="big-box box">
              <div class="big-title">
                  <h3>BILLING INFORMATION</h3>
              </div>
          </div>
          
-          <div class="big-box">
+          <div class="big-box box">
              <div class="big-title">
                  <h3>PAYMENT METHOD</h3>
              </div>
 
              <div class="payment">
-                <button class="payment-button">Add Payment Method</button>
+                <button class="payment-button text">Add Payment Method</button>
             </div>
          </div>
       </div>
 
       <div class="bot">
-          <div class="invoices">
+          <div class="invoices box">
               <div class="invoice-title">
                   <h4>Invoices</h4>
               </div>

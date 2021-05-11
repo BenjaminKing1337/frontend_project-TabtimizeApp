@@ -1,23 +1,28 @@
 <template>
-  <v-app>
+  <v-app >
     <NavDesktop />
-    <v-main class="body" :class="{'theme-dark': nightMode}">
-      <button @click="nightMode = !nightMode">DARKMODE</button>
+    <v-main class="body" >
 
-      <div id="gradientHeader"></div>
+      <div id="gradientHeader" class="noDark"></div>
 
       <div class="cornerIcons fRight">
         <v-card
-          class="cornerIcon circle dispflexcenter shadow"
+          class="cornerIcon circle dispflexcenter shadow box"
           @click.stop="drawer = !drawer"
         >
           <v-icon id="notifications">mdi-bell</v-icon>
         </v-card>
         <v-card
-          class="cornerIcon circle dispflexcenter shadow"
+          class="cornerIcon circle dispflexcenter shadow box"
           @click.stop="drawer1 = !drawer1"
         >
           <v-icon id="profile">mdi-account-circle</v-icon>
+        </v-card>
+        <v-card
+          class="cornerIcon circle dispflexcenter shadow box"
+          @click="darkMode"
+        >
+          <v-icon id="darkMode">dark_mode</v-icon>
         </v-card>
       </div>
 
@@ -116,7 +121,6 @@ export default {
     group: null,
     drawer1: false,
     group1: null,
-    nightMode: false
   }),
 
   watch: {
@@ -125,6 +129,19 @@ export default {
       this.drawer1 = false;
     },
   },
+
+  methods:{
+    darkMode: function(e){
+      if(e){
+        document.documentElement.classList.toggle('darkMode');
+
+        document.querySelectorAll('.noDark').forEach((result) =>{
+          result.classList.toggle('noDarkMode');
+        })
+      }
+
+    }
+  }
 };
 </script>
 
@@ -178,14 +195,14 @@ export default {
     }
   }
   .cornerIcons {
-    position: absolute;
+    position: fixed;
     z-index: 3;
     right: 3%;
-    width: 80px;
+    width: 110px;
     display: flex;
     justify-content: space-between;
     @media (min-width: $md) {
-      width: 100px !important;
+      width: 120px !important;
     }
     .cornerIcon {
       margin-top: 20px;
@@ -200,6 +217,9 @@ export default {
       }
       #profile {
         color: map-get($cs, accept);
+      }
+      #darkMode{
+        color: map-get($cs, purple1);
       }
     }
   }
