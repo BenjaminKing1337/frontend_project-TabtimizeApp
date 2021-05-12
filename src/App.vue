@@ -151,7 +151,9 @@ export default {
  .theme-dark {
     background-color: rgb(80, 80, 80) !important;
 }
-
+:root{
+  transition: .5s;
+}
 .body {
   background: map-get($cs, bg);
   margin-left: 350px;
