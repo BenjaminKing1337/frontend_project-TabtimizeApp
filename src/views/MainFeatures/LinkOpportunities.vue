@@ -3,7 +3,7 @@
     <div id="title"><h1 class="text">Backlink Engine</h1></div>
 
     <div class="flex spaceAround" id="balance">
-      <div class="balancedivs box" id="box1">
+      <div class="balancedivs box shadow" id="box1">
         <div id="icon" class="circle regpageColor">
           <v-icon class="icon">mdi-text-box-multiple</v-icon>
         </div>
@@ -14,7 +14,7 @@
         </div>
       </div>
 
-      <div class="balancedivs box" id="box2">
+      <div class="balancedivs box shadow" id="box2">
         <div id="icon" class="circle anabalaColor">
           <v-icon class="icon">mdi-cursor-pointer</v-icon>
         </div>
@@ -25,7 +25,7 @@
         </div>
       </div>
     </div>
-    <div id="pagelist" class="box">
+    <div id="pagelist" class="box shadow">
       <div class="page">
         <div id="navigation">
           <div class="dispflexcenter circle shadow bgcolor">
@@ -144,7 +144,7 @@ export default {};
   #pagelist {
     justify-self: center;
     margin: 20px 20px;
-    padding: 30px;
+    padding: 10px;
     border-radius: 5px;
     background-color: map-get($cs, white1);
     border-bottom: 2px solid map-get($cs, purple1);

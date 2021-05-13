@@ -1,41 +1,21 @@
-// Breakpoints
+// BREAKPOINTS
 $xl: 1440px;
 $lg: 1200px;
 $md: 900px;
 $sm: 600px;
 
-// Darkmode
-.darkMode{
-    filter: invert(1) hue-rotate(180deg);
-    .box_small{
-        filter: invert(0.1) hue-rotate(180deg);
-        
-    }
-    .text{
-        color: #000000 !important;
-    }
-    .box{
-        background: linear-gradient(rgb(224, 224, 224),rgb(212, 212, 212));
-        box-shadow: none !important;
-    }
-    .noDark{
-        filter: invert(1) hue-rotate(180deg);
-    }
-}
-
-
-// Typescale
+// TYPESCALE
 $smallest: 0.512rem; // 8.19px
 $smaller: 0.64rem; // 10.24px
 $small: 0.8rem; // 12.80px
-$medium: 1rem;  // 16px
+$medium: 1rem; // 16px
 $medium2: 1.25rem; // 20px
 $big: 1.563rem; // 25px
 $big2: 1.953rem; //31.25px
 $bigger: 2.441rem; // 39.06px
 $biggest: 3.052rem; //48.83px
 
-// Color Scheme
+// COLORSCHEME
 $cs: (
     primary: #112243,
     white1: #fffffd,
@@ -43,76 +23,212 @@ $cs: (
     hLink: #686acd,
     button: #fe3652,
     link: #7776b1,
-    purple1: #762d78,
+    purple1: #782d76,
     paragraph: #959794,
     headline: #001140,
     text: #000000,
     accept: #03a65a,
+    hover: linear-gradient(90deg, rgba(17, 34, 67, 0.25) 0%, rgba(120, 45, 118, 0.25) 26%, rgba(254, 54, 82, 0.25) 100%),
+    greyed: rgb(121, 121, 121),
+    lightgreyed: rgb(211, 211, 211),
+    transparency: rgba(121, 121, 121, 0.25),
+    tabtimize: linear-gradient(90deg, rgba(17, 34, 67, 1) 0%, rgba(120, 45, 118, 1) 26%, rgba(254, 54, 82, 1) 100%),
 );
 
-// Global classes
+// DARKMODE
+.darkMode {
+    filter: invert(1) hue-rotate(180deg);
+    .box_small {
+        filter: invert(0.1) hue-rotate(180deg);
+    }
+    .text {
+        color: #000000 !important;
+    }
+    .box {
+        background: linear-gradient(rgb(224, 224, 224), rgb(212, 212, 212));
+        box-shadow: none !important;
+    }
+    .noDark {
+        filter: invert(1) hue-rotate(180deg);
+    }
+}
 
-.RedBtn {
-    padding: 5px 10px;
-    height: 30px;
-    min-width: 30px;
-    border-radius: 15px;
-    background-color: map-get($cs, button);
-    color: map-get($cs, white1) !important;
+// GLOBAL CLASSES
+* {
+    //^collapse here^
+    .RedBtn {
+        padding: 5px 10px;
+        height: 30px;
+        min-width: 30px;
+        border-radius: 15px;
+        background-color: map-get($cs, button);
+        color: map-get($cs, white1) !important;
+    }
+    .shadow {
+        box-shadow: 2px 2px 26px rgba(134, 134, 134, 0.4);
+    }
+    .bgcolor {
+        background-color: map-get($cs, white1);
+        color: map-get($cs, white1);
+    }
+    .dark {
+        color: map-get($cs, primary) !important;
+    }
+    .light {
+        color: map-get($cs, white1) !important;
+    }
+    .bglight {
+        background-color: map-get($cs, white1) !important;
+    }
+    .nodecor {
+        text-decoration: none !important;
+    }
+    .fRight {
+        float: right;
+    }
+    .circle {
+        border-radius: 100% !important;
+        height: 40px;
+        width: 40px;
+        background-color: map-get($cs, white1);
+    }
+    .dispflexcenter {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .flex {
+        display: flex;
+        flex-direction: row;
+    }
+    .flexcol {
+        display: flex;
+        flex-direction: column;
+    }
+    .spaceAround {
+        justify-content: space-around;
+    }
+    .spaceBetween {
+        justify-content: space-between;
+    }
+    .flexend {
+        justify-content: flex-end;
+    }
+    .center {
+        justify-content: center;
+    }
+    .vcenter {
+        align-items: center;
+    }
+    .vbaseline {
+        align-items: baseline;
+    }
+    .tcenter {
+        text-align: center;
+    }
+    .truncate {
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+    .absolute {
+        position: absolute;
+    }
+    .corners {
+        border-radius: 5px;
+    }
+    .line {
+        position: relative;
+        z-index: 1;
+        font-weight: 300;
+        height: 1px;
+        border-bottom: 1px solid map-get($cs, primary);
+    }
+    .expansionbtn {
+        border-radius: 0;
+        padding: 0;
+        &:before {
+            box-shadow: unset !important;
+        }
+    }
+
+    .checkmarkbox {
+        display: block;
+        position: relative;
+        cursor: pointer;
+        user-select: none;
+
+        .checkmark {
+            position: absolute;
+            height: 22px;
+            width: 22px;
+            background-color: map-get($cs, white1);
+            border-radius: 50%;
+            box-shadow: 1px 1px 12px 0 inset;
+            &:hover {
+                background-image: map-get($cs, hover);
+            }
+            &:after {
+                content: "";
+                position: absolute;
+                display: none;
+                left: 9px;
+                top: 5px;
+                width: 5px;
+                height: 10px;
+                // border: solid *color*;
+                border-width: 0 3px 3px 0 !important;
+                transform: rotate(45deg) !important;
+            }
+        }
+        input {
+            position: absolute;
+            opacity: 0;
+            cursor: pointer;
+            height: 0;
+            width: 0;
+            &:checked ~ .checkmark {
+                background-color: map-get($cs, accept);
+            }
+            &:checked ~ .checkmark:after {
+                display: block;
+            }
+        }
+    }
 }
-.shadow {
-    box-shadow: 2px 2px 26px rgba(134, 134, 134, 0.16);
-}
-.bgcolor {
-    background-color: map-get($cs, white1);
-    color: map-get($cs, white1);
-}
-.dark {
-    color: map-get($cs, primary) !important;
-}
-.light {
-    color: map-get($cs, white1) !important;
-}
-.nodecor {
-    text-decoration: none !important;
-}
-.fRight {
-    float: right;
-}
-.circle {
-    border-radius: 100% !important;
-    height: 40px;
-    width: 40px;
-    background-color: map-get($cs, white1);
-}
-.dispflexcenter {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.flex {
-    display: flex;
-    flex-direction: row;
-}
-.flexcol {
-    display: flex;
-    flex-direction: column;
-}
-.spaceAround {
-    justify-content: space-around;
-}
-.spaceBetween {
-    justify-content: space-between;
-}
-.center {
-    justify-content: center;
-}
-.vcenter {
-    align-items: center;
-}
-.vbaseline {
-    align-items: baseline;
-}
-.tcenter {
-    text-align: center;
+
+// VUETIFY OVERRIDES
+* {
+    //^collapse here^
+    // Progress bar, provides gradient color
+    .v-application .tabtimize {
+        background-color: unset;
+        border-color: unset !important;
+        background: map-get($cs, tabtimize);
+    }
+    .v-progress-linear__background {
+        opacity: 0.01 !important;
+    }
+
+    // Filter/sort, prevents bgcolor from lingering.
+    .v-btn {
+        &:before {
+            background-color: unset;
+        }
+    }
+    
+    // Filter/sort, gives bgcolor to filter v-menu.
+    .v-menu__content.theme--light.v-menu__content--fixed.menuable__content__active {
+        background-color: map-get($cs, white1) !important;
+      }
+
+      .v-btn:not(.v-btn--round).v-size--default {
+        height: unset;
+        min-width: unset;
+        padding: 0;
+    }
+    
+    .theme--light.v-btn.v-btn--has-bg {
+        background-color: unset;
+    }
 }

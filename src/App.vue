@@ -1,5 +1,5 @@
 <template>
-  <v-app >
+  <v-app id="app">
     <NavDesktop />
     <v-main class="body" >
 
@@ -147,6 +147,11 @@ export default {
 
 <style lang="scss">
 @import "./src/styles/styles.scss";
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
+
+#app {
+  font-family: 'Quicksand', sans-serif;
+}
 
  .theme-dark {
     background-color: rgb(80, 80, 80) !important;
