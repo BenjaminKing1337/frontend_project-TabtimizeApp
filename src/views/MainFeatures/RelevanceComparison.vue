@@ -62,6 +62,7 @@ export default {
   .bot {
     min-width: 300px;
     max-width: 1200px;
+    padding: 2em;
     height: auto;
     background-color: white;
     margin: 140px auto 0 auto;

@@ -170,6 +170,7 @@ export default {};
 
   button {
     margin: 1em;
+    padding-bottom: 2em;
   }
 }
 

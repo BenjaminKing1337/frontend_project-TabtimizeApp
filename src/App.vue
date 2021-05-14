@@ -1,8 +1,7 @@
 <template>
   <v-app id="app">
     <NavDesktop />
-    <v-main class="body" >
-
+    <v-main class="body">
       <div id="gradientHeader" class="noDark"></div>
 
       <div class="cornerIcons fRight">
@@ -10,44 +9,40 @@
           class="cornerIcon circle dispflexcenter shadow box"
           @click.stop="drawer = !drawer"
         >
-         <v-tooltip bottom>
-                <template v-slot:activator="{ on, attrs }">
-                  <span
-                    v-bind="attrs"
-                    v-on="on"
-                  ><v-icon id="notifications">mdi-bell</v-icon></span>
-                </template>
-                <span>Notifications</span>
-              </v-tooltip>
-          
+          <v-tooltip bottom>
+            <template v-slot:activator="{ on, attrs }">
+              <span v-bind="attrs" v-on="on"
+                ><v-icon id="notifications">mdi-bell</v-icon></span
+              >
+            </template>
+            <span>Notifications</span>
+          </v-tooltip>
         </v-card>
         <v-card
           class="cornerIcon circle dispflexcenter shadow box"
           @click.stop="drawer1 = !drawer1"
         >
           <v-tooltip bottom>
-                <template v-slot:activator="{ on, attrs }">
-                  <span
-                    v-bind="attrs"
-                    v-on="on"
-                  ><v-icon id="profile">mdi-account-circle</v-icon></span>
-                </template>
-                <span>My Account</span>
-              </v-tooltip>
+            <template v-slot:activator="{ on, attrs }">
+              <span v-bind="attrs" v-on="on"
+                ><v-icon id="profile">mdi-account-circle</v-icon></span
+              >
+            </template>
+            <span>My Account</span>
+          </v-tooltip>
         </v-card>
         <v-card
           class="cornerIcon circle dispflexcenter shadow box"
           @click="darkMode"
         >
           <v-tooltip bottom>
-                <template v-slot:activator="{ on, attrs }">
-                  <span
-                    v-bind="attrs"
-                    v-on="on"
-                  ><v-icon id="darkMode">dark_mode</v-icon></span>
-                </template>
-                <span>Dark Mode</span>
-              </v-tooltip>
+            <template v-slot:activator="{ on, attrs }">
+              <span v-bind="attrs" v-on="on"
+                ><v-icon id="darkMode">dark_mode</v-icon></span
+              >
+            </template>
+            <span>Dark Mode</span>
+          </v-tooltip>
         </v-card>
       </div>
 
@@ -74,7 +69,7 @@
           </v-list-item>
         </v-list-item-group>
       </v-navigation-drawer>
-      
+
       <v-navigation-drawer
         id="profileDrawer"
         v-model="drawer1"
@@ -119,7 +114,7 @@
           </v-list-item>
         </v-list-item-group>
       </v-navigation-drawer>
-      
+
       <router-view class="router" />
     </v-main>
     <NavMobile />
@@ -140,8 +135,7 @@ export default {
     //NavMobile
   },
 
-  data: () => (
-    {
+  data: () => ({
     drawer: false,
     group: null,
     drawer1: false,
@@ -155,34 +149,34 @@ export default {
     },
   },
 
-  methods:{
-    darkMode: function(e){
-      if(e){
-        document.documentElement.classList.toggle('darkMode');
+  methods: {
+    darkMode: function(e) {
+      if (e) {
+        document.documentElement.classList.toggle("darkMode");
 
-        document.querySelectorAll('.noDark').forEach((result) =>{
-          result.classList.toggle('noDarkMode');
-        })
+        document.querySelectorAll(".noDark").forEach((result) => {
+          result.classList.toggle("noDarkMode");
+        });
       }
-
-    }
-  }
+    },
+  },
 };
 </script>
 
 <style lang="scss">
 @import "./src/styles/styles.scss";
-@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap");
 
 #app {
-  font-family: 'Quicksand', sans-serif;
+  font-family: "Quicksand", sans-serif;
+  font-smooth: always;
 }
 
- .theme-dark {
-    background-color: rgb(80, 80, 80) !important;
+.theme-dark {
+  background-color: rgb(80, 80, 80) !important;
 }
-:root{
-  transition: .5s;
+:root {
+  transition: 0.3s;
 }
 .body {
   background: map-get($cs, bg);
@@ -237,7 +231,8 @@ export default {
       width: 120px !important;
     }
     .cornerIcon {
-      margin-top: 20px;
+      margin-left: .5em;
+      margin-top: 2em;
       @media (max-width: $md) {
         font-size: $medium;
         width: 35px;
@@ -246,12 +241,15 @@ export default {
 
       #notifications {
         color: map-get($cs, button);
+        width: 50px;
       }
       #profile {
         color: map-get($cs, accept);
+        width: 50px;
       }
-      #darkMode{
+      #darkMode {
         color: map-get($cs, purple1);
+        width: 50px;
       }
     }
   }
