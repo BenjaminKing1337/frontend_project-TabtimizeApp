@@ -104,7 +104,7 @@ export default {};
       width: 300px;
       min-height: 140px;
       background-color: map-get($cs, white1);
-      border-radius: 5px;
+      border-radius: 10px;
       margin: 0 20px;
 
       padding: 10px;
@@ -145,7 +145,7 @@ export default {};
     justify-self: center;
     margin: 20px 20px;
     padding: 10px;
-    border-radius: 5px;
+    border-radius: 10px;
     background-color: map-get($cs, white1);
     border-bottom: 2px solid map-get($cs, purple1);
     @media (min-width: $md) {
