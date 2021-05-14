@@ -41,9 +41,34 @@
               <span>{{list.links}}</span>
             </div>
             <div class="options">
-              <v-icon class="icon">visibility</v-icon>
-              <v-icon class="icon">edit</v-icon>
-              <v-icon class="icon">mdi-delete</v-icon>
+               <v-tooltip bottom>
+                <template v-slot:activator="{ on, attrs }">
+                  <span
+                    v-bind="attrs"
+                    v-on="on"
+                  ><v-icon class="icon">visibility</v-icon></span>
+                </template>
+                <span>View more</span>
+              </v-tooltip>
+              <v-tooltip bottom>
+                <template v-slot:activator="{ on, attrs }">
+                  <span
+                    v-bind="attrs"
+                    v-on="on"
+                  ><v-icon class="icon">edit</v-icon></span>
+                </template>
+                <span>Edit List</span>
+              </v-tooltip>
+              <v-tooltip bottom>
+                <template v-slot:activator="{ on, attrs }">
+                  <span
+                    v-bind="attrs"
+                    v-on="on"
+                  ><v-icon class="icon">mdi-delete</v-icon></span>
+                </template>
+                <span>Delete List</span>
+              </v-tooltip>
+              
             </div>
           </div>
         </div>

@@ -10,19 +10,44 @@
           class="cornerIcon circle dispflexcenter shadow box"
           @click.stop="drawer = !drawer"
         >
-          <v-icon id="notifications">mdi-bell</v-icon>
+         <v-tooltip bottom>
+                <template v-slot:activator="{ on, attrs }">
+                  <span
+                    v-bind="attrs"
+                    v-on="on"
+                  ><v-icon id="notifications">mdi-bell</v-icon></span>
+                </template>
+                <span>Notifications</span>
+              </v-tooltip>
+          
         </v-card>
         <v-card
           class="cornerIcon circle dispflexcenter shadow box"
           @click.stop="drawer1 = !drawer1"
         >
-          <v-icon id="profile">mdi-account-circle</v-icon>
+          <v-tooltip bottom>
+                <template v-slot:activator="{ on, attrs }">
+                  <span
+                    v-bind="attrs"
+                    v-on="on"
+                  ><v-icon id="profile">mdi-account-circle</v-icon></span>
+                </template>
+                <span>My Account</span>
+              </v-tooltip>
         </v-card>
         <v-card
           class="cornerIcon circle dispflexcenter shadow box"
           @click="darkMode"
         >
-          <v-icon id="darkMode">dark_mode</v-icon>
+          <v-tooltip bottom>
+                <template v-slot:activator="{ on, attrs }">
+                  <span
+                    v-bind="attrs"
+                    v-on="on"
+                  ><v-icon id="darkMode">dark_mode</v-icon></span>
+                </template>
+                <span>Dark Mode</span>
+              </v-tooltip>
         </v-card>
       </div>
 
