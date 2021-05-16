@@ -49,10 +49,7 @@
       </div>
       <div class="table">
         <div class="panel-body">
-          <table
-            id="data-table"
-            width="100%"
-          >
+          <table id="data-table" width="100%">
             <thead>
               <tr>
                 <th>CHOOSE</th>
@@ -62,41 +59,68 @@
             <tbody>
               <tr>
                 <td>
-                    <input type="checkbox" name="" id="">
+                  <input type="checkbox" name="" id="" />
                 </td>
                 <td>/</td>
                 <td>
-                    <v-icon class="delete">mdi-delete</v-icon>
+                  <v-tooltip bottom>
+                    <template v-slot:activator="{ on, attrs }">
+                      <span v-bind="attrs" v-on="on"
+                        ><v-icon class="icon delete">mdi-delete</v-icon></span
+                      >
+                    </template>
+                    <span>Delete Page</span>
+                  </v-tooltip>
                 </td>
               </tr>
               <tr>
                 <td>
-                     <input type="checkbox" name="" id="">
+                  <input type="checkbox" name="" id="" />
                 </td>
                 <td>/sitemap.html</td>
                 <td>
-                    <v-icon class="delete">mdi-delete</v-icon>
+                  <v-tooltip bottom>
+                    <template v-slot:activator="{ on, attrs }">
+                      <span v-bind="attrs" v-on="on"
+                        ><v-icon class="icon delete">mdi-delete</v-icon></span
+                      >
+                    </template>
+                    <span>Delete Page</span>
+                  </v-tooltip>
                 </td>
               </tr>
               <tr>
-                 <td>
-                     <input type="checkbox" name="" id="">
+                <td>
+                  <input type="checkbox" name="" id="" />
                 </td>
                 <td>/about-us</td>
                 <td>
-                    <v-icon class="delete">mdi-delete</v-icon>
+                  <v-tooltip bottom>
+                    <template v-slot:activator="{ on, attrs }">
+                      <span v-bind="attrs" v-on="on"
+                        ><v-icon class="icon delete">mdi-delete</v-icon></span
+                      >
+                    </template>
+                    <span>Delete Page</span>
+                  </v-tooltip>
                 </td>
               </tr>
               <tr>
-                 <td>
-                     <input type="checkbox" name="" id="">
+                <td>
+                  <input type="checkbox" name="" id="" />
                 </td>
                 <td>/contact</td>
                 <td>
-                    <v-icon class="delete">mdi-delete</v-icon>
+                  <v-tooltip bottom>
+                    <template v-slot:activator="{ on, attrs }">
+                      <span v-bind="attrs" v-on="on"
+                        ><v-icon class="icon delete">mdi-delete</v-icon></span
+                      >
+                    </template>
+                    <span>Delete Page</span>
+                  </v-tooltip>
                 </td>
               </tr>
-
             </tbody>
           </table>
         </div>
@@ -113,7 +137,7 @@ export default {};
 @import "./src/styles/styles.scss";
 
 .wrap {
-    height: 100vh;
+  height: 100vh;
 }
 
 .smallbox {
@@ -146,6 +170,7 @@ export default {};
 
   button {
     margin: 1em;
+    padding-bottom: 2em;
   }
 }
 
@@ -160,24 +185,25 @@ export default {};
   margin-bottom: 6em;
 
   .table {
-      margin-top: 3em;
+    margin-top: 3em;
 
-      table {
-        border-collapse: collapse;
-      }
+    table {
+      border-collapse: collapse;
+    }
 
-      th, td {
-          text-align:left;
-      }
+    th,
+    td {
+      text-align: left;
+    }
 
-      td {
-        border-bottom: 1px solid lightgray;
-        padding: 8px;
-      }
+    td {
+      border-bottom: 1px solid lightgray;
+      padding: 8px;
+    }
 
-      .delete {
-          color: map-get($cs, button);
-      }
+    .delete {
+      color: map-get($cs, button);
+    }
   }
 
   .top {
