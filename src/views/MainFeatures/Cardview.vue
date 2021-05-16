@@ -75,7 +75,7 @@
       </div>
       <div id="cards">
         <div id="card1" class="flexcol card corners shadow">
-          <div id="checkmarkboxcontainer">
+          <div id="checkmarkboxcontainer noDark">
             <label class="checkmarkbox">
               <input type="checkbox" />
               <span class="checkmark shadow"></span>
