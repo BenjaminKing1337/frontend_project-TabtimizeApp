@@ -1,18 +1,21 @@
 <template>
   <div id="backlinkEngine">
-    <div id="title"><h1 class="text">Backlink Engine</h1></div>
+    <div id="title" class="flexcol vcenter"><h1 class="text">Backlink Engine</h1>
+    <br>
+    <h5>Select a target page to view analyzed opportunities</h5>
+    </div>
 
     <Balance/>
     <div id="pagelist" class="box">
       <div class="page">
         <div id="navigation">
           <div class="dispflexcenter circle shadow">
-            <v-icon>mdi-arrow-right</v-icon>
+            <v-icon>mdi-bullseye-arrow</v-icon>
           </div>
         </div>
 
         <div id="pageNo">
-          <h2 class="flex center">PAGE 1 / 4</h2>
+          <h2 class="flex center">Target Page 1 / 4</h2>
         </div>
 
         <div id="pageInfo">
@@ -54,12 +57,12 @@
       <div class="page">
         <div id="navigation">
           <div class="dispflexcenter circle shadow">
-            <v-icon>mdi-arrow-right</v-icon>
+            <v-icon>mdi-bullseye-arrow</v-icon>
           </div>
         </div>
 
         <div id="pageNo">
-          <h2 class="flex center">PAGE 2 / 4</h2>
+          <h2 class="flex center">Target Page 2 / 4</h2>
         </div>
 
         <div id="pageInfo">
@@ -101,12 +104,12 @@
       <div class="page">
         <div id="navigation">
           <div class="dispflexcenter circle shadow">
-            <v-icon>mdi-arrow-right</v-icon>
+            <v-icon>mdi-bullseye-arrow</v-icon>
           </div>
         </div>
 
         <div id="pageNo">
-          <h2 class="flex center">PAGE 3 / 4</h2>
+          <h2 class="flex center">Target Page 3 / 4</h2>
         </div>
 
         <div id="pageInfo">
@@ -148,12 +151,12 @@
       <div class="page">
         <div id="navigation">
           <div class="dispflexcenter circle shadow">
-            <v-icon>mdi-arrow-right</v-icon>
+            <v-icon>mdi-bullseye-arrow</v-icon>
           </div>
         </div>
 
         <div id="pageNo">
-          <h2 class="flex center">PAGE 4 / 4</h2>
+          <h2 class="flex center">Target Page 4 / 4</h2>
         </div>
 
         <div id="pageInfo">
@@ -324,12 +327,25 @@ export default {
 #backlinkEngine {
   padding-left: 5%;
   padding-right: 5%;
+  @media (max-width: $sm) {
+     padding-top: 100px;
+    }
   #title {
     display: flex;
     justify-content: center;
     color: map-get($cs, white1);
-    margin-top: 50px;
+    margin-top: 4em;
     margin-bottom: 40px;
+    h1 {
+      font-size: $biggest;
+    } 
+    h5 {
+      font-size: $medium;
+      font-weight: 400;
+    }
+    @media (max-width: $sm) {
+      display: none;
+    }
   }
   
   #pagelist {
@@ -353,13 +369,14 @@ export default {
         margin-top: -8%;
         margin-right: -8%;
         .circle {
+          transform: scale(1.2);
           background: linear-gradient(
             map-get($cs, purple1),
             map-get($cs, white1) 99%
           );
           .v-icon {
             //color: map-get($cs, purple1);
-            font-size: $biggest;
+            font-size: $big;
           }
         }
       }
