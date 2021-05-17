@@ -1,6 +1,6 @@
 <template>
   <div class="wrap">
-    <div class="smallbox box">
+    <div id="accounts" class="smallbox shadow box">
       <h3>Google Accounts</h3>
       <hr />
       <div class="mail">
@@ -8,7 +8,7 @@
         <span>someone@gmail.com</span>
       </div>
     </div>
-    <div class="smallbox box">
+    <div id="domains" class="smallbox shadow box">
       <h3>Domains</h3>
       <hr />
       <div class="mail">
@@ -18,17 +18,17 @@
     </div>
 
     <div class="buttons">
-      <button class="RedBtn noDark">Fetch Sitemap</button>
-      <button class="RedBtn noDark">Add Page</button>
+      <v-btn class="RedBtn shadow noDark">Fetch Sitemap</v-btn>
+      <v-btn class="RedBtn shadow noDark">Add Page</v-btn>
     </div>
 
-    <div class="pages box">
+    <div id="pages" class="pages shadow box">
       <div class="top">
         <div class="left">
-          <h3>Registered Pages</h3>
+          <h3>Target Pages</h3>
         </div>
         <div class="right">
-          <button class="RedBtn noDark">Verify</button>
+          <v-btn class="RedBtn noDark">Verify</v-btn>
         </div>
       </div>
       <div class="search">
@@ -137,18 +137,19 @@ export default {};
 @import "./src/styles/styles.scss";
 
 .wrap {
+  margin-top: 50px;
+  padding-top: 50px;
   height: 100vh;
 }
 
 .smallbox {
   margin-top: 4em !important;
   width: 80%;
-  background-color: map-get($cs, bg);
+  background-color: map-get($cs, white1);
   padding: 2em;
   border-radius: 10px;
   margin: 0 auto;
-  box-shadow: 0 0 10px rgba($color: #000000, $alpha: 0.2);
-
+  animation: bpprimary 25s infinite alternate-reverse;
   h3 {
     padding-bottom: 0.5em;
   }
@@ -177,12 +178,12 @@ export default {};
 .pages {
   margin-top: 4em !important;
   width: 80%;
-  background-color: map-get($cs, bg);
+  background-color: map-get($cs, white1);
   padding: 2em;
   border-radius: 10px;
   margin: 0 auto;
-  box-shadow: 0 0 10px rgba($color: #000000, $alpha: 0.2);
   margin-bottom: 6em;
+  animation: bpprimary 25s infinite alternate-reverse;
 
   .table {
     margin-top: 3em;
@@ -222,7 +223,7 @@ export default {};
   .search {
     display: flex;
     margin-top: 2em;
-
+    flex-wrap: wrap;
     .left {
       flex-grow: 1;
       justify-content: flex-start;

@@ -36,23 +36,22 @@ $cs: (
 );
 
 // DARKMODE
-.darkMode{
+.darkMode {
     filter: invert(1) hue-rotate(180deg);
-    .box_small{
+    .box_small {
         filter: invert(0.1) hue-rotate(180deg);
-        
     }
-    .text{
+    .text {
         color: #000000 !important;
     }
-    .icon{
+    .icon {
         color: #01c9ad !important;
     }
-    .box{
-        background: linear-gradient(rgb(224, 224, 224),rgb(212, 212, 212));
+    .box {
+        background: linear-gradient(rgb(224, 224, 224), rgb(212, 212, 212));
         box-shadow: none !important;
     }
-    .noDark{
+    .noDark {
         filter: invert(1) hue-rotate(180deg);
     }
 }
@@ -61,11 +60,11 @@ $cs: (
 * {
     //^collapse here^
     .RedBtn {
-        padding: 5px 10px;
-        height: 30px;
-        min-width: 30px;
-        border-radius: 20px;
-        background-color: map-get($cs, button);
+        padding: 5px 10px !important;
+        height: 30px !important;
+        min-width: 30px !important;
+        border-radius: 20px !important;
+        background-color: map-get($cs, button) !important;
         color: map-get($cs, white1) !important;
     }
     .shadow {
@@ -220,19 +219,66 @@ $cs: (
             background-color: unset;
         }
     }
-    
+
     // Filter/sort, gives bgcolor to filter v-menu.
     .v-menu__content.theme--light.v-menu__content--fixed.menuable__content__active {
         background-color: map-get($cs, white1) !important;
-      }
+    }
 
-      .v-btn:not(.v-btn--round).v-size--default {
+    .v-btn:not(.v-btn--round).v-size--default {
         height: unset;
         min-width: unset;
         padding: 0;
     }
-    
+
     .theme--light.v-btn.v-btn--has-bg {
         background-color: unset;
+    }
+}
+
+// Keyframes
+@keyframes appear {
+    0% {
+        top: -50%;
+        opacity: 0;
+        transform: scale(0);
+    }
+    100% {
+        top: unset;
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes bpaccept {
+    0% {
+        border-bottom: 2px solid map-get($cs, bg);
+    }
+    100% {
+        border-bottom: 2px solid map-get($cs, accept);
+    }
+}
+@keyframes bpbutton {
+    0% {
+        border-bottom: 2px solid map-get($cs, bg);
+    }
+    100% {
+        border-bottom: 2px solid map-get($cs, button);
+    }
+}
+@keyframes bppurple {
+    0% {
+        border-bottom: 2px solid map-get($cs, bg);
+    }
+    100% {
+        border-bottom: 2px solid map-get($cs, purple1);
+    }
+}
+@keyframes bpprimary {
+    0% {
+        border-bottom: 2px solid map-get($cs, bg);
+    }
+    100% {
+        border-bottom: 2px solid map-get($cs, primary);
     }
 }

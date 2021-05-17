@@ -32,82 +32,78 @@
         <div class="created_lists box_small">
           <div class="list" v-for="list in lists" :key="list">
             <div class="name">
-              <span>{{list.name}}</span>
+              <span>{{ list.name }}</span>
             </div>
             <div class="created">
-              <span>{{list.date}}</span>
+              <span>{{ list.date }}</span>
             </div>
             <div class="links">
-              <span>{{list.links}}</span>
+              <span>{{ list.links }}</span>
             </div>
             <div class="options">
-               <v-tooltip bottom>
+              <v-tooltip bottom>
                 <template v-slot:activator="{ on, attrs }">
-                  <span
-                    v-bind="attrs"
-                    v-on="on"
-                  ><v-icon class="icon">visibility</v-icon></span>
+                  <span v-bind="attrs" v-on="on"
+                    ><v-icon class="icon">visibility</v-icon></span
+                  >
                 </template>
                 <span>View more</span>
               </v-tooltip>
               <v-tooltip bottom>
                 <template v-slot:activator="{ on, attrs }">
-                  <span
-                    v-bind="attrs"
-                    v-on="on"
-                  ><v-icon class="icon">edit</v-icon></span>
+                  <span v-bind="attrs" v-on="on"
+                    ><v-icon class="icon">edit</v-icon></span
+                  >
                 </template>
                 <span>Edit List</span>
               </v-tooltip>
               <v-tooltip bottom>
                 <template v-slot:activator="{ on, attrs }">
-                  <span
-                    v-bind="attrs"
-                    v-on="on"
-                  ><v-icon class="icon">mdi-delete</v-icon></span>
+                  <span v-bind="attrs" v-on="on"
+                    ><v-icon class="icon">mdi-delete</v-icon></span
+                  >
                 </template>
                 <span>Delete List</span>
               </v-tooltip>
-              
             </div>
           </div>
         </div>
       </div>
 
-      <div class="lists_mobile" v-for="list in lists" :key="list">      
-          <div class="list_info">
+      <div class="lists_mobile" v-for="list in lists" :key="list">
+        <div class="list_info">
+          <div class="name">
+            <span class="font-weight-medium">NAME</span>
+          </div>
+          <div class="created">
+            <span class="font-weight-medium">CREATED</span>
+          </div>
+          <div class="links">
+            <span class="font-weight-medium">LINK OPP</span>
+          </div>
+          <div class="options">
+            <span class="font-weight-medium">OPTIONS</span>
+          </div>
+        </div>
+
+        <div class="created_lists box_small">
+          <div class="list">
             <div class="name">
-              <span class="font-weight-medium">NAME</span>
+              <span>{{ list.name }}</span>
             </div>
             <div class="created">
-              <span class="font-weight-medium">CREATED</span>
+              <span>{{ list.date }}</span>
             </div>
             <div class="links">
-              <span class="font-weight-medium">LINK OPP</span>
+              <span>{{ list.links }}</span>
             </div>
             <div class="options">
-              <span class="font-weight-medium">OPTIONS</span>
+              <v-icon class="icon">visibility</v-icon>
+              <v-icon class="icon">edit</v-icon>
+              <v-icon class="icon">mdi-delete</v-icon>
             </div>
           </div>
-
-          <div class="created_lists box_small">
-            <div class="list">
-              <div class="name">
-                <span>{{list.name}}</span>
-              </div>
-              <div class="created">
-                <span>{{list.date}}</span>
-              </div>
-              <div class="links">
-                <span>{{list.links}}</span>
-              </div>
-              <div class="options">
-                <v-icon class="icon">visibility</v-icon>
-                <v-icon class="icon">edit</v-icon>
-                <v-icon class="icon">mdi-delete</v-icon>
-              </div>
-            </div>
-          </div>
+        </div>
       </div>
     </div>
   </div>
@@ -115,17 +111,14 @@
 
 <script>
 export default {
-  data(){
-    return{
-      lists:[
-        {name: 'My list', date: '10.5.2021', links: '2519'},
-        {name: 'Your list', date: '12.5.2021', links: '748'}
-      ]
-    }
-    
-
-    
-  }
+  data() {
+    return {
+      lists: [
+        { name: "My list", date: "10.5.2021", links: "2519" },
+        { name: "Your list", date: "12.5.2021", links: "748" },
+      ],
+    };
+  },
 };
 </script>
 
@@ -136,11 +129,12 @@ export default {
   width: 90%;
   margin: 0 auto 100px auto;
   height: auto;
-  background-color: map-get($cs , white1 );
+  background-color: map-get($cs, white1);
   margin-top: 6em;
   box-shadow: 0 0 20px rgba($color: #000000, $alpha: 0.2);
   padding: 2em;
   border-radius: 10px;
+  animation: bpprimary 25s infinite alternate-reverse;
 
   .message {
     margin-top: 1em;
@@ -152,86 +146,96 @@ export default {
 
   hr {
     margin: 2em 0em 2em;
-    @media (max-width: $md){
+    @media (max-width: $md) {
       margin-bottom: 0;
     }
   }
 
-  .lists, .lists_mobile {
+  .lists,
+  .lists_mobile {
     display: flex;
     flex-direction: column;
-    .list_info{
+    .list_info {
       display: flex;
       margin: 1em;
-      .name, .created, .links, .options{
+      .name,
+      .created,
+      .links,
+      .options {
         width: 25%;
       }
     }
-    .created_lists{
+    .created_lists {
       border-radius: 10px;
-      .list{
+      .list {
         display: flex;
         margin: 1em;
-        .v-icon{
-          color: map-get($cs , button);
+        .v-icon {
+          color: map-get($cs, button);
           margin-right: 12px;
         }
-        .name, .created, .links, .options{
+        .name,
+        .created,
+        .links,
+        .options {
           width: 25%;
         }
       }
-      
     }
 
-      span {
-        color: map-get($cs, paragraph);
-        font-size: 14px;
-      }
+    span {
+      color: map-get($cs, paragraph);
+      font-size: 14px;
+    }
   }
-  .lists{
-    .list{
+  .lists {
+    .list {
       background-color: rgb(233, 231, 231);
       padding: 10px;
       border-radius: 10px;
     }
-    @media (max-width: $md){
+    @media (max-width: $md) {
       display: none;
     }
   }
-  .lists_mobile{
-    @media (min-width: $md){
+  .lists_mobile {
+    @media (min-width: $md) {
       display: none;
     }
   }
-  @media (max-width: $md){
-    .lists_mobile{
+  @media (max-width: $md) {
+    .lists_mobile {
       flex-direction: row;
       justify-content: space-between;
       border-bottom: 1px solid black;
-      .list_info{
+      .list_info {
         flex-direction: column;
-        .name, .created, .links, .options{
+        .name,
+        .created,
+        .links,
+        .options {
           width: 100%;
         }
       }
-      .created_lists{
+      .created_lists {
         background-color: transparent;
-        .list{
+        .list {
           flex-direction: column;
-          .name, .created, .links, .options{
+          .name,
+          .created,
+          .links,
+          .options {
             width: 100%;
             text-align: end;
-            .v-icon{
+            .v-icon {
               margin-right: 0;
             }
           }
         }
-        
       }
       span {
         font-size: 12px;
       }
-
     }
   }
 }

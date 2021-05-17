@@ -14,10 +14,10 @@
             <h4>Registered</h4>
           </div>
           <div class="topBtn">
-            <button class="RedBtn flex vcenter shadow">
+            <v-btn class="RedBtn flex vcenter shadow">
               <h5>Get More</h5>
               <v-icon>mdi-menu-down</v-icon>
-            </button>
+            </v-btn>
           </div>
         </div>
       </div>
@@ -34,10 +34,10 @@
             <h4>Registered</h4>
           </div>
           <div class="topBtn">
-            <button class="RedBtn flex vcenter shadow">
+            <v-btn class="RedBtn flex vcenter shadow">
               <h5>Get More</h5>
               <v-icon>mdi-menu-down</v-icon>
-            </button>
+            </v-btn>
           </div>
         </div>
       </div>
@@ -54,10 +54,10 @@
             <h4>Registered</h4>
           </div>
           <div class="topBtn">
-            <button class="RedBtn flex vcenter shadow">
+            <v-btn class="RedBtn flex vcenter shadow">
               <h5>Get More</h5>
               <v-icon>mdi-menu-down</v-icon>
-            </button>
+            </v-btn>
           </div>
         </div>
       </div>
@@ -86,9 +86,9 @@
           </div>
         </div>
         <div class="botBtn">
-          <button class="RedBtn">
+          <v-btn class="RedBtn">
             <h5>Change Plan</h5>
-          </button>
+          </v-btn>
         </div>
       </div>
       <div id="Billing" class="midbox flexcol shadow">
@@ -97,9 +97,9 @@
         </div>
         <div id="textbox"></div>
         <div class="botBtn">
-          <button>
-            <h5 class="RedBtn">Change Info</h5>
-          </button>
+          <v-btn class="RedBtn">
+            <h5>Change Info</h5>
+          </v-btn>
         </div>
       </div>
       <div id="Payment" class="midbox flexcol shadow">
@@ -108,9 +108,9 @@
         </div>
         <div id="textbox"></div>
         <div class="botBtn">
-          <button>
-            <h5 class="RedBtn">Add Payment Method</h5>
-          </button>
+          <v-btn class="RedBtn">
+            <h5>Add Payment Method</h5>
+          </v-btn>
         </div>
       </div>
     </div>
@@ -132,7 +132,7 @@
             </div>
             <div class="section">
               <h3>Amount</h3>
-              <h4>400DKK</h4>
+              <h4>400 DKK</h4>
             </div>
             <div class="section">
               <h3>Status</h3>
@@ -142,15 +142,69 @@
           <div class="invoice flexcol shadow">
             <div class="section">
               <h3>Date</h3>
-              <h4>27.10.2020</h4>
+              <h4>27.09.2020</h4>
             </div>
             <div class="section">
               <h3>Invoice Number</h3>
-              <h4>666</h4>
+              <h4>457</h4>
             </div>
             <div class="section">
               <h3>Amount</h3>
-              <h4>400DKK</h4>
+              <h4>1680 DKK</h4>
+            </div>
+            <div class="section">
+              <h3>Status</h3>
+              <h4>Owned</h4>
+            </div>
+          </div>
+          <div class="invoice flexcol shadow">
+            <div class="section">
+              <h3>Date</h3>
+              <h4>27.08.2020</h4>
+            </div>
+            <div class="section">
+              <h3>Invoice Number</h3>
+              <h4>399</h4>
+            </div>
+            <div class="section">
+              <h3>Amount</h3>
+              <h4>3775 DKK</h4>
+            </div>
+            <div class="section">
+              <h3>Status</h3>
+              <h4>Owned</h4>
+            </div>
+          </div>
+          <div class="invoice flexcol shadow">
+            <div class="section">
+              <h3>Date</h3>
+              <h4>27.07.2020</h4>
+            </div>
+            <div class="section">
+              <h3>Invoice Number</h3>
+              <h4>367</h4>
+            </div>
+            <div class="section">
+              <h3>Amount</h3>
+              <h4>999 DKK</h4>
+            </div>
+            <div class="section">
+              <h3>Status</h3>
+              <h4>Owned</h4>
+            </div>
+          </div>
+          <div class="invoice flexcol shadow">
+            <div class="section">
+              <h3>Date</h3>
+              <h4>27.06.2020</h4>
+            </div>
+            <div class="section">
+              <h3>Invoice Number</h3>
+              <h4>302</h4>
+            </div>
+            <div class="section">
+              <h3>Amount</h3>
+              <h4>599 DKK</h4>
             </div>
             <div class="section">
               <h3>Status</h3>
@@ -178,7 +232,6 @@ export default {};
   box-sizing: border-box;
   padding-left: 5%;
   padding-right: 5%;
-
   #top {
     width: 100%;
     flex-wrap: wrap;
@@ -196,7 +249,7 @@ export default {};
       font-size: $smaller;
     }
     #box1 {
-      border-bottom: 2px solid map-get($cs, button);
+      animation: bpbutton 23s infinite alternate-reverse;
       #analysisicon {
         background: linear-gradient(
           map-get($cs, button),
@@ -205,7 +258,7 @@ export default {};
       }
     }
     #box2 {
-      border-bottom: 2px solid map-get($cs, accept);
+      animation: bpaccept 18s infinite alternate-reverse;
       #registeredicon {
         background: linear-gradient(
           map-get($cs, accept),
@@ -214,10 +267,10 @@ export default {};
       }
     }
     #box3 {
-      border-bottom: 2px solid map-get($cs, primary);
+      animation: bppurple 29s infinite alternate-reverse;
       #linkicon {
         background: linear-gradient(
-          map-get($cs, primary),
+          map-get($cs, purple1),
           map-get($cs, white1) 99%
         );
       }
@@ -272,6 +325,15 @@ export default {};
     h5 {
       font-size: $small;
     }
+    #Subscription {
+      animation: bpprimary 26s infinite alternate-reverse;
+    }
+    #Billing {
+      animation: bpprimary 31s infinite alternate-reverse;
+    }
+    #Payment {
+      animation: bpprimary 19s infinite alternate-reverse;
+    }
     .midbox {
       flex-grow: 1;
       min-width: 100%;
@@ -283,7 +345,6 @@ export default {};
       background-color: map-get($cs, white1);
       position: relative;
       justify-content: space-between;
-
       #title {
         display: flex;
         justify-content: center;
@@ -302,7 +363,7 @@ export default {};
   }
   #bot {
     width: 100%;
-
+    margin-bottom: 50px;
     #invoicebox {
       min-width: 100%;
       max-width: 100%;
@@ -311,9 +372,11 @@ export default {};
       padding: 15px;
       margin-left: 20%;
       margin-right: 20%;
+      animation: bpprimary 20s infinite alternate-reverse;
 
       .line {
         width: 90%;
+        margin: 2%;
       }
       #table {
         width: 100%;
@@ -352,6 +415,7 @@ export default {};
             flex-direction: row;
             flex-wrap: nowrap;
             width: 100%;
+            margin-bottom: 2%;
           }
         }
       }
@@ -360,6 +424,9 @@ export default {};
   @media (min-width: $md) {
     padding-left: 5%;
     padding-right: 5%;
+    .maxw {
+      max-width: 250px;
+    }
     #top {
       justify-content: space-between !important;
       flex-wrap: nowrap !important;

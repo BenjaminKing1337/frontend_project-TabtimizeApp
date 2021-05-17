@@ -255,6 +255,7 @@ export default {
     overflow-x: hidden !important;
     position: relative;
     z-index: 2;
+    animation: appear 0.2s ease;
   }
 }
 
