@@ -9,18 +9,108 @@
 
     <div class="myProfile">
       <div class="editProfile">
+
         <div class="top">
           <h1>Edit profile</h1>
           <button>Save</button>
         </div>
+
         <hr />
 
         <h1>USER INFORMATION</h1>
 
-        <div class="form"></div>
+        <div class="form">
+          <v-form>
+            <v-container>
+              <v-row>
+                <v-col
+                  cols="12"
+                  sm="6"
+                >
+                  <v-text-field
+                    label="Company name"
+                    outlined
+                    dense
+                  ></v-text-field>
+                </v-col>
+
+                <v-col
+                  cols="12"
+                  sm="6"
+                >
+                  <v-text-field
+                    label="Email address"
+                    outlined
+                    dense
+                  ></v-text-field>
+                </v-col>
+
+                <v-col
+                  cols="12"
+                  sm="6"
+                >
+                  <v-text-field
+                    label="First name"
+                    outlined
+                    dense
+                  ></v-text-field>
+                </v-col>
+
+                <v-col
+                  cols="12"
+                  sm="6"
+                >
+                  <v-text-field
+                    label="Last name"
+                    outlined
+                    dense
+                  ></v-text-field>
+                </v-col>
+
+                <v-col
+                  cols="12"
+                  sm="6"
+                >
+                  <v-text-field
+                    label="Business type"
+                    outlined
+                    dense
+                  ></v-text-field>
+                </v-col>
+
+                <v-col
+                  cols="12"
+                  sm="6"
+                >
+                  <v-text-field
+                    label="LinkedIn"
+                    outlined
+                    dense
+                  ></v-text-field>
+
+                </v-col>
+
+                <hr width="100%">
+
+                <v-col
+                  cols="12"
+                  sm="12"
+                >
+                  <v-textarea
+                    label="About me"
+                    auto-grow
+                    rows="3"
+                    outlined
+                  ></v-textarea>
+                </v-col>
+              </v-row>
+            </v-container>
+          </v-form>
+        </div>
       </div>
 
       <div class="viewProfile">
+
         <div class="userInfo">
           <img
             src="https://i.pinimg.com/originals/83/7e/36/837e36aa503857cd3581bf726a5ba32e.jpg"
@@ -84,12 +174,12 @@ export default {};
   margin-top: 40px;
   .editProfile {
     width: 900px;
-    height: 400px;
+    height: auto;
     background-color: map-get($cs, white1);
     box-shadow: 0 0 20px rgba($color: #000000, $alpha: 0.2);
     border-radius: 10px;
     margin-right: 30px;
-    animation: bpprimary 25s infinite alternate-reverse;
+
     .top {
       display: flex;
       justify-content: space-between;
@@ -121,8 +211,13 @@ export default {};
     }
 
     .form {
-      height: 200px;
+      height: auto;
       padding: 0 30px;
+      display: flex;
+
+      hr{
+        margin-bottom: 17px;
+      }
     }
   }
   .viewProfile {
@@ -133,7 +228,6 @@ export default {};
     box-shadow: 0 0 20px rgba($color: #000000, $alpha: 0.2);
     border-radius: 10px;
     padding: 30px;
-    animation: bpprimary 20s infinite alternate-reverse;
 
     .userInfo {
       display: flex;
@@ -191,16 +285,38 @@ export default {};
     }
   }
 
-  @media (max-width: $md) {
+  @media (max-width: 1100px) {
     flex-direction: column-reverse;
 
     .editProfile {
       width: 100%;
       margin: 20px 0 70px 0;
+
+      .top{
+        padding: 20px;
+      }
+      .form{
+        padding: 0 20px;
+      }
     }
     .viewProfile {
       width: 100%;
       margin-top: 20px;
+      padding: 15px;
+    }
+  }
+  @media (max-width: $xl) {
+    .editProfile {
+
+      .top{
+        padding: 20px;
+      }
+      .form{
+        padding: 0 20px;
+      }
+    }
+    .viewProfile {
+      padding: 15px;
     }
   }
 }

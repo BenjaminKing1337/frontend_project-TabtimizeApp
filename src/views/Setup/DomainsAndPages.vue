@@ -137,9 +137,7 @@ export default {};
 @import "./src/styles/styles.scss";
 
 .wrap {
-  margin-top: 50px;
   padding-top: 50px;
-  height: 100vh;
 }
 
 .smallbox {
