@@ -150,7 +150,7 @@ export default {
   },
 
   methods: {
-    darkMode: function(e) {
+    darkMode: function (e) {
       if (e) {
         document.documentElement.classList.toggle("darkMode");
 
@@ -182,7 +182,6 @@ export default {
   background: map-get($cs, bg);
   margin-left: 350px;
   overflow: hidden;
-
   @media (max-width: $md) {
     margin-left: 0px !important;
   }
@@ -223,15 +222,14 @@ export default {
   .cornerIcons {
     position: fixed;
     z-index: 3;
-    right: 3%;
-    width: 110px;
+    right: 6%;
     display: flex;
     justify-content: space-between;
     @media (min-width: $md) {
       width: 120px !important;
     }
     .cornerIcon {
-      margin-left: .5em;
+      margin-left: 0.5em;
       margin-top: 2em;
       @media (max-width: $md) {
         font-size: $medium;
