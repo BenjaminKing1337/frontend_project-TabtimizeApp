@@ -95,7 +95,20 @@
         <div id="title">
           <h2>Billing Information</h2>
         </div>
-        <div id="textbox"></div>
+        <div id="textbox">
+          <div class="section">
+            <h3>Billing Email</h3>
+            <h4>jbs@tabtimize.com</h4>
+          </div>
+          <div class="section">
+            <h3>Company</h3>
+            <h4>JJS Innovations IVS</h4>
+          </div>
+          <div class="section">
+            <h3>ADDRESS</h3>
+            <h4>JJS Innovations IVS</h4>
+          </div>
+        </div>
         <div class="botBtn">
           <v-btn class="RedBtn">
             <h5>Change Info</h5>
@@ -106,7 +119,21 @@
         <div id="title">
           <h2>Payment Method</h2>
         </div>
-        <div id="textbox"></div>
+        <div id="textbox">
+          <div class="creditCard">
+            <div class="section">
+              <h3>Card Number</h3>
+              <h4>visa - 4242</h4>
+            </div>
+            <div class="section">
+              <h3>Expiration Date</h3>
+              <h4>4/2069</h4>
+            </div>
+            <div class="section">
+              <span class="activeCard">active</span>
+            </div>
+          </div>
+        </div>
         <div class="botBtn">
           <v-btn class="RedBtn">
             <h5>Add Payment Method</h5>
@@ -377,7 +404,8 @@ export default {};
 
       .line {
         width: 90%;
-        margin: 2%;
+        margin: 3%;
+        background-color: lightgray !important;
       }
       #table {
         width: 100%;
@@ -480,6 +508,22 @@ export default {};
     .RedBtn {
       transform: scale(0.8);
     }
+  }
+}
+
+.creditCard {
+  width: 80%;
+  box-shadow: 0 0 10px rgba($color: #000000, $alpha: .2);
+  padding: 1em;
+  border-radius: 15px;
+  
+  .activeCard {
+    background-color: rgba($color: #bbffaa, $alpha: 1.0);
+    padding-left: .5em;
+     padding-right: .5em;
+     padding-top: .3em;
+     padding-bottom: .3em;
+    border-radius: 15px;
   }
 }
 </style>
