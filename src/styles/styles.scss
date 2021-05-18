@@ -198,6 +198,7 @@ $cs: (
             }
         }
     }
+    
 }
 
 // VUETIFY OVERRIDES
@@ -233,6 +234,9 @@ $cs: (
 
     .theme--light.v-btn.v-btn--has-bg {
         background-color: unset;
+    }
+    .flex, .child-flex > * {
+        flex: 0 1 auto !important;
     }
 }
 

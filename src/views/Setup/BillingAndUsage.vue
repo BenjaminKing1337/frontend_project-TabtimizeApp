@@ -41,7 +41,7 @@
           </div>
         </div>
       </div>
-      <div id="box3" class="topbox flexcol shadow">
+      <!-- <div id="box3" class="topbox flexcol shadow">
         <div class="topboxtop dispflexcenter">
           <h2>Link Requests</h2>
         </div>
@@ -60,7 +60,7 @@
             </v-btn>
           </div>
         </div>
-      </div>
+      </div> -->
     </div>
     <div id="mid" class="flexcol vcenter">
       <div id="Subscription" class="midbox flexcol shadow">
@@ -276,9 +276,10 @@ export default {};
       }
     }
     .topbox {
-      flex-grow: 1 !important;
+      flex-grow: 1;
       min-width: 100%;
       max-width: 100%;
+      max-height: 50%;
       margin: 2%;
       margin-left: 0px;
       padding: 15px;
