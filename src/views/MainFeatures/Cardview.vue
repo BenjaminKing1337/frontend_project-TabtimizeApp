@@ -1,5 +1,5 @@
 <template>
-  <div class="dispflexcenter flexcol">
+  <div class="cardview_page">
     <div id="cardview">
       <div id="head" class="bglight corners shadow">
         <div id="results">
@@ -99,12 +99,17 @@ export default {
 
 <style lang="scss" scoped>
 @import "./src/styles/styles.scss";
+.cardview_page{
+  padding: 45px;
+  @media (max-width: $sm) {
+    padding: 20px;
+  }
+}
 
 #cardview {
   display: flex;
   flex-direction: column;
-  padding: 100px 0;
-  width: 90%;
+  width: 100%;
   border-radius: 5px;
   #head {
     z-index: 3;
@@ -112,8 +117,7 @@ export default {
     margin: 20px auto;
     width: 100%;
     animation: bpprimary 20s infinite alternate-reverse;
-    @media (min-width: $md) {
-    }
+    
     #results {
     }
     #filtersortcheck {

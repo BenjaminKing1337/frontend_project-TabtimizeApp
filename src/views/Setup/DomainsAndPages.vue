@@ -1,5 +1,6 @@
 <template>
   <div class="wrap">
+    <h1>Domains and Pages</h1>
     <div id="accounts" class="smallbox shadow box">
       <h3>Google Accounts</h3>
       <hr />
@@ -136,13 +137,25 @@ export default {};
 <style lang="scss" scoped>
 @import "./src/styles/styles.scss";
 
+h1 {
+  color: map-get($cs, white1);
+  text-align: start;
+  width: 100%;
+  max-width: 1590px;
+  margin: 40px auto 0 auto;
+}
+
 .wrap {
-  padding-top: 50px;
+  padding: 45px;
+  @media (max-width: $sm) {
+    padding: 20px;
+  }
 }
 
 .smallbox {
   margin-top: 4em !important;
-  width: 80%;
+  width: 100%;
+  max-width: 1590px;
   background-color: map-get($cs, white1);
   padding: 2em;
   border-radius: 10px;
@@ -175,7 +188,8 @@ export default {};
 
 .pages {
   margin-top: 4em !important;
-  width: 80%;
+  width: 100%;
+  max-width: 1590px;
   background-color: map-get($cs, white1);
   padding: 2em;
   border-radius: 10px;

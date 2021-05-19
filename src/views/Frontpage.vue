@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="frontpage">
     <div class="welcome">
       <h1 class="text">Welcome, User!</h1>
     </div>
@@ -20,8 +20,8 @@
       </p>
 
       <div class="buttons">
-        <button class="help_button box">Help guides</button>
-        <button class="learn_button box">Learn about our metrics</button>
+        <v-btn class="help_button box">Help guides</v-btn>
+        <v-btn class="learn_button box">Learn about our metrics</v-btn>
       </div>
     </div>
 
@@ -47,6 +47,13 @@ export default {
 </script>
 <style lang="scss">
 @import "./src/styles/styles.scss";
+.frontpage{
+  padding: 45px;
+  @media (max-width: $sm) {
+    padding: 20px;
+  }
+}
+
 .welcome {
   color: map-get($cs, white1);
   display: flex;
@@ -104,8 +111,9 @@ export default {
 }
 
 .helpGuides {
-  padding: 0 110px;
-
+  width: 100%;
+  max-width: 1590px;
+  margin: 0 auto;
   h1 {
     font-size: $big2;
   }
@@ -128,6 +136,7 @@ export default {
       padding: 14px 20px;
       border-radius: 27px;
       box-shadow: 2px 5px 14px hsla(0, 0%, 0%, 0.16);
+      text-transform: capitalize;
     }
     .learn_button {
       margin-left: 10px;
@@ -156,8 +165,10 @@ export default {
 
 .news {
   display: flex;
-  margin-bottom: 100px;
-  justify-content: center;
+  width: 100%;
+  max-width: 1590px;
+  margin: 0 auto 100px auto; 
+
 
   @media (max-width: $md) {
     flex-wrap: wrap;

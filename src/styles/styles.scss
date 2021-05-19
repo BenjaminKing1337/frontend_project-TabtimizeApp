@@ -145,7 +145,7 @@ $cs: (
         z-index: 1;
         font-weight: 300;
         height: 1px;
-        border-bottom: 1px solid map-get($cs, primary);
+        border-bottom: 1px solid map-get($cs, paragraph);
     }
     .expansionbtn {
         border-radius: 0;

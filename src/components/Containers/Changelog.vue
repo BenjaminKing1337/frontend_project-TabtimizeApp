@@ -19,7 +19,7 @@
     </div>
 
     <div class="button">
-      <button class="viewOlder noDark">View Older</button>
+      <v-btn depressed class="viewOlder noDark">View Older</v-btn>
     </div>
   </div>
 </template>
@@ -32,9 +32,8 @@ export default {};
 @import "./src/styles/styles.scss";
 .changelog {
   height: auto;
-  width: 634px;
+  width: 100%;
   background-color: map-get($cs, white1);
-  margin-left: 90px;
   border-radius: 9px;
   box-shadow: 2px 2px 26px hsla(0, 0%, 0%, 0.16);
   position: relative;
@@ -106,10 +105,11 @@ export default {};
       margin: 0 28px 10px 0;
       height: 34px;
       width: 104px;
-      font-size: $medium2;
+      font-size: $medium;
       color: map-get($cs, white1);
       background-color: map-get($cs, button);
       border-radius: 25px;
+      text-transform: capitalize;
     }
   }
 

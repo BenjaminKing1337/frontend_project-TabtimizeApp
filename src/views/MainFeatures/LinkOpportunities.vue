@@ -1,12 +1,12 @@
 <template>
   <div id="backlinkEngine">
-    <div id="title" class="flexcol vcenter"><h1 class="text">Backlink Engine</h1>
-    <br>
-    <h5>Select a target page to view analyzed opportunities</h5>
+    <div id="title">
+      <h1>Backlink Engine</h1>
+      <p>Select a target page to view analyzed opportunities.</p>
     </div>
 
     <Balance/>
-    <div id="pagelist" class="box">
+    <!-- <div id="pagelist" class="box">
       <div class="page">
         <div id="navigation">
           <div class="dispflexcenter circle shadow">
@@ -195,7 +195,7 @@
           >
         </div>
       </div>
-    </div>
+    </div> -->
     <!-- pagelistfull appear on desktopview only -->
     <div id="pagelistfull" class="box dispflexcenter">
       <div class="page">
@@ -209,100 +209,77 @@
           <h2 class="flex center">Target Pages</h2>
         </div>
 
-        <div id="pageInfo" class="flex spaceBetween">
-          <div id="pageName" class="flexcol spaceBetween">
-            <h3>PAGE NAME</h3>
-            <div class="line" />
-            <h4>/</h4>
-            <div class="line" />
-            <h4>/sitemap.html</h4>
-            <div class="line" />
-            <h4>/about-us</h4>
-            <div class="line" />
-            <h4>/contact</h4>
+        <div id="pageInfo">
+          <div class="infoDescription">
+            <div class="section"><span class="font-weight-bold">Pages</span></div>
+            <div class="section"><span class="font-weight-bold">Url Topic</span></div>
+            <div class="section"><span class="font-weight-bold">Link opp</span></div>
+            <div class="section"><span class="font-weight-bold">Last analyzed</span></div>
           </div>
-          <div id="number" class="flexcol spaceBetween">
-            <h3>LINK OPPORTUNITIES</h3>
-            <div class="line" />
-            <div class="flex vcenter">
-              <h4>130</h4>
-              <router-link class="nodecor" to="/MainFeatures/Cardview"
-                ><button id="view" class="RedBtn dispflexcenter">
-                  <h3 class="nodecor light noDark">VIEW</h3>
-                </button></router-link
-              >
+
+          <div class="data" v-for="data in pages" :key="data">
+            <div class="section">
+              <span>{{data.page}}</span>
             </div>
-            <div class="line" />
-            <div class="flex vcenter">
-              <h4>130</h4>
-              <router-link class="nodecor" to="/MainFeatures/Cardview"
-                ><button id="view" class="RedBtn dispflexcenter">
-                  <h3 class="nodecor light noDark">VIEW</h3>
-                </button></router-link
-              >
+            <div class="section">
+              <span>{{data.topic}}</span>
             </div>
-            <div class="line" />
-            <div class="flex vcenter">
-              <h4>130</h4>
-              <router-link class="nodecor" to="/MainFeatures/Cardview"
-                ><button id="view" class="RedBtn dispflexcenter">
-                  <h3 class="nodecor light noDark">VIEW</h3>
-                </button></router-link
-              >
+            <div class="section flex">
+              <span class="linkOpp">{{data.link}}</span>
+              <v-btn depressed to="/MainFeatures/Cardview">
+                View
+              </v-btn>
             </div>
-            <div class="line" />
-            <div class="flex vcenter">
-              <h4>130</h4>
-              <router-link class="nodecor" to="/MainFeatures/Cardview"
-                ><button id="view" class="RedBtn dispflexcenter">
-                  <h3 class="nodecor light noDark">VIEW</h3>
-                </button></router-link
-              >
+            <div class="section">
+              <span>{{data.date}}</span>
+              <v-btn depressed>
+                <v-icon>refresh</v-icon>
+              </v-btn>
             </div>
-          </div>
-          <div id="topic" class="flexcol spaceBetween">
-            <h3>URL TOPIC</h3>
-            <div class="line" />
-            <h4>Business & Industrial</h4>
-            <div class="line" />
-            <h4>Business & Industrial</h4>
-            <div class="line" />
-            <h4>Business & Industrial</h4>
-            <div class="line" />
-            <h4>Business & Industrial</h4>
-          </div>
-          <div id="analyzed" class="flexcol spaceBetween">
-            <h3>LAST ANALYZED</h3>
-            <div class="line" />
-            <div class="flex vcenter spaceBetween">
-              <button id="refresh" class="RedBtn dispflexcenter">
-                <v-icon class="noDark">mdi-refresh</v-icon>
-              </button>
-              <h4>25/01/2021</h4>
-            </div>
-            <div class="line" />
-            <div class="flex vcenter spaceBetween">
-              <button id="refresh" class="RedBtn dispflexcenter">
-                <v-icon class="noDark">mdi-refresh</v-icon>
-              </button>
-              <h4>25/01/2021</h4>
-            </div>
-            <div class="line" />
-            <div class="flex vcenter spaceBetween">
-              <button id="refresh" class="RedBtn dispflexcenter">
-                <v-icon class="noDark">mdi-refresh</v-icon>
-              </button>
-              <h4>25/01/2021</h4>
-            </div>
-            <div class="line" />
-            <div class="flex vcenter spaceBetween">
-              <button id="refresh" class="RedBtn dispflexcenter">
-                <v-icon class="noDark">mdi-refresh</v-icon>
-              </button>
-              <h4>25/01/2021</h4>
-            </div>
+
           </div>
         </div>
+      </div>
+    </div>
+
+    <div id="pagelistfull_mobile" class="box dispflexcenter" v-for="data in pages" :key="data">
+      <div class="page">
+        <div id="navigation">
+          <div class="dispflexcenter circle shadow">
+            <v-icon>mdi-bullseye-arrow</v-icon>
+          </div>
+        </div>
+
+        <div id="pageInfo">
+          <div class="infoDescription">
+            <div class="section"><span class="font-weight-bold">Page</span></div>
+            <div class="section"><span class="font-weight-bold">Url Topic</span></div>
+            <div class="section"><span class="font-weight-bold">Link opp</span></div>
+            <div class="section"><span class="font-weight-bold">Last analyzed</span></div>
+          </div>
+
+          <div class="data">
+            <div class="section">
+              <span>{{data.page}}</span>
+            </div>
+            <div class="section">
+              <span>{{data.topic}}</span>
+            </div>
+            <div class="section flex">
+              <span class="linkOpp">{{data.link}}</span>
+            </div>
+            <div class="section">
+              <span>{{data.date}}</span>
+              <v-btn depressed>
+                <v-icon>refresh</v-icon>
+              </v-btn>
+            </div>
+
+          </div>
+        </div>
+        <v-btn depressed to="/MainFeatures/Cardview">
+          View
+        </v-btn>
       </div>
     </div>
   </div>
@@ -317,6 +294,16 @@ export default {
   components: {
     Balance,
   },
+  data() {
+    return {
+      pages: [
+        {page: "/", topic: "Business & Industrial", link: "130", date:"25/01/2021" },
+        {page: "/about-us", topic: "Business & Industrial", link: "58", date:"25/01/2021" },
+        {page: "/contact", topic: "Business & Industrial", link: "666", date:"25/01/2021" },
+        {page: "/projects", topic: "Business & Industrial", link: "951", date:"25/01/2021" },
+      ],
+    };
+  },
 };
 </script>
 
@@ -325,32 +312,21 @@ export default {
 
 /* PAGE */
 #backlinkEngine {
-  padding-left: 5%;
-  padding-right: 5%;
+  padding: 45px;
   @media (max-width: $sm) {
-     padding-top: 100px;
-    }
-  #title {
-    display: flex;
-    justify-content: center;
-    color: map-get($cs, white1);
-    margin-top: 4em;
-    margin-bottom: 40px;
-    h1 {
-      font-size: $biggest;
-    } 
-    h5 {
-      font-size: $medium;
-      font-weight: 400;
-    }
-    @media (max-width: $sm) {
-      display: none;
+    padding: 20px;
+  }
+  #title{
+    width: 100%;
+    max-width: 1590px;
+    margin: 40px auto 60px auto;
+    h1,
+    p {
+      color: map-get($cs, white1);
+      margin: 0;
     }
   }
-  
   #pagelist {
-    justify-self: center;
-    margin: 2%;
     @media (min-width: $md) {
       display: none;
     }
@@ -359,15 +335,13 @@ export default {
       background-color: map-get($cs, white1);
       animation: bppurple 25s infinite alternate-reverse;
       margin-top: 5%;
-      padding: 5%;
       h3 {
         font-size: $small;
       }
       #navigation {
         display: flex;
         float: right;
-        margin-top: -8%;
-        margin-right: -8%;
+
         .circle {
           transform: scale(1.2);
           background: linear-gradient(
@@ -382,24 +356,7 @@ export default {
       }
       #pageNo {
       }
-      #pageInfo {
-        div.line {
-          margin-bottom: 30px;
-        }
-        #pageName,
-        #number,
-        #topic,
-        #analyzed {
-          margin: 5px auto;
-        }
-        #refresh {
-          margin: 0 5px;
-          width: 100%;
-          .v-icon {
-            color: map-get($cs, white1);
-          }
-        }
-      }
+      
       #viewPage {
         #view {
           width: 100%;
@@ -409,35 +366,26 @@ export default {
   }
   #pagelistfull {
     width: 100%;
-    @media (max-width: $md) {
+    max-width: 1590px;
+    margin: 0 auto;
+    @media (max-width: 1100px) {
       display: none;
     }
     h2 {
-      margin: -3% 2% 5% 2%;
+      margin: 0 2% 5% 2%;
     }
     .page {
-      width: 97%;
+      width: 100%;
       border-radius: 5px;
       background-color: map-get($cs, white1);
       animation: bppurple 25s infinite alternate-reverse;
       margin-top: 5%;
-      padding: 5%;
-      .line {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: 110%;
-      }
-      h3 {
-        font-size: $medium;
-      }
-      h4 {
-        font-size: $small;
-      }
+      padding: 5% 40px;
+
       #navigation {
         position: relative;
         transform: scale(2);
-        left: 43%;
+        left: 46%;
         margin-top: -5%;
         .circle {
           background: linear-gradient(
@@ -446,26 +394,137 @@ export default {
           );
         }
       }
-      #number {
-        .nodecor {
-          transform: scale(0.8) !important;
+
+      
+
+      #pageInfo{
+        .infoDescription{
+          display: flex;
+          justify-content: flex-start;
+          width: 100%;
+          margin-bottom: 15px;
+
+          .section{
+            width: 25%;
+            font-size: $medium;
+          }
+        
         }
-      }
-      #analyzed {
-        h3 {
-          margin-bottom: 12px;
-        }
-        .flex {
-          margin: 4px 0;
-        }
-        #refresh {
-          transform: scale(0.6);
-          .v-icon {
-            color: map-get($cs, white1);
+
+        .data{
+          display: flex;
+          padding: 10px;
+          border-radius: 10px;
+          background-color: rgb(233, 231, 231);
+          margin-bottom: 10px;
+          .section{
+            width: 25%;
+            span{
+              margin-left: 5px;
+            }
+            .linkOpp{
+              display: block;
+              width: 34px;
+            }
+            .v-btn{
+              background-color: map-get($cs, button );
+              color: map-get($cs, white1 );
+              height: 30px;
+              width: 50px;
+              border-radius: 30px;
+              margin-left: 10px;
+            }
           }
         }
       }
+     
     }
+  }
+
+  #pagelistfull_mobile{
+    @media (min-width: 1101px) {
+      display: none;
+    }
+    width: 100%;
+    background-color: map-get($cs, white1);
+    box-shadow: 0 0 20px rgba($color: #000000, $alpha: 0.2);
+    border-radius: 10px;
+    margin-top: 20px;
+
+    .page{
+      width: 100%;
+      padding: 30px 20px 20px 20px;
+      .v-btn{
+        background-color: map-get($cs, button );
+        color: map-get($cs, white1 );
+        height: 40px;
+        width: 100%;
+        border-radius: 30px;
+      }
+    }
+
+    #navigation {
+      position: absolute;
+      transform: scale(1.3);
+      left: 40px;
+      margin-top: -45px;
+      @media (max-width: $sm) {
+        left: 20px;
+      }
+
+      .circle {
+        background: linear-gradient(
+          map-get($cs, purple1),
+          map-get($cs, white1) 99%
+        );
+      }
+    }
+
+    #pageInfo{
+      display: flex;
+        .infoDescription{
+          display: flex;
+          flex-direction: column;
+          width: 50%;
+          margin-bottom: 15px;
+
+          .section{
+            font-size: $medium;
+            margin-bottom: 10px;
+          }
+        
+        }
+        .data{
+          width: 50%;
+          .section{
+            margin-bottom: 10px;
+            display: flex;
+            justify-content: flex-end;
+            span{
+              overflow: hidden;
+              white-space: nowrap;
+              text-overflow: ellipsis;
+            }
+            .linkOpp{
+              display: block;
+              width: 34px;
+            }
+            .v-btn{
+              background-color: map-get($cs, button );
+              color: map-get($cs, white1 );
+              height: 25px;
+              width: 35px;
+              border-radius: 30px;
+              margin-left: 5px;
+              text-transform: capitalize;
+            }
+          }
+        }
+
+      }
+  }
+  #pagelistfull_mobile:last-child{
+    margin-bottom: 75px;
   }
 
   /*Multiple use classes*/

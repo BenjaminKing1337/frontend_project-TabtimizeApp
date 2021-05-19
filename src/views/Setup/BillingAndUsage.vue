@@ -1,5 +1,6 @@
 <template>
-  <div class="main flexcol vcenter">
+  <div class="main">
+    <h1>Billing and Usage</h1>
     <div id="top" class="flex spaceBetween">
       <div id="box1" class="topbox flexcol shadow">
         <div class="topboxtop dispflexcenter">
@@ -147,120 +148,91 @@
           <h2>Invoices</h2>
         </div>
         <div class="line" />
+
         <div id="table">
-          <div class="invoice flexcol shadow">
-            <div class="section">
-              <h3>Date</h3>
-              <h4>27.10.2020</h4>
-            </div>
-            <div class="section">
-              <h3>Invoice Number</h3>
-              <h4>666</h4>
-            </div>
-            <div class="section">
-              <h3>Amount</h3>
-              <h4>400 DKK</h4>
-            </div>
-            <div class="section">
-              <h3>Status</h3>
-              <h4>Owned</h4>
-            </div>
+          <div class="titles">
+            <div class="section"><span class="font-weight-bold">Date</span></div>
+            <div class="section"><span class="font-weight-bold">Invoice Nr.</span></div>
+            <div class="section"><span class="font-weight-bold">Amount</span></div>
+            <div class="section"><span class="font-weight-bold">Status</span></div>
           </div>
-          <div class="invoice flexcol shadow">
+          <div class="invoice flexcol" v-for="invoice in invoices" :key="invoice">
             <div class="section">
-              <h3>Date</h3>
-              <h4>27.09.2020</h4>
+              <span>{{invoice.date}}</span>
             </div>
             <div class="section">
-              <h3>Invoice Number</h3>
-              <h4>457</h4>
+              <span>{{invoice.number}}</span>
             </div>
             <div class="section">
-              <h3>Amount</h3>
-              <h4>1680 DKK</h4>
+              <span>{{invoice.amount}}</span>
             </div>
             <div class="section">
-              <h3>Status</h3>
-              <h4>Owned</h4>
-            </div>
-          </div>
-          <div class="invoice flexcol shadow">
-            <div class="section">
-              <h3>Date</h3>
-              <h4>27.08.2020</h4>
-            </div>
-            <div class="section">
-              <h3>Invoice Number</h3>
-              <h4>399</h4>
-            </div>
-            <div class="section">
-              <h3>Amount</h3>
-              <h4>3775 DKK</h4>
-            </div>
-            <div class="section">
-              <h3>Status</h3>
-              <h4>Owned</h4>
-            </div>
-          </div>
-          <div class="invoice flexcol shadow">
-            <div class="section">
-              <h3>Date</h3>
-              <h4>27.07.2020</h4>
-            </div>
-            <div class="section">
-              <h3>Invoice Number</h3>
-              <h4>367</h4>
-            </div>
-            <div class="section">
-              <h3>Amount</h3>
-              <h4>999 DKK</h4>
-            </div>
-            <div class="section">
-              <h3>Status</h3>
-              <h4>Owned</h4>
-            </div>
-          </div>
-          <div class="invoice flexcol shadow">
-            <div class="section">
-              <h3>Date</h3>
-              <h4>27.06.2020</h4>
-            </div>
-            <div class="section">
-              <h3>Invoice Number</h3>
-              <h4>302</h4>
-            </div>
-            <div class="section">
-              <h3>Amount</h3>
-              <h4>599 DKK</h4>
-            </div>
-            <div class="section">
-              <h3>Status</h3>
-              <h4>Owned</h4>
+              <span>{{invoice.status}}</span>
             </div>
           </div>
         </div>
+
+        <div class="table_mobile">
+          <div class="invoice" v-for="invoice in invoices" :key="invoice">
+            <div class="section">
+              <span class="font-weight-medium">Date</span>
+              <span>{{invoice.date}}</span>
+            </div>
+            <div class="section">
+              <span class="font-weight-medium">Invoice Nr.</span>
+              <span>{{invoice.number}}</span>
+            </div>
+            <div class="section">
+              <span class="font-weight-medium">Amount</span>
+              <span>{{invoice.amount}}</span>
+            </div>
+            <div class="section">
+              <span class="font-weight-medium">Status</span>
+              <span>{{invoice.status}}</span>
+            </div>
+          </div>
+        </div>
+
       </div>
     </div>
   </div>
 </template>
 
 <script>
-export default {};
+export default {
+  data() {
+    return {
+      invoices: [
+        {date: "10.5.2021", number: "2519", amount: "400DKK", status:"Owned" },
+        {date: "11.5.2021", number: "2520", amount: "400DKK", status:"Owned" },
+        {date: "15.5.2021", number: "2521", amount: "600DKK", status:"Owned" },
+        {date: "20.5.2021", number: "2522", amount: "400DKK", status:"Owned" },
+      ],
+    };
+  },
+};
 </script>
 
 <style lang="scss" scoped>
 @import "./src/styles/styles.scss";
 
 .main {
-  margin-top: 50px;
-  padding-top: 50px;
-  margin-bottom: 100px;
-  min-height: 100vh;
-  box-sizing: border-box;
-  padding-left: 5%;
-  padding-right: 5%;
+  padding: 45px;
+  @media (max-width: $sm) {
+    padding: 20px;
+  }
+
+  h1 {
+    color: map-get($cs, white1);
+    text-align: start;
+    width: 100%;
+    max-width: 1590px;
+    margin: 40px auto 0 auto;
+  }
   #top {
     width: 100%;
+    max-width: 1590px;
+    margin: 2% auto;
     flex-wrap: wrap;
     justify-content: space-between;
     h2 {
@@ -285,12 +257,16 @@ export default {};
       }
     }
     #box2 {
+      margin-left: 2%;
       animation: bpaccept 18s infinite alternate-reverse;
       #registeredicon {
         background: linear-gradient(
           map-get($cs, accept),
           map-get($cs, white1) 99%
         );
+      }
+      @media (max-width: $md) {
+        margin-left: 0;
       }
     }
     #box3 {
@@ -307,11 +283,12 @@ export default {};
       min-width: 100%;
       max-width: 100%;
       max-height: 50%;
-      margin: 2%;
-      margin-left: 0px;
       padding: 15px;
       border-radius: 5px;
       background-color: map-get($cs, white1);
+      @media (max-width: $md) {
+        margin: 2% 0;
+      }
       .topboxtop {
         margin: 10px;
       }
@@ -341,6 +318,8 @@ export default {};
   }
   #mid {
     width: 100%;
+    max-width: 1590px;
+    margin: 0 auto 2% auto;
     h2 {
       font-size: $big;
     }
@@ -358,6 +337,7 @@ export default {};
     }
     #Billing {
       animation: bpprimary 31s infinite alternate-reverse;
+      margin: 0 2%;
     }
     #Payment {
       animation: bpprimary 19s infinite alternate-reverse;
@@ -367,12 +347,14 @@ export default {};
       min-width: 100%;
       max-width: 100%;
       min-height: 350px;
-      margin: 2%;
       padding: 15px;
       border-radius: 5px;
       background-color: map-get($cs, white1);
       position: relative;
       justify-content: space-between;
+      @media (max-width: $md) {
+        margin: 4% 0;
+      }
       #title {
         display: flex;
         justify-content: center;
@@ -391,13 +373,14 @@ export default {};
   }
   #bot {
     width: 100%;
-    margin-bottom: 50px;
+    max-width: 1590px;
+    margin: 0 auto 75px auto;
     #invoicebox {
       min-width: 100%;
       max-width: 100%;
       border-radius: 5px;
       background-color: map-get($cs, white1);
-      padding: 15px;
+      padding-top: 30px;
       margin-left: 20%;
       margin-right: 20%;
       animation: bpprimary 20s infinite alternate-reverse;
@@ -409,22 +392,37 @@ export default {};
       }
       #table {
         width: 100%;
+        padding: 0 40px;
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
         justify-content: center;
+        @media (max-width: 699px) {
+            display: none;
+        }
+
+        .titles{
+          display: flex;
+          justify-content: flex-start;
+          width: 100%;
+
+          .section{
+            width: 25%;
+            margin: 0 10px;
+            font-size: $medium;
+          }
+        }
 
         .invoice {
-          justify-content: space-between;
-          border-radius: 5px;
+          justify-content: flex-start;
+          padding: 10px;
+          margin-bottom: 10px;
+          border-radius: 10px;
+          background-color: rgb(233, 231, 231);
           .section {
-            margin: 10px;
-            h3 {
-              font-size: $small;
-            }
-            h4 {
-              font-size: $smaller;
-            }
+            margin: 0 10px;
+            width: 25%;
+            font-size: $medium;
           }
           @media (min-width: $md) {
             display: flex;
@@ -432,27 +430,43 @@ export default {};
           }
         }
       }
+
+      .table_mobile{
+        @media (min-width: 700px) {
+            display: none;
+        }
+        width: 100%;
+        padding: 0 15px;
+
+        .invoice {
+          padding: 10px;
+          margin-bottom: 10px;
+          border-radius: 10px;
+          background-color: rgb(233, 231, 231);
+          .section {
+            margin: 0 10px;
+            display: flex;
+            justify-content: space-between;
+            font-size: $small;
+          }
+        }
+        
+      }
     }
   }
   @media (min-width: $sm) {
-    padding-left: 15%;
-    padding-right: 15%;
     #bot {
       #invoicebox {
         #table {
           .invoice {
             flex-direction: row;
-            flex-wrap: nowrap;
             width: 100%;
-            margin-bottom: 2%;
           }
         }
       }
     }
   }
   @media (min-width: $md) {
-    padding-left: 5%;
-    padding-right: 5%;
     .maxw {
       max-width: 250px;
     }
@@ -463,7 +477,6 @@ export default {};
         max-width: unset;
         min-width: unset;
         white-space: nowrap;
-        margin-left: 2% !important;
         h2 {
           margin-left: 10px;
           margin-top: 20px;
@@ -497,7 +510,6 @@ export default {};
       }
     }
     #bot {
-      padding: 2%;
       #invoicebox {
         #table {
           flex-direction: column;

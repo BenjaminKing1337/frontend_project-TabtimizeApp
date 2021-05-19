@@ -1,5 +1,6 @@
 <template>
-  <div>
+  <div class="lists_page">
+    <h2>Lists</h2>
     <div class="list-box box">
       <div class="top">
         <h3>Your Lists:</h3>
@@ -16,16 +17,16 @@
       <div class="lists">
         <div class="list_info">
           <div class="name">
-            <span class="font-weight-medium">NAME</span>
+            <span class="font-weight-bold">Name</span>
           </div>
           <div class="created">
-            <span class="font-weight-medium">CREATED</span>
+            <span class="font-weight-bold">Created</span>
           </div>
           <div class="links">
-            <span class="font-weight-medium">LINK OPP</span>
+            <span class="font-weight-bold">Link opp</span>
           </div>
           <div class="options">
-            <span class="font-weight-medium">OPTIONS</span>
+            <span class="font-weight-bold">Options</span>
           </div>
         </div>
 
@@ -124,17 +125,34 @@ export default {
 
 <style lang="scss" scoped>
 @import "./src/styles/styles.scss";
+.lists_page{
+  padding: 45px;
+  @media (max-width: $sm) {
+    padding: 20px;
+  }
+}
 
+h2 {
+  color: map-get($cs, white1);
+  font-size: $big2;
+  text-align: start;
+  width: 100%;
+  max-width: 1590px;
+  margin: 40px auto 0 auto;
+}
 .list-box {
-  width: 90%;
-  margin: 0 auto 100px auto;
+  width: 100%;
+  max-width: 1590px;
+  margin: 60px auto 100px auto;
   height: auto;
   background-color: map-get($cs, white1);
-  margin-top: 6em;
   box-shadow: 0 0 20px rgba($color: #000000, $alpha: 0.2);
-  padding: 2em;
+  padding: 30px;
   border-radius: 10px;
   animation: bpprimary 25s infinite alternate-reverse;
+  @media (max-width: $lg) {
+      padding: 15px;
+    }
 
   .message {
     margin-top: 1em;
@@ -145,9 +163,9 @@ export default {
   }
 
   hr {
-    margin: 2em 0em 2em;
+    margin: 2em 0em 20px 0;
     @media (max-width: $md) {
-      margin-bottom: 0;
+      margin-bottom: 10px;
     }
   }
 
@@ -169,7 +187,7 @@ export default {
       border-radius: 10px;
       .list {
         display: flex;
-        margin: 1em;
+        margin: 10px;
         .v-icon {
           color: map-get($cs, button);
           margin-right: 12px;
@@ -184,8 +202,8 @@ export default {
     }
 
     span {
-      color: map-get($cs, paragraph);
-      font-size: 14px;
+      color: map-get($cs, text);
+      font-size: $medium;
     }
   }
   .lists {
@@ -207,7 +225,9 @@ export default {
     .lists_mobile {
       flex-direction: row;
       justify-content: space-between;
-      border-bottom: 1px solid black;
+      border-radius: 10px;
+      margin-bottom: 10px;
+      background-color: rgb(233, 231, 231);
       .list_info {
         flex-direction: column;
         .name,
@@ -218,7 +238,6 @@ export default {
         }
       }
       .created_lists {
-        background-color: transparent;
         .list {
           flex-direction: column;
           .name,

@@ -32,7 +32,7 @@
             </h3>
             <p>97.33</p>
           </div>
-          <div style="border-right: 1px solid black"></div>
+          <div style="border-right: 1px solid #959794"></div>
           <div id="LRS" class="flexcol vcenter">
             <h3>LRS</h3>
             <div id="progressbar">
@@ -45,7 +45,7 @@
             </div>
             <p>39.58</p>
           </div>
-          <div style="border-right: 1px solid black"></div>
+          <div style="border-right: 1px solid #959794"></div>
           <div id="wordCount">
             <h3>
               Word <br />
@@ -127,7 +127,7 @@
             </v-btn>
           </div>
         </div>
-        <div style="border-right: 1px solid black"></div>
+        <div style="border-right: 1px solid #959794"></div>
         <div id="export" class="flexcol vcenter center noDark">
           <v-menu offset-x top left>
             <template v-slot:activator="{ on, attrs }">
@@ -300,7 +300,7 @@ export default {};
     width: 50%;
 
     button {
-      transform: scale(1.8);
+      transform: scale(1.6);
       min-width: 50px;
       min-height: 25px;
       background-color: map-get($cs, button) !important;

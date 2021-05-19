@@ -36,6 +36,9 @@
 @import "./src/styles/styles.scss";
 
 #balance {
+    width: 100%;
+    max-width: 1590px;
+    margin: 0 auto;
     @media (min-width: $sm) {
       justify-content: space-between;
       .balancedivs {
@@ -47,13 +50,14 @@
     }
     #box2 {
       animation: bpaccept 25s infinite alternate-reverse;
+      margin-left: 2%;
     }
     .balancedivs {
       box-shadow: 2px 2px 26px rgba(134, 134, 134, 0.16);
       background-color: map-get($cs, white1);
       border-radius: 5px;
       padding: 10px;
-      margin: 2%;
+      width: 100%;
       .regpageColor {
         background: linear-gradient(
           map-get($cs, button),
@@ -77,7 +81,7 @@
         justify-content: center;
         margin-top: -20px;
         margin-left: -20px;
-        @media (min-width: $md) {
+        @media (min-width: 1100px) {
           transform: scale(1.5);
         }
       }
@@ -95,11 +99,5 @@
       height: 50px;
       width: 50px;
       border-radius: 100%;
-      @media (min-width: $lg) {
-        position: absolute;
-        height: 80px !important;
-        width: 80px !important;
-        margin-left: -40px !important;
-      }
     }
 </style>

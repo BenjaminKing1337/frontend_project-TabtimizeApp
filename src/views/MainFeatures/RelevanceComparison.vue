@@ -2,12 +2,8 @@
   <div>
     <div class="main">
       <div class="top">
-        <h2 class="text">Relevance Comparison</h2>
-        <br />
-        <span class="text"
-          >Insert two URLs and see how relevant the two pages are to each
-          other.</span
-        >
+        <h1> Relevance Comparison</h1>
+        <p>Insert two URLs and see how relevant the two pages are to each other.</p>
       </div>
       <div class="mid">
         <div class="comparison">
@@ -55,13 +51,14 @@ export default {};
 @import "./src/styles/styles.scss";
 
 .main {
-  margin: 0 auto;
-  margin-top: 4em;
-
+  padding: 45px;
+  @media (max-width: $sm) {
+    padding: 20px;
+  }
   .bot {
-    min-width: 300px;
-    max-width: 1200px;
-    padding: 2em;
+    width: 100%;
+    max-width: 1590px;
+    padding: 30px;
     height: auto;
     background-color: white;
     margin: 140px auto 0 auto;
@@ -85,10 +82,10 @@ export default {};
     }
 
     h3 {
-      padding: 2em;
+      padding-bottom: 20px;
     }
     @media (max-width: $md) {
-      margin: 70px 1.4em 100px 1.4em;
+      margin: 70px auto 100px auto;
       .lin {
         flex-direction: column;
 
@@ -99,24 +96,24 @@ export default {};
       }
     }
     @media (min-width: $md) and (max-width: $xl) {
-      margin: 140px 1.4em 100px 1.4em;
+      margin: 140px auto 100px auto;
     }
     @media (min-width: 1440px) and (max-width: 1580px) {
-      margin: 140px 1.4em 0 1.4em;
+      margin: 140px auto 0 auto;
     }
   }
 
   .top {
-    text-align: center;
-
-    h2 {
+    width: 100%;
+    max-width: 1590px;
+    margin: 40px auto 0 auto;
+    h1,
+    p {
       color: map-get($cs, white1);
-      font-size: $big2;
+      margin: 0;
     }
-
-    span {
-      color: map-get($cs, white1);
-      font-size: $medium;
+    h1{
+      line-height: 33px;
     }
   }
 
