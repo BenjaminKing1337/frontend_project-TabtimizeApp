@@ -1,6 +1,6 @@
 <template>
   <div class="wrap">
-    <h1>Domains and Pages</h1>
+    <h1  class="noDark">Domains and Pages</h1>
     <div id="accounts" class="smallbox shadow box">
       <h3>Google Accounts</h3>
       <hr />

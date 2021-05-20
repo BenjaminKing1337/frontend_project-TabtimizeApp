@@ -2,8 +2,10 @@
   <div>
     <div class="main">
       <div class="top">
-        <h1> Relevance Comparison</h1>
-        <p>Insert two URLs and see how relevant the two pages are to each other.</p>
+        <h1 class="noDark">Relevance Comparison</h1>
+        <p class="noDark">
+          Insert two URLs and see how relevant the two pages are to each other.
+        </p>
       </div>
       <div class="mid">
         <div class="comparison">
@@ -112,7 +114,7 @@ export default {};
       color: map-get($cs, white1);
       margin: 0;
     }
-    h1{
+    h1 {
       line-height: 33px;
     }
   }

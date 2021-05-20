@@ -3,165 +3,177 @@
     margin-top: 20px;
     background-color: map-get($cs, white1);
     animation: bpprimary 20s infinite alternate-reverse;
-  
-  #checkmarkboxcontainer {
-    .checkmarkbox {
-      .checkmark {
-        top: -20px;
-        left: -20px;
-        &:after {
-          border: solid map-get($cs, white1);
+
+    #checkmarkboxcontainer {
+        .checkmarkbox {
+            .checkmark {
+                top: -20px;
+                left: -20px;
+                &:after {
+                    border: solid map-get($cs, white1);
+                }
+            }
         }
-      }
     }
-  }
-  #headcontainer {
-    //^collapse^
-    display: block;
-  
-    #pic {
-      float: left;
-      border: 3px double map-get($cs, primary);
-      border-radius: 5px;
-      min-height: 50px;
-      min-width: 50px;
-      max-height: 50px;
-      max-width: 50px;
-      margin: 1%;
-      img {
-        height: 100%;
-        width: 100%;
-      }
-    }
-    #headline {
-      margin: 1%;
-  
-      #url {
-        font-size: $smallest;
-        position: relative;
-  
-        h3 {
-          color: map-get($cs, greyed);
+    #cardcontent {
+        @media (min-width: $sm) {
+            padding: 5%;
+    
         }
-      }
-      #title {
-        position: relative;
-        h3 {
-          color: map-get($cs, hLink);
+        
+        #headcontainer {
+            //^collapse^
+            display: block;
+            padding-bottom: 2%;
+            #pic {
+                float: left;
+                border: 3px double map-get($cs, primary);
+                border-radius: 5px;
+                min-height: 50px;
+                min-width: 50px;
+                max-height: 50px;
+                max-width: 50px;
+                margin: 1%;
+                img {
+                    height: 100%;
+                    width: 100%;
+                }
+            }
+            #headline {
+                margin: 1%;
+
+                #url {
+                    font-size: $smallest;
+                    position: relative;
+
+                    h3 {
+                        color: map-get($cs, greyed);
+                    }
+                }
+                #title {
+                    position: relative;
+                    h3 {
+                        color: map-get($cs, hLink);
+                    }
+                }
+            }
         }
-      }
-    }
-  }
-  #midcontainer {
-    //^collapsehere^
-    h3 {
-      color: map-get($cs, purple1);
-    }
-    #metrics {
-      //^collapsehere^
-      margin: 10px 0;
-      #SEOscore {
-        h3 {
-          line-height: 14px;
+        #midcontainer {
+            //^collapsehere^
+            h3 {
+                color: map-get($cs, purple1);
+            }
+            ul {
+                li {
+                    max-width: 250px;
+                }
+            }
+            #metrics {
+                //^collapsehere^
+                margin: 10px 0;
+                #SEOscore {
+                    h3 {
+                        line-height: 14px;
+                    }
+                }
+                #LRS {
+                    #progressbar {
+                        width: 70px;
+                        position: relative;
+                        .bargradient {
+                            position: inherit;
+                            border-radius: 15px;
+                            height: 10px !important;
+                            z-index: 2;
+                        }
+                        .barframe {
+                            z-index: 1;
+                            border-radius: 15px;
+                            height: 10px;
+                            width: 100%;
+                            background-color: map-get($cs, transparency);
+                        }
+                    }
+                }
+                #wordCount {
+                    h3 {
+                        line-height: 14px;
+                    }
+                }
+                h3 {
+                    font-size: $small;
+                }
+                p {
+                    color: map-get($cs, hLink);
+                    margin: 0;
+                    font-size: $medium2;
+                    font-weight: 600;
+                }
+            }
+            #anchorsugs {
+                //^collapse here^
+                font-size: $small;
+                li {
+                    &::marker {
+                        color: map-get($cs, purple1);
+                    }
+                }
+            }
+            #keywords {
+                //^collapse here^
+                h4 {
+                    font-size: $smaller;
+                }
+                h5 {
+                    font-size: $smallest;
+                    text-decoration: underline;
+                    color: map-get($cs, hLink);
+                }
+                @media (min-width: 350px) {
+                    h4 {
+                        font-size: $small;
+                    }
+                    h5 {
+                        font-size: $smaller;
+                    }
+                }
+            }
         }
-      }
-      #LRS {
-        #progressbar {
-          width: 70px;
-          position: relative;
-          .bargradient {
-            position: inherit;
-            border-radius: 15px;
-            height: 10px !important;
-            z-index: 2;
-          }
-          .barframe {
-            z-index: 1;
-            border-radius: 15px;
-            height: 10px;
-            width: 100%;
-            background-color: map-get($cs, transparency);
-          }
+        #tailcontainer {
+            margin: 10px 0 0 0;
+            h3 {
+                color: map-get($cs, purple1);
+            }
+            #analyzed {
+                //^collapse here^
+                width: 50%;
+            }
+            #export {
+                //^collapse here^
+                height: 80px;
+                width: 50%;
+
+                button {
+                    transform: scale(1.6);
+                    min-width: 50px;
+                    min-height: 25px;
+                    background-color: map-get($cs, button) !important;
+                    .v-icon {
+                        margin: -10%;
+                    }
+                }
+            }
         }
-      }
-      #wordCount {
-        h3 {
-          line-height: 14px;
-        }
-      }
-      h3 {
-        font-size: $small;
-      }
-      p {
-        color: map-get($cs, hLink);
-        margin: 0;
-        font-size: $medium2;
-        font-weight: 600;
-      }
     }
-    #anchorsugs {
-      //^collapse here^
-      font-size: $small;
-      li {
-        &::marker {
-          color: map-get($cs, purple1);
-        }
-      }
-    }
-    #keywords {
-      //^collapse here^
-      h4 {
-        font-size: $smaller;
-      }
-      h5 {
-        font-size: $smallest;
-        text-decoration: underline;
-        color: map-get($cs, hLink);
-      }
-      @media (min-width: 350px) {
-        h4 {
-          font-size: $small;
-        }
-        h5 {
-          font-size: $smaller;
-        }
-      }
-    }
-  }
-  #tailcontainer {
-    margin: 10px 0 0 0;
-    h3 {
-      color: map-get($cs, purple1);
-    }
-    #analyzed {
-      //^collapse here^
-      width: 50%;
-    }
-    #export {
-      //^collapse here^
-      height: 80px;
-      width: 50%;
-  
-      button {
-        transform: scale(1.6);
-        min-width: 50px;
-        min-height: 25px;
-        background-color: map-get($cs, button) !important;
-        .v-icon {
-          margin: -10%;
-        }
-      }
-    }
-  }
-  }
-  .darkMode {
+}
+.darkMode {
     .card {
-      h3 {
-        color: map-get($cs, white1) !important;
-        filter: invert(1) hue-rotate(180deg);
-      }
+        h3 {
+            color: map-get($cs, white1) !important;
+            filter: invert(1) hue-rotate(180deg);
+        }
     }
     .shadow {
-      box-shadow: none;
+        box-shadow: none;
     }
-  }
+}

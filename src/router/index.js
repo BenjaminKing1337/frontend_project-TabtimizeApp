@@ -3,7 +3,7 @@ import VueRouter from 'vue-router'
 import Frontpage from '../views/Frontpage.vue'
 import LinkOpportunities from '../views/MainFeatures/LinkOpportunities.vue'
 import Cardview from '../views/MainFeatures/Cardview.vue'
-import Lists from '../views/MainFeatures/Lists.vue'
+import CompiledLists from '../views/MainFeatures/CompiledLists.vue'
 import RelevanceComparison from '../views/MainFeatures/RelevanceComparison.vue'
 import DomainsAndPages from '../views/Setup/DomainsAndPages.vue'
 import BillingAndUsage from '../views/Setup/BillingAndUsage.vue'
@@ -29,9 +29,9 @@ const routes = [
     component: Cardview
   },
   {
-    path: '/MainFeatures/Lists',
-    name: 'Lists',
-    component: Lists
+    path: '/MainFeatures/CompiledLists',
+    name: 'CompiledLists',
+    component: CompiledLists
   },
   {
     path: '/MainFeatures/RelevanceComparison',

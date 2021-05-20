@@ -1,8 +1,8 @@
 <template>
   <div class="my_profile_page">
     <div class="hello">
-      <h1>Hello User</h1>
-      <p>
+      <h1  class="noDark">Hello User</h1>
+      <p  class="noDark">
         This is your profile page you can view and change your information here.
       </p>
     </div>
@@ -10,11 +10,11 @@
     <div class="myProfile">
 
       <div class="settingsProfile">
-        <div class="editProfile">
+        <div class="editProfile box">
 
           <div class="top">
             <h1>Edit profile</h1>
-            <v-btn depressed>Save</v-btn>
+            <v-btn class="noDark" depressed>Save</v-btn>
           </div>
 
           <hr />
@@ -111,10 +111,10 @@
           </div>
         </div>
 
-        <div class="viewProfile">
+        <div class="viewProfile box">
 
           <div class="userInfo">
-            <img
+            <img class="noDark"
               src="https://i.pinimg.com/originals/83/7e/36/837e36aa503857cd3581bf726a5ba32e.jpg"
               alt="profile"
             />
@@ -146,10 +146,10 @@
         </div>
       </div>
 
-      <div class="deleteProfile">
+      <div class="deleteProfile box">
         <div class="top">
           <h1>Delete profile</h1>
-          <v-btn depressed>Delete</v-btn>
+          <v-btn class="noDark" depressed>Delete</v-btn>
         </div>
         <hr>
         <v-form>

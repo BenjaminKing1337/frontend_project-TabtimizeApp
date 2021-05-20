@@ -84,6 +84,9 @@
         @media (min-width: 1100px) {
           transform: scale(1.5);
         }
+        .v-icon {
+          color: map-get($cs, icongrey) !important;
+        }
       }
       #p1 {
         font-weight: bold;

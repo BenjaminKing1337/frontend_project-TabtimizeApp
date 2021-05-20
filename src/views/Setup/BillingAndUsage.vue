@@ -1,8 +1,8 @@
 <template>
   <div class="main">
-    <h1>Billing and Usage</h1>
+    <h1  class="noDark">Billing and Usage</h1>
     <div id="top" class="flex spaceBetween">
-      <div id="box1" class="topbox flexcol shadow">
+      <div id="box1" class="topbox flexcol shadow box">
         <div class="topboxtop dispflexcenter">
           <h2>Analysis Balance</h2>
         </div>
@@ -22,7 +22,7 @@
           </div>
         </div>
       </div>
-      <div id="box2" class="topbox flexcol shadow">
+      <div id="box2" class="topbox flexcol shadow box">
         <div class="topboxtop dispflexcenter">
           <h2>Registered Pages</h2>
         </div>
@@ -64,7 +64,7 @@
       </div> -->
     </div>
     <div id="mid" class="flexcol vcenter">
-      <div id="Subscription" class="midbox flexcol shadow">
+      <div id="Subscription" class="midbox box flexcol shadow">
         <div id="title">
           <h2>Subscription Plan</h2>
         </div>
@@ -92,7 +92,7 @@
           </v-btn>
         </div>
       </div>
-      <div id="Billing" class="midbox flexcol shadow">
+      <div id="Billing" class="midbox box flexcol shadow">
         <div id="title">
           <h2>Billing Information</h2>
         </div>
@@ -116,7 +116,7 @@
           </v-btn>
         </div>
       </div>
-      <div id="Payment" class="midbox flexcol shadow">
+      <div id="Payment" class="midbox box flexcol shadow">
         <div id="title">
           <h2>Payment Method</h2>
         </div>
@@ -143,7 +143,7 @@
       </div>
     </div>
     <div id="bot" class="flex center">
-      <div id="invoicebox" class="flexcol vcenter shadow">
+      <div id="invoicebox" class="box flexcol vcenter shadow">
         <div id="title" class="flex center">
           <h2>Invoices</h2>
         </div>
@@ -230,6 +230,7 @@ export default {
     margin: 40px auto 0 auto;
   }
   #top {
+    padding-top: 5%;
     width: 100%;
     max-width: 1590px;
     margin: 2% auto;

@@ -33,7 +33,7 @@
           <li>
             <a href="#">
               <v-icon>mdi-view-list</v-icon>
-              <router-link to="/MainFeatures/Lists">Compiled Lists</router-link>
+              <router-link to="/MainFeatures/CompiledLists">Compiled Lists</router-link>
             </a>
           </li>
           <li>

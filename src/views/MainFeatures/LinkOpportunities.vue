@@ -1,8 +1,8 @@
 <template>
   <div id="backlinkEngine">
     <div id="title">
-      <h1>Backlink Engine</h1>
-      <p>Select a target page to view analyzed opportunities.</p>
+      <h1  class="noDark">Backlink Engine</h1>
+      <p  class="noDark">Select a target page to view analyzed opportunities.</p>
     </div>
 
     <Balance/>
@@ -197,8 +197,8 @@
       </div>
     </div> -->
     <!-- pagelistfull appear on desktopview only -->
-    <div id="pagelistfull" class="box dispflexcenter">
-      <div class="page">
+    <div id="pagelistfull" class="dispflexcenter">
+      <div class="page box">
         <div id="navigation">
           <div class="dispflexcenter circle shadow">
             <v-icon>mdi-bullseye-arrow</v-icon>
@@ -226,13 +226,13 @@
             </div>
             <div class="section flex">
               <span class="linkOpp">{{data.link}}</span>
-              <v-btn depressed to="/MainFeatures/Cardview">
+              <v-btn class="noDark" depressed to="/MainFeatures/Cardview">
                 View
               </v-btn>
             </div>
             <div class="section">
               <span>{{data.date}}</span>
-              <v-btn depressed>
+              <v-btn class="noDark" depressed>
                 <v-icon>refresh</v-icon>
               </v-btn>
             </div>
@@ -270,14 +270,14 @@
             </div>
             <div class="section">
               <span>{{data.date}}</span>
-              <v-btn depressed>
-                <v-icon>refresh</v-icon>
+              <v-btn depressed class="noDark">
+                <v-icon >refresh</v-icon>
               </v-btn>
             </div>
 
           </div>
         </div>
-        <v-btn depressed to="/MainFeatures/Cardview">
+        <v-btn class="noDark" depressed to="/MainFeatures/Cardview">
           View
         </v-btn>
       </div>
@@ -385,7 +385,7 @@ export default {
       #navigation {
         position: relative;
         transform: scale(2);
-        left: 46%;
+        left: 42%;
         margin-top: -5%;
         .circle {
           background: linear-gradient(
