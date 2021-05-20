@@ -20,8 +20,8 @@
       </p>
 
       <div class="buttons">
-        <v-btn class="help_button box">Help guides</v-btn>
-        <v-btn class="learn_button box">Learn about our metrics</v-btn>
+        <v-btn class="help_button box" onclick=" window.open('https://tabtimize.com/resources/help-guides/','_blank')">Help guides</v-btn>
+        <v-btn class="learn_button box" onclick=" window.open('https://tabtimize.com/resources/learn/','_blank')">Learn about our metrics</v-btn>
       </div>
     </div>
 
