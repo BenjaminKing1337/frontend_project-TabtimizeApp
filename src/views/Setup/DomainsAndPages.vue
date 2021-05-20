@@ -9,6 +9,11 @@
         <span>someone@gmail.com</span>
       </div>
     </div>
+
+    <div class="buttons">
+      <v-btn class="RedBtn shadow noDark">Manage Domains</v-btn>
+    </div>
+
     <div id="domains" class="smallbox shadow box">
       <h3>Domains</h3>
       <hr />
@@ -60,13 +65,12 @@
             <br />
             <tbody>
               <tr>
-                <th>
-                  Select All
+                <th style="padding:8px;">
                   <input
                     type="checkbox"
                     @click="selectAll"
                     v-model="allSelected"
-                  />
+                  /> Select All
                 </th>
               </tr>
               <tr v-for="page in pages" v-bind:key="page">
@@ -112,7 +116,7 @@ export default {
   }),
 
   methods: {
-    selectAll: function() {
+    selectAll: function () {
       this.pageIds = [];
 
       if (!this.allSelected) {
@@ -121,7 +125,7 @@ export default {
         }
       }
     },
-    select: function() {
+    select: function () {
       this.allSelected = false;
     },
   },
@@ -144,10 +148,16 @@ h1 {
   @media (max-width: $sm) {
     padding: 20px;
   }
+  #accounts {
+    margin-top: 4em;
+  }
+  #domains {
+    margin-top: 2em;
+  }
 }
 
 .smallbox {
-  margin-top: 4em !important;
+  // margin-top: 4em !important;
   width: 100%;
   max-width: 1590px;
   background-color: map-get($cs, white1);

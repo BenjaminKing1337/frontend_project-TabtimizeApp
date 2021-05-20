@@ -1,6 +1,9 @@
 <template>
   <div>
-    <div id="card1" class="flexcol card corners shadow">
+    <div
+      id="card1"
+      class="flexcol card corners shadow"
+    >
       <div id="checkmarkboxcontainer">
         <label class="checkmarkbox">
           <input type="checkbox" />
@@ -13,12 +16,13 @@
         </div>
         <div id="headline">
           <div id="url">
-            <h3 class="truncate">
+            <h3 class="truncate"> {{ card.url }}
               https://www.tabtimize.netlify.com/hs6SdHG6et7ksJhU1Ww2EE
             </h3>
           </div>
           <div id="title">
-            <h3>Tabtimize - Link Building Made Easy!</h3>
+            <h3> {{ card.title }}
+              Tabtimize - Link Building Made Easy!</h3>
           </div>
         </div>
       </div>
@@ -30,7 +34,8 @@
               SEO <br />
               Score
             </h3>
-            <p>97.33</p>
+            <p> {{ card.seo }}
+              97.33</p>
           </div>
           <div style="border-right: 1px solid #959794"></div>
           <div id="LRS" class="flexcol vcenter">
@@ -43,7 +48,8 @@
                 class="bargradient noDark"
               ></v-progress-linear>
             </div>
-            <p>39.58</p>
+            <p> {{ card.lrs }}
+              39.58</p>
           </div>
           <div style="border-right: 1px solid #959794"></div>
           <div id="wordCount">
@@ -51,7 +57,8 @@
               Word <br />
               Count
             </h3>
-            <p>666</p>
+            <p> {{ card.word }}
+              666</p>
           </div>
         </div>
         <div class="line" />
@@ -64,6 +71,7 @@
               <v-expansion-panel-content>
                 <ul>
                   <li>
+                    {{ card.anch1 }}
                     Lorem ipsum dolor sit amet,
                     <span style="color: blue">
                       consectetur adipiscing elit, sed do eiusmod tempor</span
@@ -71,6 +79,7 @@
                     incididunt ut labore et dolore magna aliqua.
                   </li>
                   <li>
+                    {{ card.anch2 }}
                     Ut enim
                     <span style="color: blue">
                       ad minim veniam, quis nostrud exercitation ullamco
@@ -79,6 +88,7 @@
                     nisi ut aliquip ex ea commodo consequat.
                   </li>
                   <li>
+                    {{ card.anch3 }}
                     Quis nostrudincididunt ut labore
                     <span style="color: blue">et dolore magna </span>
                   </li>
@@ -97,19 +107,23 @@
               <v-expansion-panel-content>
                 <div id="kwords" class="flex spaceBetween truncate">
                   <h4>Keywords:</h4>
-                  <h5>Frameworks</h5>
+                  <h5>{{ card.key }}
+                    Frameworks</h5>
                 </div>
                 <div id="urlTopics" class="flex spaceBetween truncate">
                   <h4>URL Topic:</h4>
-                  <h5>Technology & Development</h5>
+                  <h5>{{ card.urltop }}
+                    Technology & Development</h5>
                 </div>
                 <div id="domainTopics" class="flex spaceBetween truncate">
                   <h4>Domain Topic:</h4>
-                  <h5>Technology & Development</h5>
+                  <h5>{{ card.domtop }}
+                    Technology & Development</h5>
                 </div>
                 <div id="contentTopics" class="flex spaceBetween truncate">
                   <h4>Content Topic:</h4>
-                  <h5>Components</h5>
+                  <h5>{{ card.contop }}
+                    Components</h5>
                 </div>
               </v-expansion-panel-content>
             </v-expansion-panel>
@@ -121,7 +135,8 @@
         <div id="analyzed">
           <h3>Analyzed</h3>
           <div class="flex spaceAround">
-            <p>11/05/21</p>
+            <p>{{ card.anal }}
+              11/05/21</p>
             <v-btn class="RedBtn dispflexcenter shadow noDark">
               <v-icon class="light">mdi-refresh</v-icon>
             </v-btn>
@@ -149,7 +164,9 @@
 </template>
 
 <script>
-export default {};
+export default {
+  
+};
 </script>
 
 <style lang="scss" scoped>
@@ -160,7 +177,7 @@ export default {};
   margin-top: 20px;
   background-color: map-get($cs, white1);
   animation: bpprimary 20s infinite alternate-reverse;
-}
+
 #checkmarkboxcontainer {
   .checkmarkbox {
     .checkmark {
@@ -310,7 +327,7 @@ export default {};
     }
   }
 }
-
+}
 .darkMode {
   .card {
     h3 {
