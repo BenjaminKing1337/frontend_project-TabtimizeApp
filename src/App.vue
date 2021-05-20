@@ -158,7 +158,7 @@ export default {
           result.classList.toggle("noDarkMode");
         });
       }
-    },
+    }
   },
 };
 </script>

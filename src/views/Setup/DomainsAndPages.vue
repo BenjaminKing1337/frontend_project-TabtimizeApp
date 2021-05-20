@@ -57,60 +57,16 @@
                 <th>PAGES</th>
               </tr>
             </thead>
+              <br>
             <tbody>
               <tr>
-                <td>
-                  <input type="checkbox" name="" id="" />
-                </td>
-                <td>/</td>
-                <td>
-                  <v-tooltip bottom>
-                    <template v-slot:activator="{ on, attrs }">
-                      <span v-bind="attrs" v-on="on"
-                        ><v-icon class="icon delete">mdi-delete</v-icon></span
-                      >
-                    </template>
-                    <span>Delete Page</span>
-                  </v-tooltip>
-                </td>
+                <th>Select All <input type="checkbox" @click="selectAll" v-model="allSelected"></th>
               </tr>
-              <tr>
+              <tr v-for="page in pages" v-bind:key="page">
                 <td>
-                  <input type="checkbox" name="" id="" />
+                  <input type="checkbox" v-model="pageIds" @click="select" :value="page.id">
                 </td>
-                <td>/sitemap.html</td>
-                <td>
-                  <v-tooltip bottom>
-                    <template v-slot:activator="{ on, attrs }">
-                      <span v-bind="attrs" v-on="on"
-                        ><v-icon class="icon delete">mdi-delete</v-icon></span
-                      >
-                    </template>
-                    <span>Delete Page</span>
-                  </v-tooltip>
-                </td>
-              </tr>
-              <tr>
-                <td>
-                  <input type="checkbox" name="" id="" />
-                </td>
-                <td>/about-us</td>
-                <td>
-                  <v-tooltip bottom>
-                    <template v-slot:activator="{ on, attrs }">
-                      <span v-bind="attrs" v-on="on"
-                        ><v-icon class="icon delete">mdi-delete</v-icon></span
-                      >
-                    </template>
-                    <span>Delete Page</span>
-                  </v-tooltip>
-                </td>
-              </tr>
-              <tr>
-                <td>
-                  <input type="checkbox" name="" id="" />
-                </td>
-                <td>/contact</td>
+                <td>{{page.name}}</td>
                 <td>
                   <v-tooltip bottom>
                     <template v-slot:activator="{ on, attrs }">
@@ -131,7 +87,33 @@
 </template>
 
 <script>
-export default {};
+export default {
+  data: () => ({
+    pages: [
+      {"id":"/","name":"/"},
+      {"id":"/index","name":"/index"},
+      {"id":"/about-us","name":"/about-us"}
+    ],
+    selected: [],
+    allSelected: false,
+    pageIds: []
+  }),
+
+  methods: {
+        selectAll: function() {
+            this.pageIds = [];
+
+            if (this.allSelected) {
+                for (const page in this.pages) {
+                    this.pageIds.push(this.pages[page].id.toString());
+                }
+            }
+        },
+        select: function() {
+            this.allSelected = false;
+        }
+    }
+};
 </script>
 
 <style lang="scss" scoped>
