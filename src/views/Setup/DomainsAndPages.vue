@@ -57,16 +57,28 @@
                 <th>PAGES</th>
               </tr>
             </thead>
-              <br>
+            <br />
             <tbody>
               <tr>
-                <th>Select All <input type="checkbox" @click="selectAll" v-model="allSelected"></th>
+                <th>
+                  Select All
+                  <input
+                    type="checkbox"
+                    @click="selectAll"
+                    v-model="allSelected"
+                  />
+                </th>
               </tr>
               <tr v-for="page in pages" v-bind:key="page">
                 <td>
-                  <input type="checkbox" v-model="pageIds" @click="select" :value="page.id">
+                  <input
+                    type="checkbox"
+                    v-model="pageIds"
+                    @click="select"
+                    :value="page.id"
+                  />
                 </td>
-                <td>{{page.name}}</td>
+                <td>{{ page.name }}</td>
                 <td>
                   <v-tooltip bottom>
                     <template v-slot:activator="{ on, attrs }">
@@ -90,29 +102,29 @@
 export default {
   data: () => ({
     pages: [
-      {"id":"/","name":"/"},
-      {"id":"/index","name":"/index"},
-      {"id":"/about-us","name":"/about-us"}
+      { id: "/", name: "/" },
+      { id: "/index", name: "/index" },
+      { id: "/about-us", name: "/about-us" },
     ],
     selected: [],
     allSelected: false,
-    pageIds: []
+    pageIds: [],
   }),
 
   methods: {
-        selectAll: function() {
-            this.pageIds = [];
+    selectAll: function() {
+      this.pageIds = [];
 
-            if (this.allSelected) {
-                for (const page in this.pages) {
-                    this.pageIds.push(this.pages[page].id.toString());
-                }
-            }
-        },
-        select: function() {
-            this.allSelected = false;
+      if (!this.allSelected) {
+        for (const page in this.pages) {
+          this.pageIds.push(this.pages[page].id.toString());
         }
-    }
+      }
+    },
+    select: function() {
+      this.allSelected = false;
+    },
+  },
 };
 </script>
 
