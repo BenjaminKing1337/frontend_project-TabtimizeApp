@@ -12,9 +12,7 @@
           <div class="flexcol flexend">
             <label class="checkmarkbox">
               <h5 id="selectall">Select All</h5>
-              <input type="checkbox"
-                    @click="selectAll"
-                    v-model="allSelected" />
+              <input type="checkbox" @click="selectAll" v-model="allSelected" />
               <span class="checkmark shadow"></span>
             </label>
           </div>
@@ -76,23 +74,206 @@
         </div>
       </div>
       <div id="cards">
-       <Card/>
+        <div
+          class="flexcol card corners shadow"
+          v-for="card in cards"
+          v-bind:key="card"
+        >
+          <div id="checkmarkboxcontainer">
+            <label class="checkmarkbox">
+              <input
+                type="checkbox"
+                v-model="cardIds"
+                @click="select"
+                :value="card.id"
+              />
+              <span class="checkmark shadow"></span>
+            </label>
+          </div>
+          <div id="headcontainer">
+            <div id="pic">
+              <img class="noDark" src="../../assets/logoT.svg" />
+            </div>
+            <div id="headline">
+              <div id="url">
+                <h3 class="truncate">
+                  {{ card.url }}
+                </h3>
+              </div>
+              <div id="title">
+                <h3>{{ card.title }}</h3>
+              </div>
+            </div>
+          </div>
+          <div id="midcontainer">
+            <div class="line" />
+            <div id="metrics" class="flex spaceAround tcenter">
+              <div id="SEOscore">
+                <h3>
+                  SEO <br />
+                  Score
+                </h3>
+                <p>{{ card.seo }}</p>
+              </div>
+              <div style="border-right: 1px solid #959794"></div>
+              <div id="LRS" class="flexcol vcenter">
+                <h3>LRS</h3>
+                <div id="progressbar">
+                  <div class="barframe absolute"></div>
+                  <v-progress-linear
+                    value="39"
+                    color="tabtimize"
+                    class="bargradient noDark"
+                  ></v-progress-linear>
+                </div>
+                <p>{{ card.lrs }}</p>
+              </div>
+              <div style="border-right: 1px solid #959794"></div>
+              <div id="wordCount">
+                <h3>
+                  Word <br />
+                  Count
+                </h3>
+                <p>{{ card.word }}</p>
+              </div>
+            </div>
+            <div class="line" />
+            <div id="anchorsugs">
+              <v-expansion-panels inset class="expansionbtn">
+                <v-expansion-panel class="expansionbtn">
+                  <v-expansion-panel-header class="expansionbtn"
+                    ><h3>Anchor Suggestions</h3></v-expansion-panel-header
+                  >
+                  <v-expansion-panel-content>
+                    <ul>
+                      <li>
+                        {{ card.anch1 }}
+                      </li>
+                      <li>
+                        {{ card.anch2 }}
+                      </li>
+                      <li>
+                        {{ card.anch3 }}
+                      </li>
+                    </ul>
+                  </v-expansion-panel-content>
+                </v-expansion-panel>
+              </v-expansion-panels>
+            </div>
+            <div class="line" />
+            <div id="keywords">
+              <v-expansion-panels inset class="expansionbtn">
+                <v-expansion-panel class="expansionbtn">
+                  <v-expansion-panel-header class="expansionbtn"
+                    ><h3>Keywords & Topics</h3></v-expansion-panel-header
+                  >
+                  <v-expansion-panel-content>
+                    <div id="kwords" class="flex spaceBetween truncate">
+                      <h4>Keywords:</h4>
+                      <h5>{{ card.key }}</h5>
+                    </div>
+                    <div id="urlTopics" class="flex spaceBetween truncate">
+                      <h4>URL Topic:</h4>
+                      <h5>{{ card.urltop }}</h5>
+                    </div>
+                    <div id="domainTopics" class="flex spaceBetween truncate">
+                      <h4>Domain Topic:</h4>
+                      <h5>{{ card.domtop }}</h5>
+                    </div>
+                    <div id="contentTopics" class="flex spaceBetween truncate">
+                      <h4>Content Topic:</h4>
+                      <h5>{{ card.contop }}</h5>
+                    </div>
+                  </v-expansion-panel-content>
+                </v-expansion-panel>
+              </v-expansion-panels>
+            </div>
+            <div class="line" />
+          </div>
+          <div id="tailcontainer" class="flex spaceBetween">
+            <div id="analyzed">
+              <h3>Analyzed</h3>
+              <div class="flex spaceAround">
+                <p>{{ card.anal }}</p>
+                <v-btn class="RedBtn dispflexcenter shadow noDark">
+                  <v-icon class="light">mdi-refresh</v-icon>
+                </v-btn>
+              </div>
+            </div>
+            <div style="border-right: 1px solid #959794"></div>
+            <div id="export" class="flexcol vcenter center noDark">
+              <v-menu offset-x top left>
+                <template v-slot:activator="{ on, attrs }">
+                  <v-btn class="RedBtn dispflexcenter" v-bind="attrs" v-on="on">
+                    <v-icon class="light">mdi-chevron-left</v-icon>
+                    <v-icon class="light">mdi-plus</v-icon>
+                  </v-btn>
+                </template>
+                <v-list>
+                  <div tag="button">Export</div>
+                  <div tag="button">Add to List</div>
+                  <div tag="button">Remove</div>
+                </v-list>
+              </v-menu>
+            </div>
+          </div>
+        </div>
+
+        <!--  <Card/> -->
       </div>
     </div>
   </div>
 </template>
 
 <script>
-import Card from "../../components/Cards/Card.vue";
+//import Card from "../../components/Cards/Card.vue";
 
 export default {
   name: "Cardview",
 
   components: {
-    Card,
+    // Card,
   },
 
   data: () => ({
+    cards: [
+      {
+        pic: "",
+        url: "https://www.tabtimize.netlify.com/",
+        title: "Tabtimize - Link Building Made Easy!",
+        seo: "97.33",
+        lrs: "39.58",
+        word: "666",
+        anch1:
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+        anch2:
+          "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+        anch3: "Quis nostrudincididunt ut labore et dolore magna",
+        key: "Frameworks",
+        urltop: "Technology & Development",
+        domtop: "Technology & Development",
+        contop: "Components",
+        anal: "11/05/21",
+      },
+      {
+        pic: "",
+        url: "https://www.tabtimize.netlify.com/",
+        title: "Tabtimize - Link Building Made Easy!",
+        seo: "97.33",
+        lrs: "39.58",
+        word: "666",
+        anch1:
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+        anch2:
+          "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+        anch3: "Quis nostrudincididunt ut labore et dolore magna",
+        key: "Frameworks",
+        urltop: "Technology & Development",
+        domtop: "Technology & Development",
+        contop: "Components",
+        anal: "11/05/21",
+      },
+    ],
     selected: [],
     allSelected: false,
     cardIds: [],
@@ -112,13 +293,13 @@ export default {
       this.allSelected = false;
     },
   },
-
-  
 };
 </script>
 
 <style lang="scss" scoped>
 @import "./src/styles/styles.scss";
+@import "./src/styles/card.scss";
+
 .cardview_page {
   padding: 45px;
   @media (max-width: $sm) {
@@ -197,174 +378,6 @@ export default {
       }
     }
   }
-  .card {
-  padding: 10px;
-  margin-top: 20px;
-  background-color: map-get($cs, white1);
-  animation: bpprimary 20s infinite alternate-reverse;
-
-#checkmarkboxcontainer {
-  .checkmarkbox {
-    .checkmark {
-      top: -20px;
-      left: -20px;
-      &:after {
-        border: solid map-get($cs, white1);
-      }
-    }
-  }
-}
-#headcontainer {
-  //^collapse^
-  display: block;
-
-  #pic {
-    float: left;
-    border: 3px double map-get($cs, primary);
-    border-radius: 5px;
-    min-height: 50px;
-    min-width: 50px;
-    max-height: 50px;
-    max-width: 50px;
-    margin: 1%;
-    img {
-      height: 100%;
-      width: 100%;
-    }
-  }
-  #headline {
-    margin: 1%;
-
-    #url {
-      font-size: $smallest;
-      position: relative;
-
-      h3 {
-        color: map-get($cs, greyed);
-      }
-    }
-    #title {
-      position: relative;
-      h3 {
-        color: map-get($cs, hLink);
-      }
-    }
-  }
-}
-#midcontainer {
-  //^collapsehere^
-  h3 {
-    color: map-get($cs, purple1);
-  }
-  #metrics {
-    //^collapsehere^
-    margin: 10px 0;
-    #SEOscore {
-      h3 {
-        line-height: 14px;
-      }
-    }
-    #LRS {
-      #progressbar {
-        width: 70px;
-        position: relative;
-        .bargradient {
-          position: inherit;
-          border-radius: 15px;
-          height: 10px !important;
-          z-index: 2;
-        }
-        .barframe {
-          z-index: 1;
-          border-radius: 15px;
-          height: 10px;
-          width: 100%;
-          background-color: map-get($cs, transparency);
-        }
-      }
-    }
-    #wordCount {
-      h3 {
-        line-height: 14px;
-      }
-    }
-    h3 {
-      font-size: $small;
-    }
-    p {
-      color: map-get($cs, hLink);
-      margin: 0;
-      font-size: $medium2;
-      font-weight: 600;
-    }
-  }
-  #anchorsugs {
-    //^collapse here^
-    font-size: $small;
-    li {
-      &::marker {
-        color: map-get($cs, purple1);
-      }
-    }
-  }
-  #keywords {
-    //^collapse here^
-    h4 {
-      font-size: $smaller;
-    }
-    h5 {
-      font-size: $smallest;
-      text-decoration: underline;
-      color: map-get($cs, hLink);
-    }
-    @media (min-width: 350px) {
-      h4 {
-        font-size: $small;
-      }
-      h5 {
-        font-size: $smaller;
-      }
-    }
-  }
-}
-#tailcontainer {
-  margin: 10px 0 0 0;
-  h3 {
-    color: map-get($cs, purple1);
-  }
-  #analyzed {
-    //^collapse here^
-    width: 50%;
-  }
-  #export {
-    //^collapse here^
-    height: 80px;
-    width: 50%;
-
-    button {
-      transform: scale(1.6);
-      min-width: 50px;
-      min-height: 25px;
-      background-color: map-get($cs, button) !important;
-      .v-icon {
-        margin: -10%;
-      }
-    }
-  }
-}
-}
-.darkMode {
-  .card {
-    h3 {
-      color: map-get($cs, white1) !important;
-      filter: invert(1) hue-rotate(180deg);
-    }
-  }
-  .shadow {
-    box-shadow: none;
-  }
-}
-
   #cards {
     //^collapse here^
     margin: 30px 0;
