@@ -385,7 +385,7 @@ export default {
       #navigation {
         position: relative;
         transform: scale(2);
-        left: 42%;
+        left: 45%;
         margin-top: -5%;
         .circle {
           background: linear-gradient(

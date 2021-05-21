@@ -140,7 +140,9 @@ export default {
     group: null,
     drawer1: false,
     group1: null,
+    
   }),
+  
 
   watch: {
     group() {
@@ -158,7 +160,7 @@ export default {
           result.classList.toggle("noDarkMode");
         });
       }
-    }
+    },
   },
 };
 </script>
@@ -273,5 +275,12 @@ export default {
 }
 .v-application p {
   margin: 5px 5px 5px 0;
+}
+
+/* pop up windows grow bigger after breakpoint $sm*/
+.v-dialog {
+  @media (min-width: $sm) {
+    width: 600px !important;
+  }
 }
 </style>

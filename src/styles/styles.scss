@@ -84,6 +84,9 @@ $cs: (
     .bglight {
         background-color: map-get($cs, white1) !important;
     }
+    .bgtab {
+        background: map-get($cs, tabtimize);
+    }
     .nodecor {
         text-decoration: none !important;
     }
