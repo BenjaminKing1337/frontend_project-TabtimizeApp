@@ -140,7 +140,9 @@ export default {
     group: null,
     drawer1: false,
     group1: null,
+    
   }),
+  
 
   watch: {
     group() {

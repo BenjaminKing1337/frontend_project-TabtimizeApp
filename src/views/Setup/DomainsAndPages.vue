@@ -182,6 +182,7 @@ export default {
     selected: [],
     allSelected: false,
     pageIds: [],
+    dialog: false,
   }),
 
   methods: {
