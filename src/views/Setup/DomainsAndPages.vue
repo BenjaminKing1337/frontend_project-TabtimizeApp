@@ -1,6 +1,6 @@
 <template>
   <div class="wrap">
-    <h1  class="noDark">Domains and Pages</h1>
+    <h1 class="noDark">Domains and Pages</h1>
     <div id="accounts" class="smallbox shadow box">
       <h3>Google Accounts</h3>
       <hr />
@@ -11,7 +11,30 @@
     </div>
 
     <div class="buttons">
-      <v-btn class="RedBtn shadow noDark">Manage Domains</v-btn>
+      <v-dialog v-model="dialog" width="300"
+        ><template v-slot:activator="{ on, attrs }">
+          <v-btn class="RedBtn shadow noDark" v-bind="attrs" v-on="on"
+            >Manage Domains</v-btn
+          >
+        </template>
+        <v-card>
+          <v-card-title class="bgtab light noDark">
+            Manage Domains
+          </v-card-title>
+
+          <v-card-text>
+            List of current urls, with option to delete <br> Add domain text box +
+            button
+          </v-card-text>
+
+          <div class="line"></div>
+
+          <v-card-actions>
+            <v-spacer></v-spacer>
+            <v-btn color="primary" text @click="dialog = false"> Close </v-btn>
+          </v-card-actions>
+        </v-card>
+      </v-dialog>
     </div>
 
     <div id="domains" class="smallbox shadow box">
@@ -24,8 +47,53 @@
     </div>
 
     <div class="buttons">
-      <v-btn class="RedBtn shadow noDark">Fetch Sitemap</v-btn>
-      <v-btn class="RedBtn shadow noDark">Add Page</v-btn>
+      <v-dialog v-model="dialog" width="300"
+        ><template v-slot:activator="{ on, attrs }">
+          <v-btn class="RedBtn shadow noDark" v-bind="attrs" v-on="on"
+            >Add Sitemap</v-btn
+          >
+        </template>
+        <v-card>
+          <v-card-title class="bgtab light noDark">
+            Add Sitemap
+          </v-card-title>
+
+          <v-card-text>
+            inputfield for sitemap url <br>
+            fetch sitemap from google search console + button
+          </v-card-text>
+
+          <div class="line"></div>
+
+          <v-card-actions>
+            <v-spacer></v-spacer>
+            <v-btn color="primary" text @click="dialog = false"> Close </v-btn>
+          </v-card-actions>
+        </v-card>
+      </v-dialog>
+      <v-dialog v-model="dialog" width="300"
+        ><template v-slot:activator="{ on, attrs }">
+          <v-btn class="RedBtn shadow noDark" v-bind="attrs" v-on="on"
+            >Add Page</v-btn
+          >
+        </template>
+        <v-card>
+          <v-card-title class="bgtab light noDark">
+            Add Page
+          </v-card-title>
+
+          <v-card-text>
+            Field to add page + submit button
+          </v-card-text>
+
+          <div class="line"></div>
+
+          <v-card-actions>
+            <v-spacer></v-spacer>
+            <v-btn color="primary" text @click="dialog = false"> Close </v-btn>
+          </v-card-actions>
+        </v-card>
+      </v-dialog>
     </div>
 
     <div id="pages" class="pages shadow box">
@@ -65,12 +133,13 @@
             <br />
             <tbody>
               <tr>
-                <th style="padding:8px;">
+                <th style="padding: 8px">
                   <input
                     type="checkbox"
                     @click="selectAll"
                     v-model="allSelected"
-                  /> Select All
+                  />
+                  Select All
                 </th>
               </tr>
               <tr v-for="page in pages" v-bind:key="page">
