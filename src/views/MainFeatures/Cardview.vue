@@ -248,7 +248,7 @@
 //import Card from "../../components/Cards/Card.vue";
 import axios from "axios";
 
-const baseURL = "http://localhost:3000/cards";
+const baseURL = "https://my-json-server.typicode.com/danysko5/project-data/cards";
 
 export default {
   name: "Cardview",
