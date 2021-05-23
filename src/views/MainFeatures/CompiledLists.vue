@@ -122,9 +122,9 @@ export default {
   data() {
     return {
       lists: [],
-      listName: '',
-      listDate: '',
-      listLinks: ''
+      // listName: '',
+      // listDate: '',
+      // listLinks: ''
     };
   },
 
