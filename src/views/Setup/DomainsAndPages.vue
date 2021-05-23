@@ -174,7 +174,7 @@
 <script>
 import axios from "axios";
 
-const baseURL = "http://localhost:3000/pages";
+const baseURL = "https://my-json-server.typicode.com/danysko5/project-data/pages";
 
 export default {
   data: () => ({
