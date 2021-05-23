@@ -287,6 +287,9 @@
 
 <script>
 import Balance from "../../components/Containers/Balance.vue";
+import axios from "axios";
+
+const baseURL = "http://localhost:3000/linkOp";
 
 export default {
   name: "LinkOpportunities",
@@ -297,18 +300,29 @@ export default {
   data() {
     return {
       pages: [
-        {page: "/", topic: "Business & Industrial", link: "130", date:"25/01/2021" },
-        {page: "/about-us", topic: "Business & Industrial", link: "58", date:"25/01/2021" },
-        {page: "/contact", topic: "Business & Industrial", link: "666", date:"25/01/2021" },
-        {page: "/projects", topic: "Business & Industrial", link: "951", date:"25/01/2021" },
+        // {page: "/", topic: "Business & Industrial", link: "130", date:"25/01/2021" },
+        // {page: "/about-us", topic: "Business & Industrial", link: "58", date:"25/01/2021" },
+        // {page: "/contact", topic: "Business & Industrial", link: "666", date:"25/01/2021" },
+        // {page: "/projects", topic: "Business & Industrial", link: "951", date:"25/01/2021" },
       ],
     };
   },
+async created() {
+    try {
+      const res = await axios.get(baseURL);
+
+      this.pages = res.data;
+    } catch (e) {
+      console.error(e);
+    }
+  },
+
 };
 </script>
 
 <style lang="scss" scoped>
 @import "./src/styles/styles.scss";
+
 
 /* PAGE */
 #backlinkEngine {

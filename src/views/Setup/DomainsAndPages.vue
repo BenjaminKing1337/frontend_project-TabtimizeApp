@@ -172,18 +172,32 @@
 </template>
 
 <script>
+import axios from "axios";
+
+const baseURL = "http://localhost:3000/pages";
+
 export default {
   data: () => ({
     pages: [
-      { id: "/", name: "/" },
-      { id: "/index", name: "/index" },
-      { id: "/about-us", name: "/about-us" },
+      // { id: "/", name: "/" },
+      // { id: "/index", name: "/index" },
+      // { id: "/about-us", name: "/about-us" },
     ],
     selected: [],
     allSelected: false,
     pageIds: [],
     dialog: false,
   }),
+
+async created() {
+    try {
+      const res = await axios.get(baseURL);
+
+      this.pages = res.data;
+    } catch (e) {
+      console.error(e);
+    }
+  },
 
   methods: {
     selectAll: function () {
