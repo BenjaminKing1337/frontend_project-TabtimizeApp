@@ -258,7 +258,26 @@ export default {
   },
 
   data: () => ({
-    cards: [],
+    cards: [
+       {
+        pic: "",
+        url: "https://www.tabtimize.netlify.com/",
+        title: "Tabtimize - Link Building Made Easy!",
+        seo: "97.33",
+        lrs: "39.58",
+        word: "666",
+        anch1:
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+        anch2:
+          "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+        anch3: "Quis nostrudincididunt ut labore et dolore magna",
+        key: "Frameworks",
+        urltop: "Technology & Development",
+        domtop: "Technology & Development",
+        contop: "Components",
+        anal: "11/05/21",
+      },
+    ],
     selected: [],
     allSelected: false,
     cardIds: [],
