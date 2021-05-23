@@ -1,29 +1,30 @@
 # tabtimizeapp
 
-## Project setup
+## 1. Install project
 ```
 npm install
 ```
 
-### Compiles and hot-reloads for development
+### 2. Hot reload for development
 ```
 npm run serve
 ```
 
-### Compiles and minifies for production
+### 3. Minifies for production
 ```
 npm run build
 ```
 
-### Run your tests
+### 4. Run your tests if necessary
 ```
 npm run test
 ```
 
-### Lints and fixes files
+### 5. Linting and fixing
 ```
 npm run lint
 ```
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+### SAMUEL *
+### BENJAMIN * 
+### DANIEL *
