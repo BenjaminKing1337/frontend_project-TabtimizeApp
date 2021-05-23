@@ -111,15 +111,25 @@
 </template>
 
 <script>
+import axios from 'axios';
+
 export default {
+  name: 'lists',
   data() {
     return {
-      lists: [
-        { name: "My list", date: "10.5.2021", links: "2519" },
-        { name: "Your list", date: "12.5.2021", links: "748" },
-      ],
+      lists: []
     };
   },
+
+  async created() {
+    try {
+      const res = await axios.get('http://localhost:3000/lists');
+
+      this.lists = res.data;
+    } catch (e) {
+      console.error(e);
+    }
+  }
 };
 </script>
 
