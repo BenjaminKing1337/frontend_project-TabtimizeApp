@@ -178,11 +178,7 @@ const baseURL = "https://my-json-server.typicode.com/danysko5/project-data/pages
 
 export default {
   data: () => ({
-    pages: [
-      // { id: "/", name: "/" },
-      // { id: "/index", name: "/index" },
-      // { id: "/about-us", name: "/about-us" },
-    ],
+    pages: [],
     selected: [],
     allSelected: false,
     pageIds: [],
