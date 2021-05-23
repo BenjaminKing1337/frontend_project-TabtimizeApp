@@ -115,7 +115,7 @@
 <script>
 import axios from 'axios';
 
-const baseURL = "http://localhost:3000/lists"
+const baseURL = "https://my-json-server.typicode.com/danysko5/project-data/lists"
 
 export default {
   name: 'lists',
