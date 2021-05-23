@@ -4,6 +4,7 @@
     <div class="list-box box">
        <div class="top flex spaceBetween">
         <h3>Your Lists:</h3>
+        <!-- <input type="text" v-model="listName" @keyup.enter="addList"> -->
         <v-btn class="RedBtn noDark">Create New List</v-btn>
       </div>
      <!-- <div class="message">
@@ -112,15 +113,43 @@
 </template>
 
 <script>
+import axios from 'axios';
+
+const baseURL = "http://localhost:3000/lists"
+
 export default {
+  name: 'lists',
   data() {
     return {
-      lists: [
-        { name: "My list", date: "10.5.2021", links: "2519" },
-        { name: "Your list", date: "12.5.2021", links: "748" },
-      ],
+      lists: [],
+      listName: '',
+      listDate: '',
+      listLinks: ''
     };
   },
+
+  async created() {
+    try {
+      const res = await axios.get(baseURL);
+
+      this.lists = res.data;
+
+    } catch (e) {
+      console.error(e);
+    }
+  },
+
+  // methods: {
+  //   async addList() {
+  //     const res = await axios.post(baseURL, {name: this.listName}, {date: this.listDate}, {links: this.listLinks});
+
+  //     this.lists = [...this.lists, res.data];
+
+  //     this.listName = '';
+  //     this.listDate = '';
+  //     this.listLinks = '';
+  //   }
+  // }
 };
 </script>
 

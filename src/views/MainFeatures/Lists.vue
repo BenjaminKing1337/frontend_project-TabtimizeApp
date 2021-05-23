@@ -111,6 +111,8 @@
 </template>
 
 <script>
+import axios from 'axios';
+
 export default {
   name: 'lists',
   data() {
@@ -118,15 +120,16 @@ export default {
       lists: []
     };
   },
-    created() {
-    fetch("http://localhost:3000/lists")
-    .then(response => {
-      return response.json();
-    })
-    .then(data => {
-      this.lists = data;
-    })
-  },
+
+  async created() {
+    try {
+      const res = await axios.get('http://localhost:3000/lists');
+
+      this.lists = res.data;
+    } catch (e) {
+      console.error(e);
+    }
+  }
 };
 </script>
 
