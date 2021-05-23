@@ -289,7 +289,7 @@
 import Balance from "../../components/Containers/Balance.vue";
 import axios from "axios";
 
-const baseURL = "http://localhost:3000/linkOp";
+const baseURL = "https://my-json-server.typicode.com/danysko5/project-data/linkOp";
 
 export default {
   name: "LinkOpportunities",
