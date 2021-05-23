@@ -2,12 +2,12 @@
   <div class="lists_page">
     <h2 class="noDark">Compiled Lists</h2>
     <div class="list-box box">
-       <div class="top flex spaceBetween">
+      <div class="top flex spaceBetween">
         <h3>Your Lists:</h3>
         <!-- <input type="text" v-model="listName" @keyup.enter="addList"> -->
         <v-btn class="RedBtn noDark">Create New List</v-btn>
       </div>
-     <!-- <div class="message">
+      <!-- <div class="message">
         <h4>You don't have any lists!</h4>
         <br />
         <h4>
@@ -113,18 +113,18 @@
 </template>
 
 <script>
-import axios from 'axios';
+import axios from "axios";
 
-const baseURL = "http://localhost:3000/lists"
+const baseURL = "http://localhost:3000/lists";
 
 export default {
-  name: 'lists',
+  name: "lists",
   data() {
     return {
       lists: [],
-      listName: '',
-      listDate: '',
-      listLinks: ''
+      //  listName: '',
+      //  listDate: '',
+      //  listLinks: ''
     };
   },
 
@@ -133,7 +133,6 @@ export default {
       const res = await axios.get(baseURL);
 
       this.lists = res.data;
-
     } catch (e) {
       console.error(e);
     }
@@ -155,7 +154,7 @@ export default {
 
 <style lang="scss" scoped>
 @import "./src/styles/styles.scss";
-.lists_page{
+.lists_page {
   padding: 45px;
   @media (max-width: $sm) {
     padding: 20px;
@@ -181,8 +180,8 @@ h2 {
   border-radius: 10px;
   animation: bpprimary 25s infinite alternate-reverse;
   @media (max-width: $lg) {
-      padding: 15px;
-    }
+    padding: 15px;
+  }
 
   .message {
     margin-top: 1em;
