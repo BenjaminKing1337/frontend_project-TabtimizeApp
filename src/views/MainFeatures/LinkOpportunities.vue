@@ -263,13 +263,13 @@
               <span>{{data.page}}</span>
             </div>
             <div class="section">
-              <span>{{data.topic}}</span>
+              <span>{{data.urlTopic}}</span>
             </div>
             <div class="section flex">
-              <span class="linkOpp">{{data.link}}</span>
+              <span class="linkOpp">{{data.opportunities}}</span>
             </div>
             <div class="section">
-              <span>{{data.date}}</span>
+              <span>{{data.lastAnal}}</span>
               <v-btn depressed class="noDark">
                 <v-icon >refresh</v-icon>
               </v-btn>
