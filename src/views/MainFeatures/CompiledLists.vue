@@ -121,10 +121,7 @@ export default {
   name: "lists",
   data() {
     return {
-      lists: [
-        //  { name: "My list", date: "10.5.2021", links: "2519" },
-        // { name: "Your list", date: "12.5.2021", links: "748" },
-      ],
+      lists: [],
       //  listName: '',
       //  listDate: '',
       //  listLinks: ''
