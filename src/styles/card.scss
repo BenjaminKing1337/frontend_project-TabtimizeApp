@@ -154,6 +154,10 @@
                 height: 80px;
                 width: 50%;
 
+                .exportContent {
+                   margin: 1em !important;
+                }
+
                 button {
                     transform: scale(1.6);
                     min-width: 50px;
