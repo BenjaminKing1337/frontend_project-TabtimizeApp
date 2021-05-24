@@ -215,7 +215,7 @@
               </div>
               <div style="border-right: 1px solid #959794"></div>
               <div id="export" class="flexcol vcenter center noDark">
-                <v-menu offset-x top left>
+                <v-menu offset-x top left rounded :menu-props="{ contentClass: 'exportContent'}">
                   <template v-slot:activator="{ on, attrs }">
                     <v-btn
                       class="RedBtn dispflexcenter"
