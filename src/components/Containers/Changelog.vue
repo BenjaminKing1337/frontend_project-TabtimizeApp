@@ -134,14 +134,12 @@ export default {};
     .button {
       width: 100%;
       .viewOlder {
-        width: 100%;
-        margin: 10px 28px;
+        width: 82%;
+        margin: 10px auto;
       }
     }
   }
 
-  @media (min-width: $md) and (max-width: $lg) {
-    margin: 0 10px 0 25px;
-  }
+  
 }
 </style>

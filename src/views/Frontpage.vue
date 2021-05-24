@@ -167,6 +167,7 @@ export default {
   display: flex;
   width: 100%;
   max-width: 1590px;
+  justify-content: center;
   margin: 0 auto 100px auto; 
 
 
