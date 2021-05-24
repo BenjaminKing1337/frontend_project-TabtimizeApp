@@ -368,8 +368,7 @@ async created() {
           }
         }
       }
-      #pageNo {
-      }
+     
       
       #viewPage {
         #view {

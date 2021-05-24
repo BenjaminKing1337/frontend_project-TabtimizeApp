@@ -83,6 +83,7 @@
         </div>
       </div>
       <div id="cards">
+
         <div
           class="card flexcol corners shadow box"
           v-for="card in cards"
@@ -99,6 +100,7 @@
               <span class="checkmark shadow"></span>
             </label>
           </div>
+
           <div id="cardcontent">
             <div id="headcontainer">
               <div id="pic">
@@ -115,6 +117,7 @@
                 </div>
               </div>
             </div>
+
             <div id="midcontainer">
               <div class="line" />
               <div id="metrics" class="flex spaceAround tcenter">
@@ -144,7 +147,7 @@
                     Word <br />
                     Count
                   </h3>
-                  <p>{{ card.word }}</p>
+                  <p>{{ card.words }}</p>
                 </div>
               </div>
               <div class="line" />
@@ -203,12 +206,13 @@
               </div>
               <div class="line" />
             </div>
+
             <div id="tailcontainer" class="flex spaceBetween">
               <div id="analyzed">
                 <h3>Analyzed</h3>
                 <div class="flex spaceAround">
                   <p>{{ card.anal }}</p>
-                  <v-btn class="RedBtn dispflexcenter shadow noDark">
+                  <v-btn class="RedBtn  dispflexcenter noDark" depressed>
                     <v-icon class="light">mdi-refresh</v-icon>
                   </v-btn>
                 </div>
@@ -219,6 +223,7 @@
                   <template v-slot:activator="{ on, attrs }">
                     <v-btn
                       class="RedBtn dispflexcenter"
+                      depressed
                       v-bind="attrs"
                       v-on="on"
                     >
@@ -343,8 +348,6 @@ export default {
     width: 100%;
     animation: bpprimary 20s infinite alternate-reverse;
 
-    #results {
-    }
     #filtersortcheck {
       height: 100%;
       .checkmarkbox {
@@ -406,10 +409,7 @@ export default {
     //^collapse here^
     margin: 30px 0;
     @media (min-width: 980px) {
-      display: flex;
-      justify-content: space-evenly;
-      flex-direction: row;
-      flex-wrap: wrap;
+      
     }
   }
 }

@@ -20,6 +20,10 @@
             padding: 5%;
     
         }
+        @media (min-width: $lg) {
+            padding: 5px;
+    
+        }
         
         #headcontainer {
             //^collapse^
@@ -40,7 +44,7 @@
                 }
             }
             #headline {
-                margin: 1%;
+                margin: auto 0;
 
                 #url {
                     font-size: $smallest;
@@ -52,7 +56,7 @@
                 }
                 #title {
                     position: relative;
-                    margin: 1%;
+                    margin: 0;
                     h3 {
                         color: map-get($cs, hLink);
                     }
@@ -64,11 +68,7 @@
             h3 {
                 color: map-get($cs, purple1);
             }
-            ul {
-                li {
-                    max-width: 250px;
-                }
-            }
+            
             #metrics {
                 //^collapsehere^
                 margin: 10px 0;

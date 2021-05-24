@@ -51,6 +51,7 @@ $cs: (
     .box {
         background: linear-gradient(rgb(224, 224, 224), rgb(212, 212, 212));
         box-shadow: none !important;
+        animation: none;
     }
     .noDark {
         filter: invert(1) hue-rotate(180deg);
