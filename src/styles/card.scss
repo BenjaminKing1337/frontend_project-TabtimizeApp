@@ -1,8 +1,11 @@
-.card {
+.card_mobile {
     padding: 10px;
     margin-top: 20px;
     background-color: map-get($cs, white1);
     animation: bpprimary 20s infinite alternate-reverse;
+    @media (min-width: $md) {
+        display: none;
+    }
 
     #checkmarkboxcontainer {
         .checkmarkbox {
@@ -27,10 +30,9 @@
         
         #headcontainer {
             //^collapse^
-            display: block;
-            padding-bottom: 2%;
+            display: flex;
+            align-items: center;
             #pic {
-                float: left;
                 border: 3px double map-get($cs, primary);
                 border-radius: 5px;
                 min-height: 50px;
@@ -45,13 +47,17 @@
             }
             #headline {
                 margin: auto 0;
-
+                min-width: 0;
                 #url {
                     font-size: $smallest;
                     position: relative;
+                    min-width: 0;
 
                     h3 {
                         color: map-get($cs, greyed);
+                        overflow: hidden;
+                        white-space: nowrap;
+                        text-overflow: ellipsis;
                     }
                 }
                 #title {
@@ -165,6 +171,213 @@
                     background-color: map-get($cs, button) !important;
                     .v-icon {
                         margin: -10%;
+                    }
+                }
+            }
+        }
+    }
+}
+.darkMode {
+    .card {
+        h3 {
+            color: map-get($cs, white1) !important;
+            filter: invert(1) hue-rotate(180deg);
+        }
+    }
+    .shadow {
+        box-shadow: none;
+    }
+}
+
+.card {
+    padding: 0px;
+    width: 100%;
+    max-width: 1590px;
+    margin: 20px auto 0 auto;
+    background-color: map-get($cs, white1);
+    animation: bpprimary 20s infinite alternate-reverse;
+    @media (max-width: $md) {
+        display: none;
+    }
+
+    #checkmarkboxcontainer {
+        .checkmarkbox {
+            .checkmark {
+                top: -15px;
+                left: -15px;
+                &:after {
+                    border: solid map-get($cs, white1);
+                }
+            }
+        }
+    }
+    #cardcontent {
+        @media (min-width: $lg) {
+            padding: 0px;
+    
+        }
+        .wrap_head{
+            display: flex;
+            align-items: flex-start;
+            justify-content: space-between;
+            padding: 15px 25px;
+            #headcontainer {
+                //^collapse^
+                width: 60%;
+                .card_header{
+                    display: flex;
+                    align-items: center;
+                    #pic {
+                        border: 3px double map-get($cs, primary);
+                        border-radius: 5px;
+                        min-height: 50px;
+                        min-width: 50px;
+                        max-height: 50px;
+                        max-width: 50px;
+                        margin-right: 1%;
+                        img {
+                            height: 100%;
+                            width: 100%;
+                        }
+                    }
+                    #headline {
+                        margin: auto 0;
+                        min-width: 0;
+                        #url {
+                            font-size: $smallest;
+                            position: relative;
+                            min-width: 0;
+
+                            h3 {
+                                color: map-get($cs, greyed);
+                                overflow: hidden;
+                                white-space: nowrap;
+                                text-overflow: ellipsis;
+                            }
+                        }
+                        #title {
+                            position: relative;
+                            margin: 0;
+                            h3 {
+                                color: map-get($cs, hLink);
+                            }
+                        }
+                    }
+                }
+
+                #metrics {
+                    //^collapsehere^
+                    margin: 20px 0 10px 0;
+                    padding: 10px;
+                    justify-content: space-around;
+                    width: 80%;
+                    text-align: center;
+                    border: 3px dotted #A6A6A6;
+                    border-radius: 15px;
+                    #SEOscore {
+                        h3 {
+                            line-height: 14px;
+                        }
+                    }
+                    #LRS {
+                        #progressbar {
+                            width: 70px;
+                            position: relative;
+                            .bargradient {
+                                position: inherit;
+                                border-radius: 15px;
+                                height: 10px !important;
+                                z-index: 2;
+                            }
+                            .barframe {
+                                z-index: 1;
+                                border-radius: 15px;
+                                height: 10px;
+                                width: 100%;
+                                background-color: map-get($cs, transparency);
+                            }
+                        }
+                    }
+                    #wordCount {
+                        h3 {
+                            line-height: 14px;
+                        }
+                    }
+                    h3 {
+                        font-size: $medium;
+                    }
+                    p {
+                        color: map-get($cs, hLink);
+                        margin: 0;
+                        font-size: $big;
+                        font-weight: 600;
+                    }
+                }
+            }
+            .actions{
+                display: flex;
+                flex-direction: column;
+                #export {
+                    //^collapse here^
+                    display: flex;
+                    justify-content: flex-end;
+                    .v-btn{
+                        height: 50px;
+                        width: 90px;
+                        border-radius: 26px;
+                        background-color: map-get($cs, button);
+                        
+                    }
+
+                }
+                #analyzed{
+                    align-items: center;
+                    margin-top: 90px;
+                    p{
+                        margin-left: 10px;
+                        font-size: $medium2;
+                    }
+                }
+            }
+        }
+        #midcontainer {
+            //^collapsehere^
+            display: flex;
+            h3 {
+                color: map-get($cs, purple1);
+                margin-left: 10px;
+            }
+            
+            
+            #anchorsugs {
+                //^collapse here^
+                font-size: $small;
+                background: #F8F8F8;
+                width: 50%;
+                li {
+                    &::marker {
+                        color: map-get($cs, purple1);
+                    }
+                }
+            }
+            #keywords {
+                //^collapse here^
+                width: 50%;
+                background: #F8F8F8;
+                h4 {
+                    font-size: $smaller;
+                }
+                h5 {
+                    font-size: $smallest;
+                    text-decoration: underline;
+                    color: map-get($cs, hLink);
+                }
+                @media (min-width: 350px) {
+                    h4 {
+                        font-size: $small;
+                    }
+                    h5 {
+                        font-size: $smaller;
                     }
                 }
             }
