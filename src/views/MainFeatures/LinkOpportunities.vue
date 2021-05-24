@@ -217,21 +217,21 @@
             <div class="section"><span class="font-weight-bold">Last analyzed</span></div>
           </div>
 
-          <div class="data" v-for="data in pages" :key="data">
+          <div class="data" v-for="data in linkOp" :key="data">
             <div class="section">
               <span>{{data.page}}</span>
             </div>
             <div class="section">
-              <span>{{data.topic}}</span>
+              <span>{{data.urlTopic}}</span>
             </div>
             <div class="section flex">
-              <span class="linkOpp">{{data.link}}</span>
+              <span class="linkOpp">{{data.opportunities}}</span>
               <v-btn class="noDark" depressed to="/MainFeatures/Cardview">
                 View
               </v-btn>
             </div>
             <div class="section">
-              <span>{{data.date}}</span>
+              <span>{{data.lastAnal}}</span>
               <v-btn class="noDark" depressed>
                 <v-icon>refresh</v-icon>
               </v-btn>
@@ -242,7 +242,7 @@
       </div>
     </div>
 
-    <div id="pagelistfull_mobile" class="box dispflexcenter" v-for="data in pages" :key="data">
+    <div id="pagelistfull_mobile" class="box dispflexcenter" v-for="data in linkOp" :key="data">
       <div class="page">
         <div id="navigation">
           <div class="dispflexcenter circle shadow">
@@ -299,7 +299,7 @@ export default {
   },
   data() {
     return {
-      pages: [
+      linkOp: [
         // {page: "/", topic: "Business & Industrial", link: "130", date:"25/01/2021" },
         // {page: "/about-us", topic: "Business & Industrial", link: "58", date:"25/01/2021" },
         // {page: "/contact", topic: "Business & Industrial", link: "666", date:"25/01/2021" },
@@ -311,7 +311,7 @@ async created() {
     try {
       const res = await axios.get(baseURL);
 
-      this.pages = res.data;
+      this.linkOp = res.data;
     } catch (e) {
       console.error(e);
     }
