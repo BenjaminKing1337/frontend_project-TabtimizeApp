@@ -21,48 +21,50 @@
           </div>
           <div id="filtersort" class="flex">
             <div id="filter">
-              <v-menu
-                offset-y
-                bottom
-                left
-                min-width="280px"
+              <v-btn id="filtersortBtn" @click="show = !show"
+                >Add Filter<v-icon>mdi-plus</v-icon></v-btn
               >
-                <template v-slot:activator="{ on, attrs }">
-                  <v-btn id="filtersortBtn" v-bind="attrs" v-on="on"
-                    >Add Filter<v-icon>mdi-plus</v-icon></v-btn
-                  >
-                </template>
-                <v-card >
-                  <div id="cats">
-                    <div id="cat1">
-                      <div id="Metrics">
-                        Metrics
-                        <div tag="button">LRS</div>
-                        <div tag="button">Keyword</div>
-                        <div tag="button">Authority</div>
+            
+              <div id="cats" v-if="show">
+                <div class="cats_wrap">
+                  <div id="cat1">
+
+                    <div id="Metrics">
+                      <h1>Metrics</h1>
+                      <div v-for="(metric,index) in metrics" :key="metric">
+                        <v-btn depressed @click="activateM(index)"><v-icon v-bind:class="{arrow:metric.active}">arrow_right</v-icon><h2>{{metric.name}}</h2></v-btn>
+                        <div v-if="metric.active" class="content">Placeholder</div>
                       </div>
-                      <div id="Topics">
-                        Topics
-                        <div tag="button">URL Topic</div>
-                        <div tag="button">Content Topic</div>
-                        <div tag="button">Domain Topic</div>
+                      
+                    </div>
+
+                    <div id="Topics">
+                      <h1>Topics</h1>
+                      <div v-for="(topic,index) in topics" :key="topic">
+                        <v-btn depressed @click="activateT(index)"><v-icon v-bind:class="{arrow:topic.active}">arrow_right</v-icon><h2>{{topic.name}}</h2></v-btn>
+                        <div v-if="topic.active" class="content">Placeholder</div>
                       </div>
                     </div>
-                    <div id="cat2">
-                      <div id="Stats">
-                        Stats
-                        <div tag="button">Word Count</div>
-                        <div tag="button">Anchor Text</div>
-                        <div tag="button">Analyzed Date</div>
-                        <div tag="button">Front Page</div>
-                        <div tag="button">Languages</div>
-                        <div tag="button">TLD</div>
-                      </div>
-                    </div>
+
                   </div>
-                </v-card>
-              </v-menu>
+
+                  <div id="cat2">
+
+                    <div id="Stats">
+                      <h1>Stats</h1>
+                      <div v-for="(stat,index) in stats" :key="stat">
+                        <v-btn depressed @click="activateS(index)"><v-icon v-bind:class="{arrow:stat.active}">arrow_right</v-icon><h2>{{stat.name}}</h2></v-btn>
+                        <div v-if="stat.active" class="content">Placeholder</div>
+                      </div>
+                    </div>
+
+                  </div>
+                </div>
+
+                <v-btn class="button noDark" @click="show = !show" depressed>Apply Filter</v-btn>
+              </div>
             </div>
+
             <div id="sort" class="text-center">
               <v-menu offset-y bottom left>
                 <template v-slot:activator="{ on, attrs }">
@@ -71,9 +73,9 @@
                   >
                 </template>
                 <v-list>
-                  <div tag="button">LRS</div>
-                  <div tag="button">SEO</div>
-                  <div style="text-align: left" tag="button">
+                  <div >LRS</div>
+                  <div >SEO</div>
+                  <div style="text-align: left" >
                     Word <br />
                     Count
                   </div>
@@ -232,9 +234,9 @@
                     </v-btn>
                   </template>
                   <v-list>
-                    <div tag="button">Export</div>
-                    <div tag="button">Add to List</div>
-                    <div tag="button">Remove</div>
+                    <div >Export</div>
+                    <div >Add to List</div>
+                    <div >Remove</div>
                   </v-list>
                 </v-menu>
               </div>
@@ -405,6 +407,7 @@
 
         <!--  <Card/> -->
       </div>
+      
     </div>
   </div>
 </template>
@@ -429,6 +432,25 @@ export default {
     allSelected: false,
     cardIds: [],
     panel: [0,0],
+    show:false,
+    metrics:[
+      {name:'LRS', active:false},
+      {name:'Keyword', active:false},
+      {name:'Authority', active:false}
+    ],
+    topics:[
+      {name:'URL Topic', active:false},
+      {name:'Content Topic', active:false},
+      {name:'Domain Topic', active:false}
+    ],
+    stats:[
+      {name:'Word Count', active:false},
+      {name:'Anchor Text', active:false},
+      {name:'Analyzed Date', active:false},
+      {name:'Front Page', active:false},
+      {name:'Languages', active:false},
+      {name:'TLD', active:false}
+    ],
   }),
 
   async created() {
@@ -440,6 +462,7 @@ export default {
       console.error(e);
     }
   },
+  
 
   methods: {
     selectAll: function () {
@@ -454,6 +477,17 @@ export default {
     select: function () {
       this.allSelected = false;
     },
+    activateM(index){
+      this.metrics[index].active=!this.metrics[index].active;
+
+    },
+    activateT(index){
+      this.topics[index].active=!this.topics[index].active;
+    },
+    activateS(index){
+      this.stats[index].active=!this.stats[index].active;
+    },
+    
   },
 };
 </script>
@@ -515,12 +549,7 @@ export default {
         #filter {
           margin: 0 1%;
 
-          #cats {
-            min-width: 600px;
-            display: flex;
-            flex-direction: row;
-            flex-flow: nowrap;
-          }
+          
           .v-icon {
             color: map-get($cs, button);
           }
@@ -555,6 +584,56 @@ export default {
     @media (min-width: 980px) {
       
     }
+  }
+  #cats {
+    height: auto;
+    width: 400px;
+    background-color: map-get($cs, white1 );
+    box-shadow: 0 0 20px rgba($color: #000000, $alpha: 0.2);
+    border-radius: 5px;
+    padding: 10px 30px;
+    position: absolute;
+    margin-left: -300px;
+    margin-top: 10px;
+    transition: 1s;
+    .cats_wrap{
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .content{
+      padding-left: 20px;
+      overflow: hidden;
+      transition: max-height 0.2s ease-out;
+    }
+
+    .button{
+      background-color: map-get($cs, button);
+      color: map-get($cs, white1);
+      font-size: $medium;
+      height: 30px;
+      width: 115px;
+      border-radius: 30px;
+      text-transform: capitalize;
+      float: right;
+    }
+    .v-btn{
+      text-transform: capitalize;
+    }
+    h1{
+      color: map-get($cs , button );
+      font-size: $medium2;
+    }
+    h2{
+      font-size: $medium;
+    }
+  }
+  .arrow{
+    transform: rotate(90deg);
+  }
+  .show{
+    visibility: visible;
+    opacity: 1;
   }
 }
 </style>
