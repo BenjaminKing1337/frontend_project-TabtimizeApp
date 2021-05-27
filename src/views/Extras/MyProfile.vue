@@ -219,6 +219,7 @@ hr {
       box-shadow: 0 0 20px rgba($color: #000000, $alpha: 0.2);
       border-radius: 10px;
       margin-right: 30px;
+      animation: bpprimary 15s infinite alternate-reverse;
 
       .top {
         display: flex;
@@ -266,6 +267,7 @@ hr {
       box-shadow: 0 0 20px rgba($color: #000000, $alpha: 0.2);
       border-radius: 10px;
       padding: 30px;
+      animation: bpprimary 15s infinite alternate-reverse;
 
       .userInfo {
         display: flex;
@@ -367,6 +369,7 @@ hr {
     border-radius: 10px;
     padding: 30px;
     margin: 40px 0 0 0;
+    animation: bpprimary 15s infinite alternate-reverse;
     .top {
       display: flex;
       justify-content: space-between;

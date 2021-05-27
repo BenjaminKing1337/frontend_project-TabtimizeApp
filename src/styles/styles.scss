@@ -49,9 +49,14 @@ $cs: (
         color: #01c9ad !important;
     }
     .box {
-        background: linear-gradient(rgb(224, 224, 224), rgb(212, 212, 212));
+        background: linear-gradient(rgb(234, 234, 234), rgb(222, 222, 222)) !important;
         box-shadow: none !important;
-        animation: none;
+        animation: none !important;
+    }
+    .box_light{
+        background-color: rgb(234, 234, 234) !important;
+        box-shadow: none !important;
+        animation: none !important;
     }
     .noDark {
         filter: invert(1) hue-rotate(180deg);

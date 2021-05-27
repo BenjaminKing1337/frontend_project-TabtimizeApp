@@ -11,7 +11,7 @@
     </div>
 
     <div class="buttons">
-      <v-dialog v-model="dialog" width="300"
+      <v-dialog v-model="dialog" width="300" hide-overlay
         ><template v-slot:activator="{ on, attrs }">
           <v-btn class="RedBtn shadow noDark" v-bind="attrs" v-on="on"
             >Manage Domains</v-btn
@@ -47,7 +47,7 @@
     </div>
 
     <div class="buttons">
-      <v-dialog v-model="dialog" width="300"
+      <v-dialog v-model="dialog" width="300" hide-overlay
         ><template v-slot:activator="{ on, attrs }">
           <v-btn class="RedBtn shadow noDark" v-bind="attrs" v-on="on"
             >Add Sitemap</v-btn
@@ -71,13 +71,13 @@
           </v-card-actions>
         </v-card>
       </v-dialog>
-      <v-dialog v-model="dialog" width="300"
+      <v-dialog v-model="dialog" width="300" overlay-opacity="0.1" class="box"
         ><template v-slot:activator="{ on, attrs }">
           <v-btn class="RedBtn shadow noDark" v-bind="attrs" v-on="on"
             >Add Page</v-btn
           >
         </template>
-        <v-card>
+        <v-card >
           <v-card-title class="bgtab light noDark">
             Add Page
           </v-card-title>

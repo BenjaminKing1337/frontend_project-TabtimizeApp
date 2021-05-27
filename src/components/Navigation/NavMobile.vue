@@ -14,24 +14,25 @@
     </v-card>
   </div>
   <v-navigation-drawer
-            v-model="drawer"
-            fixed
-            temporary
-            bottom
-            height="400"
-        >
-            <v-list-item-group
-                v-model="group"
-                align="center"
-            >
-                <v-list-item><a href="#"><v-icon>mdi-link-variant</v-icon><router-link to="/MainFeatures/LinkOpportunities">Link Opportunities</router-link> </a></v-list-item>
-                <v-list-item><a href="#"><v-icon>mdi-view-list</v-icon><router-link to="/MainFeatures/CompiledLists">Compiled Lists</router-link> </a></v-list-item>
-                <v-list-item><a href="#"><v-icon>mdi-dice-3</v-icon><router-link to="/MainFeatures/RelevanceComparison">Relevance Comparison</router-link> </a></v-list-item>
-                <v-list-item><a href="#"><v-icon>mdi-cog</v-icon><router-link to="/Setup/DomainsAndPages">Domains and Pages</router-link> </a></v-list-item>
-                <v-list-item><a href="#"><v-icon>mdi-file-document-multiple</v-icon><router-link to="/Setup/BillingAndUsage">Billing and Usage</router-link></a></v-list-item>
-                <v-list-item><a href="#"><v-icon>mdi-face-profile</v-icon><router-link to="/Extras/MyProfile">My Profile</router-link> </a></v-list-item>
-            </v-list-item-group>
-      </v-navigation-drawer>
+        v-model="drawer"
+        fixed
+        temporary
+        bottom
+        hide-overlay
+        height="400"
+  >
+    <v-list-item-group
+        v-model="group"
+        align="center"
+    >
+        <v-list-item><a href="#"><v-icon>mdi-link-variant</v-icon><router-link to="/MainFeatures/LinkOpportunities">Link Opportunities</router-link> </a></v-list-item>
+        <v-list-item><a href="#"><v-icon>mdi-view-list</v-icon><router-link to="/MainFeatures/CompiledLists">Compiled Lists</router-link> </a></v-list-item>
+        <v-list-item><a href="#"><v-icon>mdi-dice-3</v-icon><router-link to="/MainFeatures/RelevanceComparison">Relevance Comparison</router-link> </a></v-list-item>
+        <v-list-item><a href="#"><v-icon>mdi-cog</v-icon><router-link to="/Setup/DomainsAndPages">Domains and Pages</router-link> </a></v-list-item>
+        <v-list-item><a href="#"><v-icon>mdi-file-document-multiple</v-icon><router-link to="/Setup/BillingAndUsage">Billing and Usage</router-link></a></v-list-item>
+        <v-list-item><a href="#"><v-icon>mdi-face-profile</v-icon><router-link to="/Extras/MyProfile">My Profile</router-link> </a></v-list-item>
+    </v-list-item-group>
+  </v-navigation-drawer>
 </div>
 </template>
 

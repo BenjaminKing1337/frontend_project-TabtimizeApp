@@ -51,9 +51,11 @@
         v-model="drawer"
         fixed
         temporary
+        hide-overlay
         top
         right
         height="200"
+        class="box"
       >
         <v-list-item-group v-model="group" class="flexcol">
           <div>
@@ -75,9 +77,11 @@
         v-model="drawer1"
         fixed
         temporary
+        hide-overlay
         top
         right
         height="300"
+        class="box"
       >
         <v-list-item-group v-model="group1">
           <div class="flex center">
@@ -215,7 +219,7 @@ export default {
       padding: 0 10px;
     }
     #domainImg {
-      border-radius: 100%;
+      border-radius: 5px;
       width: 30px;
       height: 30px;
       padding: 5px 1px 1px 1px;

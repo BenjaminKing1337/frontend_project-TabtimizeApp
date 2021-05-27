@@ -25,7 +25,7 @@
                 >Add Filter<v-icon>mdi-plus</v-icon></v-btn
               >
             
-              <div id="cats" v-if="show">
+              <div id="cats" v-if="show" class="box">
                 <div class="cats_wrap">
                   <div id="cat1">
 
@@ -345,10 +345,10 @@
               </div>
             </div>
 
-            <div id="midcontainer">
+            <div id="midcontainer" class="box_light">
             
               <div id="anchorsugs">
-                <v-expansion-panels inset multiple v-model="panel" class="expansionbtn">
+                <v-expansion-panels inset multiple v-model="panel" class="expansionbtn box_light">
                   <v-expansion-panel class="expansionbtn">
                     <v-expansion-panel-header class="expansionbtn"
                       ><h3>Anchor Suggestions</h3></v-expansion-panel-header
@@ -370,8 +370,8 @@
                 </v-expansion-panels>
               </div>
 
-              <div id="keywords">
-                <v-expansion-panels inset multiple v-model="panel" class="expansionbtn">
+              <div id="keywords" class="box_light">
+                <v-expansion-panels inset multiple v-model="panel" class="expansionbtn box_light">
                   <v-expansion-panel class="expansionbtn">
                     <v-expansion-panel-header class="expansionbtn"
                       ><h3>Keywords & Topics</h3></v-expansion-panel-header
@@ -501,6 +501,9 @@ export default {
   @media (max-width: $sm) {
     padding: 20px;
   }
+  @media (max-width: $md) {
+    padding-bottom: 70px;
+  }
 }
 
 #cardview {
@@ -581,9 +584,9 @@ export default {
   #cards {
     //^collapse here^
     margin: 30px 0;
-    @media (min-width: 980px) {
-      
-    }
+  }
+  .card_mobile:last-child, .card:last-child{
+    margin-bottom: 200px;
   }
   #cats {
     height: auto;
