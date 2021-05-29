@@ -113,42 +113,30 @@
 </template>
 
 <script>
+// import HTTP client
 import axios from "axios";
-
+// save JSON server URL as constant variable, so its easier to re-use
 const baseURL = "https://my-json-server.typicode.com/danysko5/project-data/lists"
 
 export default {
   name: "lists",
   data() {
     return {
+      // data array
       lists: [],
-      //  listName: '',
-      //  listDate: '',
-      //  listLinks: ''
     };
   },
-
+  // life-cycle hook
   async created() {
     try {
       const res = await axios.get(baseURL);
-
       this.lists = res.data;
-    } catch (e) {
+    } 
+    // check errors 
+    catch (e) {
       console.error(e);
     }
   },
-
-  // methods: {
-  //   async addList() {
-  //     const res = await axios.post(baseURL, {name: this.listName}, {date: this.listDate}, {links: this.listLinks});
-
-  //     this.lists = [...this.lists, res.data];
-
-  //     this.listName = '';
-  //     this.listDate = '';
-  //     this.listLinks = '';
-  //   }
-  // }
 };
 </script>
 
