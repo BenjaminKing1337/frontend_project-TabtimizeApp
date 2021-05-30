@@ -7,7 +7,7 @@
         </div>
         <h3 class="flex center">Registered Pages</h3>
         <div class="flex center">
-          <p id="p1">0</p>
+          <p id="p1">3</p>
           <p class="dispflexcenter" id="p2">Registered</p>
         </div>
       </div>
