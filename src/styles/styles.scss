@@ -34,7 +34,7 @@ $cs: (
     transparency: rgba(121, 121, 121, 0.25),
     tabtimize: linear-gradient(90deg, rgba(17, 34, 67, 1) 0%, rgba(120, 45, 118, 1) 26%, rgba(254, 54, 82, 1) 100%),
     icongrey: rgba(0, 0, 0, 0.54),
-    );
+);
 
 // DARKMODE
 .darkMode {
@@ -53,7 +53,7 @@ $cs: (
         box-shadow: none !important;
         animation: none !important;
     }
-    .box_light{
+    .box_light {
         background-color: rgb(234, 234, 234) !important;
         box-shadow: none !important;
         animation: none !important;
@@ -208,7 +208,6 @@ $cs: (
             }
         }
     }
-    
 }
 
 // VUETIFY OVERRIDES
@@ -245,15 +244,16 @@ $cs: (
     .theme--light.v-btn.v-btn--has-bg {
         background-color: unset;
     }
-    .flex, .child-flex > * {
+    .flex,
+    .child-flex > * {
         flex: 0 1 auto !important;
     }
     .v-card--link:before {
-     border-radius: 100%;
+        border-radius: 100%;
     }
     .theme--light.v-expansion-panels .v-expansion-panel {
         background-color: #ffffff00 !important;
-   }
+    }
 }
 
 // Keyframes

@@ -5,11 +5,11 @@
     </div>
 
     <div class="manual">
-      <img src="@/assets/manual_left.png" alt="manual_left" />
-      <img class="arrow" src="@/assets/arrow.png" alt="arrow" />
-      <img src="@/assets/manual_center.png" alt="manual_center" />
-      <img class="arrow" src="@/assets/arrow.png" alt="arrow" />
-      <img src="@/assets/manual_right.png" alt="manual_right" />
+      <img src="@/assets/manual_left.svg" alt="manual_left" />
+      <img class="arrow" src="@/assets/arrow.svg" alt="arrow" />
+      <img src="@/assets/manual_center.svg" alt="manual_center" />
+      <img class="arrow" src="@/assets/arrow.svg" alt="arrow" />
+      <img src="@/assets/manual_right.svg" alt="manual_right" />
     </div>
 
     <div class="helpGuides">
