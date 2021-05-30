@@ -82,6 +82,7 @@ export default {
     margin: 100px auto 38px auto;
     img {
       margin-bottom: 3em;
+      max-width: 300px;
     }
 
     .arrow {
@@ -104,6 +105,14 @@ export default {
       height: 200px;
     }
 
+    .arrow {
+      height: 12px;
+    }
+  }
+  @media (min-width: $lg) {
+    img {
+      height: 200px;
+    }
     .arrow {
       height: 12px;
     }
