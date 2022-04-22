@@ -1,4 +1,4 @@
-# tabtimizeapp
+# Tabtimize App
 
 ## 1. Install project
 ```
@@ -25,6 +25,4 @@ npm run test
 npm run lint
 ```
 
-### SAMUEL *
-### BENJAMIN * 
-### DANIEL *
+ Created by Benjamin King, Daniel Radosa & Samuel Kuzma.
