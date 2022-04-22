@@ -1,5 +1,9 @@
 # Tabtimize App
 
+
+Recreation of Tabtimize App (Front-End) in Vue with global Sass and Reponsiveness. Design Trim. 4th semester project of my academic programme.
+Created by Benjamin King, Daniel Radosa & Samuel Kuzma.
+
 ## 1. Install project
 ```
 npm install
@@ -25,4 +29,4 @@ npm run test
 npm run lint
 ```
 
- Created by Benjamin King, Daniel Radosa & Samuel Kuzma.
+
