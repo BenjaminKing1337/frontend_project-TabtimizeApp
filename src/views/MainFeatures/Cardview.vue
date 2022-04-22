@@ -86,7 +86,7 @@
         </div>
       </div>
       <div id="cards">
-
+        <!-- Mobile version -->
         <div class="card_mobile flexcol corners shadow box"
           v-for="card in cards"
           v-bind:key="card"
@@ -102,7 +102,6 @@
               <span class="checkmark shadow"></span>
             </label>
           </div>
-
           <div id="cardcontent">
             <div id="headcontainer">
               <div id="pic">
@@ -119,7 +118,6 @@
                 </div>
               </div>
             </div>
-
             <div id="midcontainer">
               <div class="line" />
               <div id="metrics" class="flex spaceAround tcenter">
@@ -208,7 +206,6 @@
               </div>
               <div class="line" />
             </div>
-
             <div id="tailcontainer" class="flex spaceBetween">
               <div id="analyzed">
                 <h3>Analyzed</h3>
@@ -243,6 +240,7 @@
             </div>
           </div>
         </div>
+        
         <!-- Desktop version -->
         <div class="card flexcol corners shadow box"
           v-for="card in cards"
