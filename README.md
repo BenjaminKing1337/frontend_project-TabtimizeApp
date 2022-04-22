@@ -3,6 +3,10 @@
 
 Recreation of Tabtimize App (Front-End) in Vue with global Sass and Reponsiveness. Design Trim. 4th semester project of my academic programme.
 
+Hosted on Netlify
+
+https://tabtimize.netlify.com
+
 Created by Benjamin King, Daniel Radosa & Samuel Kuzma.
 
 
